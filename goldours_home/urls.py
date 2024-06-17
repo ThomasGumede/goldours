@@ -8,9 +8,9 @@ from goldours_home.views.member_views import create_member, delete_member, team_
 app_name = 'goldours_home'
 urlpatterns = [
     path("", home, name="goldours-home"),
-    path("about-us", about_goldours, name="about-goldours"),
+    path("about-us/", about_goldours, name="about-goldours"),
     path("about-us/teams/<member_id>", team_member_details, name="team-member"),
-    path("contact-us", contact, name="contact"),
+    path("contact-us/", contact, name="contact"),
     path("api/contact-us", contact_ajax, name="api-contact"),
     path("dashboard", dashboard, name="dashboard"),
     path("search", search, name="search"),
@@ -22,12 +22,12 @@ urlpatterns = [
     path("services/governance-and-direction", governance_and_direction, name="governance-and-direction"),
     path("services/systems-reviews-and-assurance", systems_reviews_and_assurance, name="systems-reviews-and-assurance"),
     path("about-us/terms-and-conditions", terms_and_conditions, name="terms"),
-    path("blogs", blogs, name="blogs"),
-    path("blogs/<slug:category_slug>", blogs, name="blogs-by-category"),
+    path("articles/", blogs, name="blogs"),
+    path("articles/<slug:category_slug>/", blogs, name="blogs-by-category"),
     path("dashboard/accounts", all_accounts, name="all-accounts"),
     path("dashboard/blogs", all_blogs, name="all-blogs"),
     path("dashboard/blogs/create", create_blog, name="create-blog"),
-    path("blogs/details/<slug:post_slug>", blog_details, name="details-blog"),
+    path("article/<slug:post_slug>", blog_details, name="details-blog"),
     path("dashboard/blogs/update/<slug:post_slug>", update_blog, name="update-blog"),
     path("dashboard/blogs/delete/<slug:post_slug>", delete_blog, name="delete-blog"),
 
@@ -35,5 +35,4 @@ urlpatterns = [
     path("dashboard/member/create", create_member, name="create-member"),
     path("dashboard/member/update/<member_id>", update_member, name="update-member"),
     path("dashboard/member/delete/<member_id>", delete_member, name="delete-member"),
-    
 ]

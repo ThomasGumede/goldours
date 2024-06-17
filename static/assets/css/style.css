@@ -20547,7 +20547,7 @@ body.thirteen-body .title-area span {
 .bg-about-sm-shape {
   position: relative;
 }
-.bg-about-sm-shape::after {
+/* .bg-about-sm-shape::after {
   content: "";
   position: absolute;
   height: 150px;
@@ -20556,7 +20556,7 @@ body.thirteen-body .title-area span {
   background-repeat: no-repeat;
   top: 32%;
   animation: jump-1 8s linear infinite;
-}
+} */
 @media only screen and (max-width: 767px) {
   .bg-about-sm-shape::after {
     right: -15%;
@@ -20567,7 +20567,7 @@ body.thirteen-body .title-area span {
     right: -32%;
   }
 }
-.bg-about-sm-shape::before {
+/* .bg-about-sm-shape::before {
   content: "";
   position: absolute;
   height: 150px;
@@ -20578,7 +20578,7 @@ body.thirteen-body .title-area span {
   right: -2%;
   animation: rotateIt 10s linear infinite;
   z-index: -1;
-}
+} */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .bg-about-sm-shape::before {
     top: 76%;
