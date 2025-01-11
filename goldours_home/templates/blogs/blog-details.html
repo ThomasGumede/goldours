@@ -1,0 +1,193 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>{{post.title}}</title>
+<meta name="description"
+    content="{{post.description}}" />
+<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, {{post.title}}, {{post.category.label}}" />
+<link rel="canonical" href="https://goldours.co.za/blog" />
+<meta property="og:title" content="{{post.title}}" />
+<meta property="og:description"
+    content="{{post.description}}" />
+<meta property="og:url" content="https://goldours.co.za/blog" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}"/>
+{% endblock seo %}
+
+{% block content %}
+
+<!-- start breadcrumb area -->
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Post Details</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
+                    <span> / </span>
+                    <a href="#" class="active">Post Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb area -->
+
+<!-- rts blog mlist area -->
+<div class="rts-blog-list-area rts-section-gap">
+    <div class="container">
+        <div class="row g-5">
+            <!-- rts blo post area -->
+            <div class="col-xl-8 col-md-12 col-sm-12 col-12">
+                <!-- single post -->
+                <div class="blog-single-post-listing details mb--0">
+                    <div class="thumbnail">
+                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}" alt="{{post.title}}">
+                    </div>
+                    <div class="blog-listing-content">
+                        <div class="user-info">
+                            <!-- single info -->
+                            <div class="single">
+                                <i class="far fa-user-circle"></i>
+                                <span>by Admin</span>
+                            </div>
+                            <!-- single infoe end -->
+                            <!-- single info -->
+                            <div class="single">
+                                <i class="far fa-clock"></i>
+                                <span>{{post.created}}</span>
+                            </div>
+                            <!-- single infoe end -->
+                            <!-- single info -->
+                            <div class="single">
+                                <i class="far fa-tags"></i>
+                                <span>{{post.category.label}}</span>
+                            </div>
+                            <!-- single infoe end -->
+                        </div>
+                        <h3 class="title">{{post.title}}</h3>
+                        {{post.content|safe}}
+                        <div class="row  align-items-center">
+                            
+                            <div class="col-lg-6 col-md-12">
+                                <div class="details-share">
+                                    <h6>Share:</h6>
+                                    <button><i class="fab fa-facebook-f"></i></button>
+                                    <button><i class="fab fa-twitter"></i></button>
+                                    <button><i class="fab fa-instagram"></i></button>
+                                    <button><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="replay-area-details">
+                            <h4 class="title">Leave a Reply</h4>
+                            <form action="#">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" placeholder="Select Topic">
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <a class="rts-btn btn-primary" href="#">Submit Message</a> -->
+                    </div>
+                </div>
+                <!-- single post End-->
+            </div>
+            <!-- rts-blog post end area -->
+            <!--rts blog wizered area -->
+            <div class="col-xl-4 col-md-12 col-sm-12 col-12">
+                <!-- single wizered start -->
+                <div class="rts-single-wized search">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Search Hear
+                        </h5>
+                    </div>
+                    <div class="wized-body">
+                        <form action="{% url 'goldours_home:blogs' %}" class="rts-search-wrapper">
+                            <input class="Search" type="text" name="query" placeholder="Enter Keyword">
+                            <button type="submit"><i class="fal fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <!-- single wizered End -->
+                <!-- single wizered start -->
+                <div class="rts-single-wized Categories">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Categories
+                        </h5>
+                    </div>
+                    <div class="wized-body">
+                        {% for category in blog_categories %}
+                        <!-- single categoris --> 
+                        <ul class="single-categories">
+                            <li><a href="{% url 'goldours_home:blogs-by-category' category.slug %}">{{category.label}} <i class="far fa-long-arrow-right"></i></a></li>
+                        </ul>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+                <!-- single wizered End -->
+                <!-- single wizered start -->
+                <div class="rts-single-wized Recent-post">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Recent Posts
+                        </h5>
+                    </div>
+                    <div class="wized-body">
+                        <!-- recent-post -->
+                         {% for post in recent_posts %}
+                        <div class="recent-post-single">
+                            <div class="thumbnail">
+                                <a href="{% url 'goldours_home:details-blog' post.slug %}"><img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}"
+                                        alt="{{post.tilte}}"></a>
+                            </div>
+                            <div class="content-area">
+                                <div class="user">
+                                    <i class="fal fa-clock"></i>
+                                    <span>{{post.created|date:"b d, Y"}}</span>
+                                </div>
+                                <a class="post-title" href="{% url 'goldours_home:details-blog' post.slug %}">
+                                    <h6 class="title">{{post.title}}</h6>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <!-- single wizered End -->
+                <!-- single wizered start -->
+                <div class="rts-single-wized contact">
+                    <div class="wized-header">
+                        <a href="{% url 'goldours_home:contact' %}"><img src="{% static 'assets/images/logo/logo-2.png' %}" alt="Goldours logo"></a>
+                    </div>
+                    <div class="wized-body">
+                        <h5 class="title">Need Help? We Are Here
+                            To Help You</h5>
+                        <a class="rts-btn btn-primary" href="{% url 'goldours_home:contact' %}">Contact Us</a>
+                    </div>
+                </div>
+                <!-- single wizered End -->
+            </div>
+            <!-- rts- blog wizered end area -->
+        </div>
+    </div>
+</div>
+<!-- rts blog mlist area End -->
+
+{% endblock content %}

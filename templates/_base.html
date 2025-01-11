@@ -1,0 +1,160 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% tailwind_preload_css %}
+    {% tailwind_css %}
+    {{form.media}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="max-image-preview:large">
+    {% block seo %}
+    <title>GoldOurs - Empowering Growth & Excellence</title>
+    <meta name="description"
+        content="Discover GoldOurs' transformative services in governance, strategy, leadership, and talent management. Empowering individuals and organizations for impactful growth." />
+    <meta name="keywords"
+        content="GoldOurs, governance consulting, leadership development, B-BBEE consulting, talent management, strategy formulation, risk management" />
+    <meta name="author" content="GoldOurs" />
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+    <meta property="og:title" content="GoldOurs - Empowering Growth & Excellence" />
+    <meta property="og:description"
+        content="Transform your business with GoldOurs' expert governance, strategy, and leadership solutions." />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:type" content="website" />
+    
+    <meta property="og:image" content="https://goldours.co.za{% static 'assets/images/logo/logo-2.png' %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GoldOurs - Empowering Growth & Excellence",
+                "description": "Discover GoldOurs' transformative services in governance, strategy, leadership, and talent management.",
+                "url": "https://goldours.co.za",
+                "mainEntity": {
+                    "@type": "Organization",
+                    "name": "GoldOurs",
+                    "logo": "https://goldours.co.za/logo.png",
+                    "sameAs": [
+                    "https://www.linkedin.com/company/goldours",
+                    "https://www.facebook.com/goldours",
+                    "https://www.twitter.com/goldours"
+                    ],
+                    "address": [
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Unit 108, Millennium Business Park, 19 Edison Way, Century City",
+                        "addressLocality": "Cape Town",
+                        "addressRegion": "Western Cape",
+                        "postalCode": "7441",
+                        "addressCountry": "South Africa"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "6 Piccolo Estate, 270 Von Willich, Die Hoewes, Centurion",
+                        "addressLocality": "Pretoria",
+                        "addressRegion": "Gauteng",
+                        "postalCode": "0157",
+                        "addressCountry": "South Africa"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "9 Armitage Road, Bird Sanctuary, Townhill",
+                        "addressLocality": "Pietermaritzburg",
+                        "addressRegion": "KwaZulu-Natal",
+                        "postalCode": "3201",
+                        "addressCountry": "South Africa"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "43 Bird Street, Central",
+                        "addressLocality": "Gqeberha",
+                        "addressRegion": "Eastern Cape",
+                        "postalCode": "6001",
+                        "addressCountry": "South Africa"
+                    },
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "13 Blaine Street, West Bank",
+                        "addressLocality": "Qonce",
+                        "addressRegion": "Eastern Cape",
+                        "postalCode": "5601",
+                        "addressCountry": "South Africa"
+                    }
+                    ],
+                    "service": [
+                    {
+                        "@type": "Service",
+                        "name": "Governance & Direction",
+                        "description": "Strategic planning, risk management, and board training."
+                    },
+                    {
+                        "@type": "Service",
+                        "name": "Systems, Reviews & Assurance",
+                        "description": "Ensuring business continuity, compliance, and reliable financial reporting."
+                    },
+                    {
+                        "@type": "Service",
+                        "name": "B-BBEE Consulting & Training",
+                        "description": "Supporting strategy development, implementation, and B-BBEE audit processes."
+                    },
+                    {
+                        "@type": "Service",
+                        "name": "Talent Management & Development",
+                        "description": "Building leadership skills, managing performance, and fostering organizational growth."
+                    }
+                    ]
+                }
+                }
+    
+    
+    </script>
+    {% endblock seo %}
+    
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://goldours.co.za/wp-content/uploads/2023/03/goldours-favicon.png">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/fontawesome-5.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/unicons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    {% include 'includes/header.html' %}
+    {% block content %}
+    {% endblock content %}
+    
+    {% include 'includes/footer.html' %}
+    <!-- start loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End loader -->
+    <!-- progress Back to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- progress Back to top End -->
+    <!-- scripts start form hear -->
+    <script src="{% static 'assets/js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jqueryui.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/waypoint.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/sal.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+    
+    <script src="{% static 'assets/js/vendor/waw.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script>
+    <!-- main Js -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <!-- scripts end form hear -->
+</body>
+</html>

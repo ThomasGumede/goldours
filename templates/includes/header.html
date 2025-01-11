@@ -1,0 +1,200 @@
+{% load static %}
+<!-- start header area -->
+<!-- start header area -->
+<header class="header--sticky header-one ">
+    <div class="header-top header-top-one bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-xl-block d-none">
+                    <div class="left">
+                        <div class="mail">
+                            <a href="mailto:webmaster@example.com"><i class="fal fa-envelope"></i>
+                                info@goldours.co.za</a>
+                        </div>
+                        <div class="working-time">
+                            <p><i class="fal fa-clock"></i> Working: 8.00am - 5.00pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-xl-block d-none">
+                    <div class="right">
+                        <ul class="top-nav">
+                            <li><a href="{% url 'goldours_home:about-goldours' %}">About</a></li>
+                            <li><a href="{% url 'goldours_home:blogs' %}">News</a></li>
+                            <li><a href="{% url 'goldours_home:contact' %}">Contact</a></li>
+                        </ul>
+                        <ul class="social-wrapper-one">
+                            {% if facebook %}
+                            <li><a href="{{facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                            {% endif %}
+                            {% if twitter %}
+                            <li><a href="{{twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                            {% endif %}
+                            {% if instagram %}
+                            <li><a href="{{instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                            {% endif %}
+                            {% if linkedin %}
+                            <li><a href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                            {% endif %}
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-main-one bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <div class="thumbnail">
+                        <a href="{% url 'goldours_home:goldours-home' %}">
+                            <img src="{% static 'assets/images/logo/logo.jpg' %}" alt="Goldours-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class=" col-xl-9 col-lg-8 col-md-8 col-sm-8 col-8">
+                    <div class="main-header">
+                        <nav class="nav-main mainmenu-nav d-none d-xl-block">
+                            <ul class="mainmenu">
+                                <li><a class="nav-item active" href="{% url 'goldours_home:goldours-home' %}">Home</a></li>
+                                <li><a class="nav-item" href="{% url 'goldours_home:about-goldours' %}">About Us</a></li>
+                                <li class="has-droupdown">
+                                    <a class="nav-link" href="#">Services</a>
+                                    <ul class="submenu">
+                                
+                                        <li><a href="{% url 'goldours_home:all-services' %}">All Services</a></li>
+                                        <li><a href="{% url 'goldours_home:governance-and-direction' %}">Gorvenance & Direction</a></li>
+                                        <li><a href="{% url 'goldours_home:talent-management-and-development' %}">Talent Management & Development</a></li>
+                                        <li><a href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Systems, Reviews & Assurance</a></li>
+                                        <li><a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE Consulting & Training</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="nav-item" href="{% url 'goldours_home:blogs' %}">Blog</a></li>
+                                <li><a class="nav-item" href="{% url 'goldours_home:contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="button-area">
+
+                            <a href="{% url 'goldours_home:contact' %}" class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn">Get
+                                Quote</a>
+                            <button id="menu-btn" class="menu rts-btn btn-primary-alta ml--20 ml_sm--5">
+                                <img class="menu-dark" src="{% static 'assets/images/icon/menu.png' %}" alt="Menu-icon">
+                                <img class="menu-light" src="{% static 'assets/images/icon/menu-light.png' %}" alt="Menu-icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End header area -->
+
+<div id="side-bar" class="side-bar">
+    <button class="close-icon-menu"><i class="far fa-times"></i></button>
+    <!-- inner menu area desktop start -->
+    <div class="rts-sidebar-menu-desktop">
+        <a class="logo-1" href="{% url 'goldours_home:goldours-home' %}"><img class="logo" src="{% static 'assets/images/logo/logo.jpg' %}" alt="Goldours logo"></a>
+
+        <div class="body d-none d-xl-block">
+            <p class="disc">
+                We must explain to you how all seds this mistakens idea denouncing pleasures and praising account.
+            </p>
+            <div class="get-in-touch">
+                <!-- title -->
+                <div class="h6 title">Get In Touch</div>
+                <!-- title End -->
+                <div class="wrapper">
+                    <!-- single -->
+                    <div class="single">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0215259188">021 525 9188</a>
+                    </div>
+                    <!-- single ENd -->
+                    <!-- single -->
+                    <div class="single">
+                        <i class="fas fa-envelope"></i>
+                        <a href="emailto:info@goldours.co.za">info@goldours.co.za</a>
+                    </div>
+                    <!-- single ENd -->
+                    <!-- single -->
+                    <div class="single">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://goldours.co.za/">www.goldours.co.za</a>
+                    </div>
+                    <!-- single ENd -->
+                    <!-- single -->
+                    <div class="single">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="#">19 Edison Way, Century City, Cape Town, 7441</a>
+                    </div>
+                    <!-- single ENd -->
+                </div>
+                <div class="social-wrapper-two menu">
+                    
+                    {% if facebook %}
+                    <a href="{{facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    {% endif %}
+                    {% if twitter %}
+                    <a href="{{twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    {% endif %}
+                    {% if instagram %}
+                    <a href="{{instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    {% endif %}
+                    {% if linkedin %}
+                    <a href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    {% endif %}
+                    <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+            </div>
+        </div>
+        <div class="body-mobile d-block d-xl-none">
+            <nav class="nav-main mainmenu-nav">
+                <ul class="mainmenu">
+                    <li class="menu-item"><a class="menu-link" href="{% url 'goldours_home:goldours-home' %}">Home</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{% url 'goldours_home:about-goldours' %}">About Us</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{% url 'goldours_home:all-services' %}">Sevices</a></li>
+                    
+                    <li class="menu-item"><a class="menu-link" href="{% url 'goldours_home:blogs' %}">Blogs</a></li>
+
+                    <li class="menu-item menu-item"><a class="menu-link" href="{% url 'goldours_home:contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-wrapper-two menu mobile-menu">
+                {% if facebook %}
+                <a href="{{facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                {% endif %}
+                {% if twitter %}
+                <a href="{{twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                {% endif %}
+                {% if instagram %}
+                <a href="{{instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                {% endif %}
+                {% if linkedin %}
+                <a href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                {% endif %}
+                <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+            </div>
+            <a href="{% url 'goldours_home:contact' %}" class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btnmenu">Get Quote</a>
+        </div>
+    </div>
+    <!-- inner menu area desktop End -->
+</div>
+
+<div class="search-input-area">
+    <div class="container">
+        <div class="search-input-inner">
+            <div class="input-div">
+                <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
+                <button><i class="far fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
+</div>
+
+<div id="anywhere-home">
+</div>
+<!-- ENd Header Area -->

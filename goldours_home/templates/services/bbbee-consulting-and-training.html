@@ -1,0 +1,132 @@
+{% extends '_service.html' %}
+{% load static %}
+
+{% block seo %}
+<title>B-BBEE Consulting & Training</title>
+<meta name="description" content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Consulting & Training services.." />
+<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, B-BBEE strategy, B-BBEE Consulting, BBBEE Training, bbbee, black business empowerement, B-BBEE audit" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="B-BBEE Consulting & Training" />
+<meta property="og:description" content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Consulting & Training services.." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://goldours.co.za{% static 'assets/images/service/service-1.jpg' %}">
+{% endblock seo %}
+
+{% block service_title %}
+B-BBEE Consulting & Training
+{% endblock service_title %}
+
+{% block service_title_2 %}
+B-BBEE Consulting & Training
+{% endblock service_title_2 %}
+
+{% block service %}
+<div class="col-xl-8 col-md-12 col-sm-12 col-12">
+    <!-- service details left area start -->
+    <div class="service-detials-step-1">
+        <div class="thumbnail">
+            <img src="{% static 'assets/images/service/service-1.jpg' %}" alt="Photo by Jep Gambardella: https://www.pexels.com/photo/people-working-in-the-office-7689864/">
+        </div>
+        <h4 class="title">B-BBEE Consulting & Training</h4>
+        <p class="disc">
+            GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE
+            Consulting &
+            Training services.
+
+        </p>
+
+        <div class="row g-5 mt--30 mb--40">
+            <div class="col-lg-6">
+                <!-- single service details card -->
+                <div class="service-details-card">
+
+                    <div class="details">
+                        <h6 class="title">Strategy</h6>
+                        <p class="disc">We design customized B-BBEE strategies to help organizations achieve their
+                            desired score, integrate these efforts into
+                            overall business strategies, and implement actionable plans to drive measurable impact</p>
+                    </div>
+                </div>
+                <!-- single service details card End -->
+            </div>
+            <div class="col-lg-6">
+                <!-- single service details card -->
+                <div class="service-details-card">
+
+                    <div class="details">
+                        <h6 class="title">Implementation</h6>
+                        <p class="disc">Our team facilitates the execution of B-BBEE strategies through enterprise and
+                            supplier development programs, skills
+                            training, and in-house staff development to ensure lasting results.</p>
+                    </div>
+                </div>
+                <!-- single service details card End -->
+            </div>
+            <div class="col-lg-6">
+                <!-- single service details card -->
+                <div class="service-details-card">
+
+                    <div class="details">
+                        <h6 class="title">Reporting</h6>
+                        <p class="disc">We provide ongoing support with quarterly reports, B-BBEE audits, integrated
+                            annual reporting, and board meeting
+                            preparation to ensure your organization stays on track and meets its transformation goals..
+                        </p>
+                    </div>
+                </div>
+                <!-- single service details card End -->
+            </div>
+
+        </div>
+        <p class="disc">
+            GoldOurs is proud to have partnered with esteemed clients such as SM Tax, Kuhle Apha, Jade-Sky Project
+            Management,
+            Business Partner, and the College of Cape Town. With proven expertise and dedication, we are committed to
+            helping
+            businesses drive transformation and growth while leaving a positive societal impact.
+
+        </p>
+    </div>
+
+    <!-- service details left area end -->
+    <div class="service-detials-step-3 mt--70 mt_md--50">
+        <div class="row g-5 align-items-center">
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="thumbnail sm-thumb-service">
+                    <img src="{% static 'assets/images/service/sm-01.jpg' %}" alt="Service">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
+                <h4 class="title">Customer Benefits</h4>
+                <p class="disc">Our services enhance brand reputation, ensure legal compliance, and establish
+                    sustainable succession planning for
+                    internal and external services. By fostering inclusivity, we also contribute to reducing poverty and
+                    unemployment.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="rts-trusted-client mt--70 rts-section-gapBottom">
+        <div class="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title-area-client text-center">
+                        <p class="client-title">Our Clients</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="client-wrapper-one">
+                    <a href="#"><img src="{% static 'assets/images/clients/bbgi.png' %}" alt="BBGI logo"></a>
+                    <a href="#"><img src="{% static 'assets/images/clients/smtax.png' %}" alt="Fasset logo"></a>
+                    <a href="#"><img src="{% static 'assets/images/clients/kuhle-apha.jpg' %}" alt="Kuhle apha logo"></a>
+                    <a href="#"><img src="{% static 'assets/images/clients/jade-sky.jpg' %}" alt="jade sky logo"></a>
+                    <a href="#"><img src="{% static 'assets/images/clients/mediae.png' %}" class="bg-dark" alt="media eq logo"></a>
+                    <a href="#"><img src="{% static 'assets/images/clients/edge.svg' %}" alt="Edge Growth logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock service %}

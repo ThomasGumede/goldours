@@ -1,0 +1,201 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- start breadcrumb area -->
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Our Services</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
+                    <span> / </span>
+                    <a href="#" class="active">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb area -->
+
+
+<!-- our service area start -->
+<div class="rts-service-area rts-section-gapTop pb--200 service-two-bg bg_image">
+    <div class="container">
+        <div class="row g-5 justify-content-center align-items-center service padding-controler">
+            <!-- single service area -->
+            <div class="col-xl-4 col-md-6 col-sm-12 col-12 pb--140 pb_md--100">
+                <div class="service-two-inner">
+                    <a href="{% url 'goldours_home:governance-and-direction' %}" class="thumbnail"><img src="{% static 'assets/images/service/service-4.jpg' %}"
+                        alt="Photo by Anna Tarazevich: https://www.pexels.com/photo/leadership-lettering-text-on-black-background-5598284/"></a>
+                    <div class="body-content">
+                        <div class="hidden-area">
+                            <h5 class="title">Governance & Direction</h5>
+                            <p class="dsic">
+                                Strategic planning, risk management, and board training to drive organizational success.
+                            </p>
+                            <a class="rts-read-more-two color-primary" href="{% url 'goldours_home:governance-and-direction' %}">Read More<i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single service area end-->
+            <!-- single service area -->
+            <div class="col-xl-4 col-md-6 col-sm-12 col-12 pb--140 pb_md--100">
+                <div class="service-two-inner">
+                    <a href="{% url 'goldours_home:systems-reviews-and-assurance' %}" class="thumbnail two"><img src="{% static 'assets/images/service/service-3.jpg' %}"
+                            alt="Photo by Tima Miroshnichenko: https://www.pexels.com/photo/person-in-black-long-sleeve-polo-shirt-working-on-a-wooden-table-6694481/"></a>
+                    <div class="body-content">
+                        <div class="hidden-area">
+                            <h5 class="title">Systems, Reviews & Assurance</h5>
+                            <p class="dsic">
+                                Ensuring business continuity, compliance, and reliable financial reporting.
+                            </p>
+                            <a class="rts-read-more-two color-primary" href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Read More<i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single service area end-->
+            <!-- single service area -->
+            <div class="col-xl-4 col-md-6 col-sm-12 col-12 pb--140 pb_md--100">
+                <div class="service-two-inner">
+                    <a href="{% url 'goldours_home:bbbee-consulting-and-training' %}" class="thumbnail three"><img src="{% static 'assets/images/service/service-1.jpg' %}"
+                            alt="Photo by Jep Gambardella: https://www.pexels.com/photo/people-working-in-the-office-7689864/"></a>
+                    <div class="body-content">
+                        <div class="hidden-area">
+                            <h5 class="title">B-BBEE Consulting & Training</h5>
+                            <p class="dsic">
+                                Supporting strategy development, implementation, and B-BBEE audit processes.
+                            </p>
+                            <a class="rts-read-more-two color-primary" href="{% url 'goldours_home:bbbee-consulting-and-training' %}">Read More<i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single service area end-->
+            <!-- single service area -->
+            <div class="col-xl-4 col-md-6 col-sm-12 col-12 pb--140 pb_md--100">
+                <div class="service-two-inner">
+                    <a href="{% url 'goldours_home:talent-management-and-development' %}" class="thumbnail four"><img src="{% static 'assets/images/service/service-2.jpg' %}"
+                            alt="Photo by Christina Morillo: https://www.pexels.com/photo/group-of-people-talking-to-each-other-in-front-of-brown-wooden-table-1181360/"></a>
+                    <div class="body-content">
+                        <div class="hidden-area">
+                            <h5 class="title">Talent Management & Development</h5>
+                            <p class="dsic">
+                                Building leadership skills, managing performance, and fostering organizational growth.
+                            </p>
+                            <a class="rts-read-more-two color-primary" href="{% url 'goldours_home:talent-management-and-development' %}">Read More<i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single service area end-->
+
+        </div>
+    </div>
+</div>
+<!-- our service area end -->
+
+<!-- service accordion area -->
+<div class="rts-accordion-area service rts-section-gap">
+    <div class="accordion-service-bg bg_image ptb--120 ptb_md--80 ptb_sm--60">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="accordion-service-inner">
+                        <div class="title-area-start">
+                            <span class="sub color-primary">WHY CHOOSE US?</span>
+                            <h2 class="title">Why GoldOurs? Your Partner in Excellence</h2>
+                        </div>
+                        <div class="accordion-area">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Our Purpose
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Partnering with individuals and organizations to achieve long-term visions
+                                            through strategic decision-making and
+                                            goal-oriented services.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Our Vision
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            To be globally renowned for assisting leaders and institutions in achieving
+                                            their optimal potential.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Our core values
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Our core values center on treasuring people—employees, clients, and
+                                            partners—while fostering joy, peace, and integrity
+                                            in every interaction. We honor commitments with prompt delivery, uphold
+                                            trust, and embrace continuous growth through
+                                            lifelong learning and improvement.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Expert Minds, Exceptional Results
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Our team of seasoned professionals brings years of expertise and a passion
+                                            for excellence, ensuring tailored solutions
+                                            that drive success and transformation.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- service accordion area End -->
+
+{% endblock content %}
