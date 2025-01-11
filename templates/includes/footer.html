@@ -17,7 +17,7 @@
                     <div class="quick-link-inner">
                         <ul class="links">
                             <li><a href="{% url 'goldours_home:goldours-home' %}"><i class="far fa-arrow-right"></i> Home</a></li>
-                            <li><a href="projects.html"><i class="far fa-arrow-right"></i> Projects</a></li>
+                            <!-- <li><a href="projects.html"><i class="far fa-arrow-right"></i> Projects</a></li> -->
                             <li><a href="{% url 'goldours_home:contact' %}"><i class="far fa-arrow-right"></i> Contact Us</a></li>
 
                             <li><a href="#"><i class="far fa-arrow-right"></i> Privacy Policy</a></li>
@@ -67,37 +67,23 @@
                     </div>
                     <div class="post-wrapper">
                         <!-- single post -->
+                         {% for post in footerposts %}
                         <div class="single-footer-post mb--30">
                             <div class="left-thumbnail">
-                                <img src="{% static 'assets/images/footer/post/01.png' %}" alt="Goldours_business-post">
+                                <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
                             </div>
                             <div class="post-right">
-                                <p> <i class="fal fa-clock"></i> 1st Jan, 2025</p>
-                                <a href="blog-details.html">
-                                    <h6 class="title">Best Business Ideas For
-                                        Getting Solution</h6>
+                                <p> <i class="fal fa-clock"></i> {{post.created|date:"b d, Y"}}</p>
+                                <a href="{% url 'goldours_home:details-blog' post.slug %}">
+                                    <h6 class="title">{{post.title}}</h6>
                                 </a>
-                                <a class="red-more" href="blog-details.html">Read More<i
+                                <a class="red-more" href="{% url 'goldours_home:details-blog' post.slug %}">Read More<i
                                         class="far fa-arrow-right"></i></a>
                             </div>
                         </div>
+                        {% endfor %}
                         <!-- single post End -->
-                        <!-- single post -->
-                        <div class="single-footer-post">
-                            <div class="left-thumbnail">
-                                <img src="{% static 'assets/images/footer/post/02.png' %}" alt="Goldours_business-post">
-                            </div>
-                            <div class="post-right">
-                                <p> <i class="fal fa-clock"></i> 1st Jan, 2025</p>
-                                <a href="blog-details.html">
-                                    <h6 class="title">Best Business Ideas For
-                                        Getting Solution</h6>
-                                </a>
-                                <a class="red-more" href="blog-details.html">Read More<i
-                                        class="far fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- single post End -->
+                        
                     </div>
                 </div>
             </div>

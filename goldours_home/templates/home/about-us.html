@@ -1,6 +1,44 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block seo %}
+<title>About Us - GoldOurs</title>
+<meta name="description"
+    content="Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals through governance, leadership, and talent development." />
+<meta name="keywords"
+    content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="About Us - GoldOurs" />
+<meta property="og:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://goldours.co.za{% static 'assets/images/logo/logo-2.png' %}">
+
+<script type="application/ld+json">
+        {
+                "@context": "https://schema.org",
+                    "@type": "WebPage",
+                        "name": "About Us - GoldOurs",
+                            "description": "Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals.",
+                                "url": "https://www.goldours.com/about-us",
+                                    "mainEntity": {
+                    "@type": "Organization",
+                        "name": "GoldOurs",
+                            "mission": "To empower individuals and organizations to achieve sustainable growth and transformation.",
+                                "vision": "To be world-renowned for unearthing the optimal value of institutions and leaders.",
+                                    "values": [
+                                        "People are treasure",
+                                        "Pursue joy and protect peace",
+                                        "Honor commitments",
+                                        "Grow always"
+                                    ]
+                }
+            }
+
+    </script>
+{% endblock seo %}
+
 {% block content %}
 
 <!-- start breadcrumb area -->
@@ -31,16 +69,7 @@
                     <div class="image-area">
                         <img class="mt--110 img-1" src="{% static 'assets/images/about/main/about-03.jpg' %}" alt="BUsiness_image">
                         <img class="img-over" src="{% static 'assets/images/about/main/about-04.jpg' %}" alt="BUsiness_image">
-                        <div class="goal-button-wrapper">
-                            <div class="vedio-icone">
-                                <a id="play-video" class="video-play-button" href="#">
-                                    <span></span>
-                                </a>
-                                <div id="video-overlay" class="video-overlay">
-                                    <a class="video-overlay-close">x</a>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -290,105 +319,59 @@
     </div>
 </div>
 
-<!-- rts team two area -->
-<div class="rts-team-area rts-section-gap bg-team">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="rts-title-area team text-center">
-                    <p class="pre-title">
-                        Professionals Team
-                    </p>
-                    <h2 class="title">Professionals Team</h2>
+<div class="rts-feature-area rts-section-gap">
+    <div class="container-fluid padding-controler plr--120">
+        <div class="row bg-white-feature  pt--120 pb--120">
+            <div class="col-xl-6 col-lg-12">
+                <div class="feature-left-area">
+                    <img src="{% static 'assets/images/feature/01.png' %}" alt="">
                 </div>
             </div>
-        </div>
-        <div class="row g-5 mt--0">
+            <div class="col-xl-6 col-lg-12">
+                <div class="rts-title-area feature text-start pl--30 pl_sm--0">
+                    <p class="pre-title">
+                        Our Team
+                    </p>
+                    <h2 class="title feature-title">We bring fresh insights to shape your future.</h2>
+                    <p>
 
-            <div class="swiper mySwiperh1_team">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="team-single-one-start">
-                            <div class="team-image-area">
-                                <a href="team-details.html">
-                                    <img src="{% static 'assets/images/team/tm/01.jpg' %}" alt="Business_Team_single">
-                                    <div class="team-social">
-                                        <div class="main">
-                                            <i class="fal fa-plus"></i>
-                                        </div>
-                                        <div class="team-social-one">
-                                            <i class="fab fa-youtube"></i>
-                                            <i class="fab fa-twitter"></i>
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="single-details">
-                                <a href="team-details.html">
-                                    <h5 class="title">Mr. Sazi Ndwandwa CA(SA)</h5>
-                                </a>
-                                <p>Director: Training and Coaching</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-single-one-start">
-                            <div class="team-image-area">
-                                <a href="team-details.html">
-                                    <img src="{% static 'assets/images/team/tm/02.jpg' %}" alt="Business_Team_single">
-                                    <div class="team-social">
-                                        <div class="main">
-                                            <i class="fal fa-plus"></i>
-                                        </div>
-                                        <div class="team-social-one">
-                                            <i class="fab fa-youtube"></i>
-                                            <i class="fab fa-twitter"></i>
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="single-details">
-                                <a href="team-details.html">
-                                    <h5 class="title">Mr. Lwandile Fatuse</h5>
-                                </a>
-                                <p>Executive Officer: Accounting and Tax</p>
-                            </div>
-                        </div>
-                    </div>
+                        At GoldOurs, our team is the cornerstone of our success, bringing together over 20 seasoned
+                        professionals with diverse
+                        expertise across all <a href="{% url 'goldours_home:all-services' %}"><strong>our
+                                services</strong></a>. With an average of 15+ years
+                        in private and public sectors and affiliations with esteemed bodies such as SAICA, COMENSA,
+                        IODSA, and IRBA, our team
+                        combines practical experience, academic excellence, and innovative thinking. Armed with advanced
+                        qualifications,
+                        including MBAs, PhDs, and Chartered Accountancy credentials, we are dedicated to empowering
+                        organizations with
+                        strategies, compliance solutions, and leadership development that drive sustainable growth and
+                        transformation.</p>
 
-                    <div class="swiper-slide">
-                        <div class="team-single-one-start">
-                            <div class="team-image-area">
-                                <a href="team-details.html">
-                                    <img src="{% static 'assets/images/team/tm/03.jpg' %}" alt="Business_Team_single">
-                                    <div class="team-social">
-                                        <div class="main">
-                                            <i class="fal fa-plus"></i>
-                                        </div>
-                                        <div class="team-social-one">
-                                            <i class="fab fa-youtube"></i>
-                                            <i class="fab fa-twitter"></i>
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="single-details">
-                                <a href="team-details.html">
-                                    <h5 class="title">Mr. Wandile Mnyaka</h5>
-                                </a>
-                                <p>Executive Officer: Governance and Strategy</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
+                <!-- <div class="feature-one-wrapper pl--30 mt--40 pl_sm--0">
+                    <div class="single-feature-one">
+                        <i class="fal fa-check"></i>
+                        <p>Fast Growing Sells</p>
+                    </div>
+                    <div class="single-feature-one">
+                        <i class="fal fa-check"></i>
+                        <p>24/7 Quality Services</p>
+                    </div>
+                    <div class="single-feature-one">
+                        <i class="fal fa-check"></i>
+                        <p>Expert Members</p>
+                    </div>
+                    <div class="single-feature-one">
+                        <i class="fal fa-check"></i>
+                        <p>Best Quality Services</p>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
-<!-- rts team two area End -->
 
 <!-- rts faq section area -->
 <div class="rts-faq-section rts-section-gap rts-faq-bg bg_image">

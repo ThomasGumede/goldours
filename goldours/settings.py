@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os, re
 from pathlib import Path
 from decouple import config, Csv
+from .logging_config import *
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ LOGIN_URL = 'accounts:login'
 SECRET_KEY = config('SECRET', 'django-insecure-^o8sk%36a@45k##tsmt!d4q917m7$azq223#w29h@79-$ufo4+')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -49,6 +50,9 @@ NPM_BIN_PATH = "/usr/bin/npm"
 INTERNAL_IPS = [
     "127.0.0.1", '0.0.0.0'
 ]
+PASSWORD_RESET_TIMEOUT = 14400
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880 # 5MB
 
 # Application definition
 
@@ -101,17 +105,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'goldours.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -149,15 +142,54 @@ STATICFILES_FINDERS = [
 ]
 
 if DEBUG:
-
+    ALLOWED_HOSTS = []
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+    
     STATIC_URL = 'static/'
     STATICFILES_DIRS = [
         BASE_DIR / 'static'
     ]
     STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+    
 else:
+    ALLOWED_HOSTS = ['ndwandwa.africa', 'www.ndwandwa.africa', 'localhost']
+    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://ndwandwa.africa', 'https://www.ndwandwa.africa']
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    X_FRAME_OPTIONS = "SAMEORIGIN"
+    
+
+    # SSL SETTINGS
+    
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'goldoursdb',
+            'USER': config("DB_USER"),
+            'PASSWORD': config("DB_PASSWORD"),
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+    
+    
+    
     STATIC_URL = 'static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    
+    SILENCED_SYSTEM_CHECKS = ['security.W019']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -166,10 +198,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'technical@bbgi.co.za'
+EMAIL_HOST_USER = 'noreply@siyazalana.org'
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = 'noreply@bbgi.co.za'
+DEFAULT_FROM_EMAIL = 'noreply@siyazalana.org'

@@ -1,7 +1,7 @@
 from django.contrib.sites.shortcuts import get_current_site
 from django.conf import settings
 from accounts.utilities.company import COMPANY
-from goldours_home.models import BlogCategory
+from goldours_home.models import BlogCategory, Blog
 
 def global_context(request):
     PROTOCOL = "https" if request.is_secure() else "http"
@@ -10,6 +10,7 @@ def global_context(request):
     context = {
         'domain' : DOMAIN,
         'protocol': PROTOCOL,
+        'footerposts': Blog.objects.order_by("-created")[:2],
         "blog_categories": BlogCategory.objects.all(),
         "facebook": COMPANY["facebook"],
         "instagram": COMPANY["instagram"],
