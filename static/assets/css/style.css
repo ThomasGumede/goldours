@@ -25416,8 +25416,20 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   width: 100%;
 }
 
+.radius-20 {
+  border-radius: 20px;
+}
+
+.thumbnail-gallery {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 450px;
+}
+
 .thumbnail-gallery img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
   margin-top: -5px;
 }
 

@@ -12,7 +12,7 @@
     content="{{post.description}}" />
 <meta property="og:url" content="https://goldours.co.za/blog" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}"/>
+<meta property="og:image" content="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}"/>
 {% endblock seo %}
 
 {% block content %}
@@ -45,7 +45,7 @@
                 <!-- single post -->
                 <div class="blog-single-post-listing details mb--0">
                     <div class="thumbnail">
-                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}" alt="{{post.title}}">
+                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
                     </div>
                     <div class="blog-listing-content">
                         <div class="user-info">
@@ -153,7 +153,7 @@
                          {% for post in recent_posts %}
                         <div class="recent-post-single">
                             <div class="thumbnail">
-                                <a href="{% url 'goldours_home:details-blog' post.slug %}"><img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}"
+                                <a href="{% url 'goldours_home:details-blog' post.slug %}"><img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}"
                                         alt="{{post.tilte}}"></a>
                             </div>
                             <div class="content-area">

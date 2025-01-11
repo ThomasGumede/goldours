@@ -101,13 +101,14 @@
                         <img src="{% static 'assets/images/service/icon/01.svg' %}" alt="Goldours_service">
                     </div>
                     <div class="service-details">
-                        <a href="service-details.html">
+                        <a href="{% url 'goldours_home:governance-and-direction' %}">
                             <h5 class="title">Governance & direction</h5>
                         </a>
                         <p class="disc">
                             Strategic planning, risk management, and board training to drive organizational success.
                         </p>
-                        <a class="rts-read-more btn-primary" href="service-details.html"><i
+                        <a class="rts-read-more btn-primary"
+                            href="{% url 'goldours_home:governance-and-direction' %}"><i
                                 class="far fa-arrow-right"></i>Read
                             More</a>
                     </div>
@@ -121,13 +122,14 @@
                         <img src="{% static 'assets/images/service/icon/04.svg' %}" alt="Goldours_service">
                     </div>
                     <div class="service-details">
-                        <a href="service-details.html">
+                        <a href="{% url 'goldours_home:talent-management-and-development' %}">
                             <h5 class="title">Talent Management & Development</h5>
                         </a>
                         <p class="disc">
                             Building leadership skills, managing performance, and fostering organizational growth.
                         </p>
-                        <a class="rts-read-more btn-primary" href="service-details.html"><i
+                        <a class="rts-read-more btn-primary"
+                            href="{% url 'goldours_home:talent-management-and-development' %}"><i
                                 class="far fa-arrow-right"></i>Read
                             More</a>
                     </div>
@@ -141,14 +143,15 @@
                         <img src="{% static 'assets/images/service/icon/03.svg' %}" alt="Goldours_service">
                     </div>
                     <div class="service-details">
-                        <a href="service-details.html">
+                        <a href="{% url 'goldours_home:systems-reviews-and-assurance' %}">
                             <h5 class="title">Systems, Reviews & Assurance</h5>
                         </a>
                         <p class="disc">
                             Ensuring business continuity, compliance, and reliable financial reporting.
 
                         </p>
-                        <a class="rts-read-more btn-primary" href="service-details.html"><i
+                        <a class="rts-read-more btn-primary"
+                            href="{% url 'goldours_home:systems-reviews-and-assurance' %}"><i
                                 class="far fa-arrow-right"></i>Read
                             More</a>
                     </div>
@@ -162,13 +165,14 @@
                         <img src="{% static 'assets/images/service/icon/06.svg' %}" alt="Goldours_service">
                     </div>
                     <div class="service-details">
-                        <a href="service-details.html">
+                        <a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">
                             <h5 class="title">B-BBEE Consulting & Training</h5>
                         </a>
                         <p class="disc">
                             Supporting strategy development, implementation, and B-BBEE audit processes.
                         </p>
-                        <a class="rts-read-more btn-primary" href="service-details.html"><i
+                        <a class="rts-read-more btn-primary"
+                            href="{% url 'goldours_home:bbbee-consulting-and-training' %}"><i
                                 class="far fa-arrow-right"></i>Read
                             More</a>
                     </div>
@@ -178,7 +182,19 @@
 
             <!-- end single Services -->
         </div>
-
+        <div class="row">
+            <div class="cta-one-bg col-12">
+                <div class="cta-one-inner">
+                    <div class="cta-left">
+                        <h3 class="title">Let's discuss about how we can help
+                            make your business better</h3>
+                    </div>
+                    <div class="cta-right">
+                        <a class="rts-btn btn-white" href="{% url 'goldours_home:contact' %}">Lets Work Together</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- rts services area End -->
@@ -469,7 +485,7 @@
                 <div class="testimopnial-wrapper-two">
                     <div class="test-header">
                         <div class="thumbnail">
-                            <img src="{% static 'assets/images/testimonials/02.png' %}" alt="Mazana Security Services">
+                            <img src="{% static 'assets/images/R.png' %}" alt="Mazana Security Services">
                         </div>
                         <div class="name-desig">
                             <h5 class="title">Mazana Security Services</h5>

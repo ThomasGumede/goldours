@@ -1,10 +1,10 @@
 (function ($) {
     'use strict';
     // Get the form.
-    var form = $('#contact-form');
+    var form = $('#contact-form3');
 
     // Get the messages div.
-    var formMessages = $('#form-messages');
+    var formMessages = $('#form-messages3');
 
     // Set up an event listener for the contact form.
     $(form).submit(function (e) {

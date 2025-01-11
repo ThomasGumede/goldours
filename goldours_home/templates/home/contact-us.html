@@ -122,19 +122,24 @@
                         <p class="pre-title">
                             Get In Touch
                         </p>
-                        <h2 class="title">Needs Help? Let’s Get in Touch</h2>
+                        <h2 class="title">Needs Help? Let's Get in Touch</h2>
                     </div>
                     <div class="form-wrapper">
                         <div id="form-messages"></div>
-                        <form id="contact-form" action="https://reactheme.com/products/html/Goldours/mailer.php"
+                        <form id="contact-form" action="{% url 'goldours_home:contact' %}"
                             method="post">
+                            {% csrf_token %}
                             <div class="name-email">
-                                <input type="text" name="name" placeholder="Your Name" required>
-                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="text" placeholder="Your Name" name="name" required>
+                                <input type="email" placeholder="Email Address" name="from_email" required>
                             </div>
-                            <input type="text" name="subject" placeholder="Your Subject">
+                            <div class="name-email">
+                                <input type="tel" placeholder="Your Number" name="phone" required>
+                                <input type="text" placeholder="Business Topic" name="subject" required>
+                            </div>
+                            
                             <textarea placeholder="Type Your Message" name="message"></textarea>
-                            <button type="submit" class="rts-btn btn-primary">Send Message</button>
+                            <button type="submit" class="rts-btn btn-primary">Submit Message</button>
                         </form>
                     </div>
                 </div>

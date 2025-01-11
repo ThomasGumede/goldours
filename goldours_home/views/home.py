@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth import get_user_model
-
+from django.http import JsonResponse
 from goldours_home.forms import EmailForm, SearchForm
 from goldours_home.models import Blog, Member
 from goldours_home.tasks import send_email_to_admin
@@ -31,6 +31,24 @@ def contact(request):
             for err in form.errors:
                 messages.error(request, f"{err}")
                 return render(request, "home/contact-us.html", {"form": form})
+            
+    form = EmailForm()
+    return render(request, "home/contact-us.html", {"form": form})
+
+def contact_ajax(request):
+    if request.method == 'POST':
+        try:
+            form = EmailForm(request.POST)
+            if form.is_valid():
+                form.save()
+                send_email_to_admin(form.cleaned_data["subject"], form.cleaned_data["message"], form.cleaned_data["from_email"], form.cleaned_data["name"])
+                messages.success(request, "We have successfully receive your email, will be in touch shortly")
+                return JsonResponse({"success": True, "message": "We have successfully receive your email, will be in touch shortly"}, status=200)
+            else:
+                messages.error(request, "Something went wrong, please fix errors below")
+                return JsonResponse({"success": True, "message": "Something went wrong, we couldn' receive your email"}, status=200)
+        except Exception as ex:
+            return JsonResponse({"success": True, "message": "Something went wrong, we couldn' receive your email"}, status=500)
             
     form = EmailForm()
     return render(request, "home/contact-us.html", {"form": form})

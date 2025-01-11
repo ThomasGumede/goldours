@@ -45,7 +45,7 @@
                 {% for post in posts %}
                 <div class="blog-single-post-listing">
                     <div class="thumbnail">
-                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/blog-lg-1.jpg' %}{% endif %}" alt="Business-Blog">
+                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="Business-Blog">
                     </div>
                     <div class="blog-listing-content">
                         <div class="user-info">
@@ -81,8 +81,8 @@
                 <!-- single post End-->
                 
 
-                <!-- pagination area -->
-                <div class="row">
+                
+                <!-- <div class="row">
                     <div class="col-12">
                         <div class="text-center">
                             <div class="pagination">
@@ -94,8 +94,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- pagination area End -->
+                </div> -->
+                
             </div>
             <!-- rts-blog post end area -->
             <!--rts blog wized area -->
@@ -108,10 +108,10 @@
                         </h5>
                     </div>
                     <div class="wized-body">
-                        <div class="rts-search-wrapper">
+                        <form class="rts-search-wrapper" action="{% url 'goldours_home:blogs' %}">
                             <input class="Search" type="text" placeholder="Enter Keyword">
                             <button><i class="fal fa-search"></i></button>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <!-- single wized End -->
@@ -123,138 +123,17 @@
                         </h5>
                     </div>
                     <div class="wized-body">
+                        {% for category in blog_categories %}
                         <!-- single categoris -->
                         <ul class="single-categories">
-                            <li><a href="#">Business Solution <i class="far fa-long-arrow-right"></i></a></li>
+                            <li><a href="{% url 'goldours_home:blogs-by-category' category.slug %}">{{category.label}} <i
+                                        class="far fa-long-arrow-right"></i></a></li>
                         </ul>
-                        <!-- single categoris End -->
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="#">Solution Model<i class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        <!-- single categoris End -->
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="#">More Business <i class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        <!-- single categoris End -->
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="#">Goldours Solution <i class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        <!-- single categoris End -->
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="#">Consulting Busiuness<i class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        <!-- single categoris End -->
+                        {% endfor %}
+                        
                     </div>
                 </div>
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized Recent-post">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Recent Posts
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <!-- recent-post -->
-                        <div class="recent-post-single">
-                            <div class="thumbnail">
-                                <a href="#"><img src="{% static 'assets/images/blog/details/recent-post/01.png' %}"
-                                        alt="Blog_post"></a>
-                            </div>
-                            <div class="content-area">
-                                <div class="user">
-                                    <i class="fal fa-clock"></i>
-                                    <span>15 Jan, 2023</span>
-                                </div>
-                                <a class="post-title" href="#">
-                                    <h6 class="title">We would love to share a similar experience</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- recent-post End -->
-                        <!-- recent-post -->
-                        <div class="recent-post-single">
-                            <div class="thumbnail">
-                                <a href="#"><img src="{% static 'assets/images/blog/details/recent-post/02.png' %}"
-                                        alt="Blog_post"></a>
-                            </div>
-                            <div class="content-area">
-                                <div class="user">
-                                    <i class="fal fa-clock"></i>
-                                    <span>15 Jan, 2023</span>
-                                </div>
-                                <a class="post-title" href="#">
-                                    <h6 class="title">We would love to share a similar experience</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- recent-post End -->
-                        <!-- recent-post -->
-                        <div class="recent-post-single">
-                            <div class="thumbnail">
-                                <a href="#"><img src="{% static 'assets/images/blog/details/recent-post/03.png' %}"
-                                        alt="Blog_post"></a>
-                            </div>
-                            <div class="content-area">
-                                <div class="user">
-                                    <i class="fal fa-clock"></i>
-                                    <span>15 Jan, 2023</span>
-                                </div>
-                                <a class="post-title" href="#">
-                                    <h6 class="title">We would love to share a similar experience</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- recent-post End -->
-
-                    </div>
-                </div>
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized Recent-post">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Recent Posts
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <div class="gallery-inner">
-                            <div class="row-1 single-row">
-                                <a href="#"><img src="{% static 'assets/images/blog/details/gallery/01.png' %}" alt="Gallery"></a>
-                                <a href="#"><img src="{% static 'assets/images/blog/details/gallery/02.png' %}" alt="Gallery"></a>
-                                <a href="#"><img src="{% static 'assets/images/blog/details/gallery/03.png' %}" alt="Gallery"></a>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Popular Tags
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <div class="tags-wrapper">
-                            <a href="#">Services</a>
-                            <a href="#">Business</a>
-                            <a href="#">Growth</a>
-                            <a href="#">Finance</a>
-                            <a href="#">UI/UX Design</a>
-                            <a href="#">Solution</a>
-                            <a href="#">Speed</a>
-                            <a href="#">Strategy</a>
-                            <a href="#">Technology</a>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- single wized End -->
                 <!-- single wized start -->
                 <div class="rts-single-wized contact">
