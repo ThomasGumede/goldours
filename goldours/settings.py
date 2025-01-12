@@ -158,8 +158,8 @@ if DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
     
 else:
-    ALLOWED_HOSTS = ['ndwandwa.africa', 'www.ndwandwa.africa', 'localhost']
-    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://ndwandwa.africa', 'https://www.ndwandwa.africa']
+    ALLOWED_HOSTS = ['bbgi.africa', 'www.bbgi.africa', 'localhost']
+    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://bbgi.africa', 'https://www.bbgi.africa']
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     X_FRAME_OPTIONS = "SAMEORIGIN"
     
