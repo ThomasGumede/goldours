@@ -11106,6 +11106,9 @@ body {
   display: block;
   overflow: hidden;
   border-radius: 50%;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
   margin-right: 16px;
 }
 .about-founder-wrapper .author-inner a.thumbnail img {
