@@ -12,7 +12,7 @@
     content="Explore GoldOurs' latest articles and insights to empower your business and career." />
 <meta property="og:url" content="{{ request.build_absolute_uri }}" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://goldours.co.za{% static 'assets/images/logo/logo-2.png' %}">
+<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
 {% endblock seo %}
 
 {% block content %}

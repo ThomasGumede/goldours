@@ -16,13 +16,11 @@ def global_context(request):
         "instagram": COMPANY["instagram"],
         "linkedin": COMPANY["linkedin"],
         # "youtube": COMPANY["youtube"],
-        # "tiktok": COMPANY["tiktok"],
-        "company_support": COMPANY["phone"],
-        "company_support_mail": COMPANY["company_support_mail"], 
+        "twitter": COMPANY["twitter"],
+        "number": COMPANY["phone"],
+        "emailinfo": COMPANY["company_support_mail"], 
         "address": COMPANY["address"],
-        "company_city": COMPANY["company_city"],
-        "company_state": COMPANY["company_state"],
-        "company_zipcode": COMPANY["company_zipcode"],
+        
         "vision": COMPANY["vision"],
         "mission": COMPANY["mission"],
         'GOOGLE_ANALYTICS_MEASUREMENT_ID': getattr(settings, 'GOOGLE_ANALYTICS_MEASUREMENT_ID', None)

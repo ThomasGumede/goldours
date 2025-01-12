@@ -10,6 +10,8 @@ from django.db.models.signals import pre_delete, post_save
 from accounts.utilities.abstracts import AbstractCreate, AbstractProfile
 from accounts.utilities.choices import TITLE_CHOICES, RoleChoice
 from accounts.utilities.file_handlers import handle_profile_upload
+from accounts.utilities.validators import validate_fcbk_link, validate_in_link, validate_insta_link, validate_twitter_link, verify_rsa_phone
+PHONE_VALIDATOR = verify_rsa_phone()
 
 class Account(AbstractUser, AbstractProfile):
     profile_image = models.ImageField(help_text=_("Upload profile image"), upload_to=handle_profile_upload, null=True, blank=True)
@@ -42,11 +44,19 @@ class Account(AbstractUser, AbstractProfile):
     def get_absolute_url(self):
         return reverse("accounts:user-details", kwargs={"username": self.username})
 
-class AboutCompany(AbstractCreate, AbstractProfile):
+class AboutCompany(AbstractCreate):
     title = models.CharField(max_length=300, null=True, blank=True, unique=True)
     slogan = models.CharField(max_length=300, null=True, blank=True, unique=True)
-    # vision = models.CharField(max_length=300, null=True, blank=True, unique=True)
     slug = models.SlugField(max_length=300, default="about-goldours-model", unique=True)
+    address = models.CharField(max_length=300, null=True, blank=True, unique=True, help_text="Add company main address e.g Central park, KZN, 7441")
+    address_coordinates = models.CharField(max_length=300, null=True, blank=True, help_text="Add company main address coordinates separated by comma e.g 10.00,12.66")
+
+    phone = models.CharField(help_text=_("Enter telephone number"), max_length=15, validators=[PHONE_VALIDATOR], unique=True, null=True, blank=True)
+    alternate_phone = models.CharField(help_text=_("Enter other telephone number"), max_length=15, validators=[PHONE_VALIDATOR], unique=True, null=True, blank=True)
+    facebook = models.URLField(validators=[validate_fcbk_link], blank=True, null=True, help_text=_("Enter facebook link e.g https://www.facebook.com/profile"))
+    twitter = models.URLField(validators=[validate_twitter_link], blank=True, null=True, help_text=_("Enter twitter link e.g https://www.twitter.com/profile"))
+    instagram = models.URLField(validators=[validate_insta_link], blank=True, null=True, help_text=_("Enter instagram link e.g https://www.instagram.com/profile"))
+    linkedIn = models.URLField(validators=[validate_in_link], blank=True, null=True, help_text=_("Enter linkedin link e.g https://www.linkedin.com/profile"))
     email = models.EmailField(null=True, blank=True)
     small_description = models.TextField(null=True, blank=True)
     vision = models.TextField(blank=True, null=True, unique=True)

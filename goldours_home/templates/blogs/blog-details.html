@@ -6,13 +6,13 @@
 <meta name="description"
     content="{{post.description}}" />
 <meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, {{post.title}}, {{post.category.label}}" />
-<link rel="canonical" href="https://goldours.co.za/blog" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
 <meta property="og:title" content="{{post.title}}" />
 <meta property="og:description"
     content="{{post.description}}" />
-<meta property="og:url" content="https://goldours.co.za/blog" />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}"/>
+<meta property="og:image" content="{% if post.image %}{{post.image.url}}{% else %}{{request.scheme}}://{{request.get_host}}{% static 'assets/images/no-image.png' %}{% endif %}"/>
 {% endblock seo %}
 
 {% block content %}

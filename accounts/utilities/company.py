@@ -5,17 +5,15 @@ try:
     company = AboutCompany.objects.get(slug="about-goldours-model")
     COMPANY = {
         "facebook": company.facebook,
-        # "tiktok": "https://wwww.tiktok.com/@BBGInitiative",
+        "twitter": company.twitter,
         "instagram": company.instagram,
         "linkedin": company.linkedIn,
         "website": "https://goldours.co.za",
         "company_support_mail": company.email,
         "phone": company.phone,
+        "other_phone": company.alternate_phone,
         # "youtube": "https://www.youtube.com/@blackbusinessgrowthinitiat6153",
-        "address": f"{company.city}, {company.province}, {company.zipcode}, RSA", 
-        "company_city": company.city,
-        "company_state": company.province,
-        "company_zipcode": company.zipcode,
+        "address": company.address,
         "vision": company.vision,
         "mission": company.mission
 
@@ -24,25 +22,18 @@ except:
 
     COMPANY = {
         "facebook": None,
-        # "tiktok": None,
+        "tiktok": None,
         "instagram": None,
         "linkedin": None,
         "website": "https://goldours.co.za",
         "company_support_mail": "info@goldours.co.za",
-        "phone": "021 830 5415",
+        "phone": "	+27 79 213 1566",
+        "other_phone": '+27 21 525 9188',
         # "youtube": "https://www.youtube.com/@blackbusinessgrowthinitiat6153",
         "address": "Cape Town, 7441, RSA",
-        "company_city": "COMPANY.city",
-        "company_state": "COMPANY.province",
-        "company_zipcode": "zipcode",
-        "vision": """To become the leading platform that unites and empowers Black African entrepreneurs and professionals, fostering a
-                        thriving, collaborative community that drives economic growth, innovation, and sustainable success across
-                        South Africa and beyond.""",
-        "mission": """
-        Our mission is to support and promote the growth of Black African businesses and careers by providing a platform to
-                        showcase expertise, facilitating impactful networking opportunities, delivering business education and mentorship,
-                        fostering unity and collaboration, and driving initiatives that empower and sustain Black-owned businesses.
-        """
+    
+        "vision": None,
+        "mission": None
 
     }
 
