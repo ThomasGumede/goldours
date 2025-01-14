@@ -127,8 +127,7 @@
                     </div>
                     <div class="form-wrapper">
                         <div id="form-messages"></div>
-                        <form id="contact-form" action="{% url 'goldours_home:contact' %}"
-                            method="post">
+                        <form id="contact-form-" method="post">
                             {% csrf_token %}
                             <div class="name-email">
                                 <input type="text" placeholder="Your Name" name="name" required>
