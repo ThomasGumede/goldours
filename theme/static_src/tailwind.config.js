@@ -44,7 +44,29 @@ module.exports = {
     ],
     theme: {
         extend: {},
-    },
+        screens: {
+            xs: "480px",
+
+            sm: "576px",
+            // => @media (min-width: 730px) { ... }
+
+            md: "768px",
+            // => @media (min-width: 1024px) { ... }
+
+            lg: "992px",
+            // => @media (min-width: 1204px) { ... }
+
+            xl: "1200px",
+            // => @media (min-width: 1440pxpx) { ... }
+
+            xxl: "1300px",
+            // => @media (min-width: 1636px) { ... }
+
+            txxl: "1400px",
+
+            dxxl: "1600px",
+            },
+        },
     plugins: [
         /**
          * '@tailwindcss/forms' is the forms plugin that provides a minimal styling

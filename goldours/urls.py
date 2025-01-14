@@ -12,7 +12,7 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('goldours-admin/', admin.site.urls),
+    path('goldours-admin', admin.site.urls),
     path("", include("accounts.urls", namespace="accounts")),
     path("", include("goldours_home.urls", namespace="goldours_home")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),

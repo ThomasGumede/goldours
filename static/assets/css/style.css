@@ -19156,17 +19156,22 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 .banner-three {
   position: relative;
 }
-.banner-three::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/banner/shape/04.png);
-  height: 100%;
-  width: 650px;
-  background-size: cover;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
+
+
+@media only screen and (min-width: 767px) {
+  .banner-three::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/banner/shape/04.png);
+    height: 100%;
+    width: 650px;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+  }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-three::before {
     width: 370px;
