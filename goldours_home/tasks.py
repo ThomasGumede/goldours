@@ -12,7 +12,7 @@ def send_email_to_admin(subject, message, from_email, name):
             subject=subject,
             body=message,
             from_email=from_email,
-            to=["gumedewandile18@gmail.com"]
+            to=["info@goldours.co.za"]
         )
         if not email.send():
             return f"Email not sent from {from_email}"
