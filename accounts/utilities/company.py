@@ -22,7 +22,7 @@ except:
 
     COMPANY = {
         "facebook": None,
-        "tiktok": None,
+        "twitter": None,
         "instagram": None,
         "linkedin": None,
         "website": "https://goldours.co.za",

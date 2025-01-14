@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'accounts',
     'goldours_home',
     
@@ -158,8 +159,8 @@ if DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
     
 else:
-    ALLOWED_HOSTS = ['bbgi.africa', 'www.bbgi.africa', 'localhost']
-    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://bbgi.africa', 'https://www.bbgi.africa']
+    ALLOWED_HOSTS = ['goldours.co.za', 'www.goldours.co.za', 'localhost']
+    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://goldours.co.za', 'https://www.goldours.co.za']
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     X_FRAME_OPTIONS = "SAMEORIGIN"
     
@@ -203,6 +204,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'noreply@siyazalana.org'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = 'noreply@siyazalana.org'
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
