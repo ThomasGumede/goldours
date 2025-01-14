@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load email_filters %}
 
 {% block content %}
 
@@ -39,8 +40,8 @@
                         </div>
                         <div class="info">
                             <span>Call Us 24/7</span>
-                            <a href="tel:0215259188">
-                                <h5>021 525 9188</h5>
+                            <a href="tel:{{ '0215259188'|obfuscate_phone|safe }}">
+                                <h5>{{ '0215259188'|obfuscate_phone|safe }}</h5>
                             </a>
                         </div>
                     </div>
@@ -59,8 +60,8 @@
                         </div>
                         <div class="info">
                             <span>MAke A Quote</span>
-                            <a href="info@goldours.co.za">
-                                <h5>info@goldours.co.za</h5>
+                            <a href="emailto:{{ 'info@goldours.co.za'|obfuscate|safe }}">
+                                <h5>{{ 'info@goldours.co.za'|obfuscate|safe }}</h5>
                             </a>
                         </div>
                     </div>

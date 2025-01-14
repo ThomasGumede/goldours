@@ -16,9 +16,9 @@ def blogs(request, category_slug=None):
         category = get_object_or_404(BlogCategory, slug=category_slug)
         blogs = model.objects.filter(category=category)
         if query:
-            blogs = blogs.filter(title__icontains=query)
+            blogs = blogs.order_by('-created').filter(title__icontains=query)
     else:
-        blogs = model.objects.all()
+        blogs = model.objects.order_by('-created')
         if query:
             blogs = blogs.filter(title__icontains=query)
 

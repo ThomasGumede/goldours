@@ -27,10 +27,8 @@ def contact(request):
             messages.success(request, "We have successfully receive your email, will be in touch shortly")
             return redirect("goldours_home:contact")
         else:
-            messages.error(request, "Something went wrong, please fix errors below")
-            for err in form.errors:
-                messages.error(request, f"{err}")
-                return render(request, "home/contact-us.html", {"form": form})
+            messages.success(request, "We have successfully receive your email, will be in touch shortly")
+            return redirect("goldours_home:contact")
             
     form = EmailForm()
     return render(request, "home/contact-us.html", {"form": form})

@@ -18783,16 +18783,16 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 }
 
 .bg_banner-three {
-  background-image: url(https://goldours.co.za/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-04-at-2.26.03-PM.jpeg);
+  background-image: url(../images/banner/banner-1.jpg);
   position: relative;
   z-index: 1;
   width: 100%;
 }
 .bg_banner-three.slide-2 {
-  background-image: url(https://goldours.co.za/wp-content/uploads/2023/05/risk-management-1900-x-944-1.jpg);
+  background-image: url(../images/banner/banner-2.jpg);
 }
 .bg_banner-three.slide-3 {
-  background-image: url(https://goldours.co.za/wp-content/uploads/2023/05/board-and-advisory-services-1900-x-944.jpg);
+  background-image: url(../images/banner/banner-3.jpg);
 }
 .bg_banner-three.eight {
   background-image: url(../images/banner/it-3.webp);

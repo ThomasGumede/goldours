@@ -2,13 +2,13 @@ User-agent: *
 Disallow: /
 
 User-agent: *
-Allow: /{% url 'goldours_home:goldours-home' %}
-Allow: /{% url 'goldours_home:about-goldours' %}
-Allow: /{% url 'goldours_home:contact' %}
-Allow: /{% url 'goldours_home:blogs' %}
-Allow: /{% url 'goldours_home:all-services' %}
-Allow: /{% url 'goldours_home:bbbee-consulting-and-training' %}
-Allow: /{% url 'goldours_home:talent-management-and-development' %}
-Allow: /{% url 'goldours_home:governance-and-direction' %}
-Allow: /{% url 'goldours_home:systems-reviews-and-assurance' %}
+Allow: {% url 'goldours_home:goldours-home' %}
+Allow: {% url 'goldours_home:about-goldours' %}
+Allow: {% url 'goldours_home:contact' %}
+Allow: {% url 'goldours_home:blogs' %}
+Allow: {% url 'goldours_home:all-services' %}
+Allow: {% url 'goldours_home:bbbee-consulting-and-training' %}
+Allow: {% url 'goldours_home:talent-management-and-development' %}
+Allow: {% url 'goldours_home:governance-and-direction' %}
+Allow: {% url 'goldours_home:systems-reviews-and-assurance' %}
 Sitemap: {{ request.scheme }}://{{ request.get_host }}/sitemap.xml
