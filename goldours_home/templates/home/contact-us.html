@@ -2,6 +2,55 @@
 {% load static %}
 {% load email_filters %}
 
+{% block seo %}
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render={{ site_key }}"></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("contact-form-").submit();
+            }
+
+            function loadRecaptcha() {
+                grecaptcha.enterprise.ready(function () {
+                    grecaptcha.enterprise.execute('{{ site_key }}', {action: 'submit'}).then(function (token) {
+                        document.getElementById('id_recaptcha_token').value = token;
+                    });
+                });
+            }
+
+            window.onload = loadRecaptcha;
+        </script>
+        <title>Contact Us - GoldOurs</title>
+        <meta name="description"
+            content="Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals through governance, leadership, and talent development." />
+        <meta name="keywords"
+            content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting" />
+        <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+        <meta property="og:title" content="Contact Us - GoldOurs" />
+        <meta property="og:description"
+            content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
+        <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image"
+            content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+        <meta name="author" content="GoldOurs Team">
+        <meta name="robots" content="index, nofollow">
+        <meta name="language" content="en">
+        <meta name="revisit-after" content="7 days">
+        <meta name="distribution" content="global">
+        
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
+        <meta name="twitter:description"
+            content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
+        <meta name="twitter:image"
+            content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+        <meta name="twitter:site" content="{{ request.build_absolute_uri }}">
+        <meta name="twitter:creator" content="@GoldOursOfficial">
+{% endblock seo %}
+
 {% block content %}
 
 <!-- start breadcrumb area -->
@@ -15,7 +64,7 @@
                 <div class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="#" class="active">Contact Us</a>
+                    <a href="{% url 'goldours_home:contact' %}" class="active">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -129,6 +178,7 @@
                         <div id="form-messages"></div>
                         <form id="contact-form-" method="post">
                             {% csrf_token %}
+                            
                             <div class="name-email">
                                 <input type="text" placeholder="Your Name" name="name" required>
                                 <input type="email" placeholder="Email Address" name="from_email" required>
@@ -139,7 +189,12 @@
                             </div>
                             
                             <textarea placeholder="Type Your Message" name="message"></textarea>
-                            <button type="submit" class="rts-btn btn-primary">Submit Message</button>
+                            {{form.recaptcha_token}}
+                            
+                            <button type="submit" class="g-recaptcha rts-btn btn-primary" data-sitekey="{{ site_key }}" data-callback='onSubmit'
+                                data-action='submit'>
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -150,3 +205,8 @@
 <!-- conact us form fluid end -->
 
 {% endblock content %}
+
+{% block js %}
+<!-- Replace the variables below. -->
+
+{% endblock js %}

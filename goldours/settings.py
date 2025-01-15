@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'tinymce',
+    # 'django_recaptcha',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+
+RECAPTCHA_ENTERPRISE_PROJECT_ID = config('RECAPTCHA_ENTERPRISE_PROJECT_ID')
+RECAPTCHA_ENTERPRISE_SITE_KEY = config('RECAPTCHA_ENTERPRISE_SITE_KEY')
+GOOGLE_APPLICATION_CREDENTIALS = '/path/to/your/service-account-key.json'
 
 ROOT_URLCONF = 'goldours.urls'
 

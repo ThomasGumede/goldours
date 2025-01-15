@@ -14,6 +14,22 @@
 <meta property="og:url" content="{{ request.build_absolute_uri }}" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="author" content="GoldOurs Team">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+<meta name="distribution" content="global">
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
+<meta name="twitter:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
+<meta name="twitter:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:creator" content="@GoldOursOfficial">
+
 
 <script type="application/ld+json">
         {
@@ -49,10 +65,10 @@
                 <h1 class="title">About Us</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
+                <div aria-label="Breadcrumb" class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="#" class="active">About Us</a>
+                    <a href="{% url 'goldours_home:about-goldours' %}" class="active">About Us</a>
                 </div>
             </div>
         </div>

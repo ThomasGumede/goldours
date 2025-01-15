@@ -23,7 +23,9 @@ def global_context(request):
         
         "vision": COMPANY["vision"],
         "mission": COMPANY["mission"],
-        'GOOGLE_ANALYTICS_MEASUREMENT_ID': getattr(settings, 'GOOGLE_ANALYTICS_MEASUREMENT_ID', None)
+        'GOOGLE_ANALYTICS_MEASUREMENT_ID': getattr(settings, 'GOOGLE_ANALYTICS_MEASUREMENT_ID', None),
+        "site_key": getattr(settings, 'RECAPTCHA_ENTERPRISE_SITE_KEY', None),
+        "project_id": getattr(settings, 'RECAPTCHA_ENTERPRISE_PROJECT_ID', None),
     }
 
     
