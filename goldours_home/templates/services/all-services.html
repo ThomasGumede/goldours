@@ -1,6 +1,22 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block seo %}
+<title>Goldours - Our Services</title>
+<meta name="description"
+    content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Services services." />
+<meta name="keywords"
+    content="blog, insights, Goldours Services, leadership advice, GoldOurs, B-BBEE strategy, B-BBEE Consulting, BBBEE Training, bbbee, black business empowerement, B-BBEE audit" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="Goldours - Our Services" />
+<meta property="og:description"
+    content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Services services.." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/service/service-1.jpg' %}">
+{% endblock seo %}
+
 {% block content %}
 
 <!-- start breadcrumb area -->
@@ -11,10 +27,10 @@
                 <h1 class="title">Our Services</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
+                <div aria-label="breadcrumb" class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="#" class="active">Our Services</a>
+                    <a href="{% url 'goldours_home:all-services' %}" class="active">Our Services</a>
                 </div>
             </div>
         </div>

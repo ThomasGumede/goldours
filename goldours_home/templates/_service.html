@@ -11,10 +11,12 @@
                 <h1 class="title">{% block service_title %}B-BBEE Consulting & Training{% endblock service_title %}</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
+                <div aria-label="breadcrumb" class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="#" class="active">{% block service_title_2 %}B-BBEE Consulting & Training{% endblock service_title_2 %}</a>
+                    <a href="{% url 'goldours_home:all-services' %}" class="active">Our Services</a>
+                    <span> / </span>
+                    <a href="{% block link %}{% endblock link %}" class="active">{% block service_title_2 %}B-BBEE Consulting & Training{% endblock service_title_2 %}</a>
                 </div>
             </div>
         </div>
