@@ -94,7 +94,7 @@ class EmailModel(AbstractCreate):
 
 PRIVACY_TITLES = (
     ("Website Terms and Community Guidlines", "Website Terms and Community Guidlines"),
-    ("Refund Policy", "Refund Policy"),
+    ("Cookie Policy", "Cookie Policy"),
     ("Privacy Policy", "Privacy Policy"),
     ("Terms of use: Consumers", "Terms of use: Consumers"),
     ("Terms of use: Organisers", "Terms of use: Organisers")

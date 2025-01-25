@@ -359,11 +359,11 @@ p {
   line-height: var(--line-height-b2);
   font-weight: var(--p-regular);
   color: var(--color-body);
-  margin: 0 0 40px;
+  /* margin: 0 0 40px; */
 }
 @media only screen and (max-width: 767px) {
   p {
-    margin: 0 0 20px;
+    /* margin: 0 0 20px; */
     font-size: 16px;
     line-height: 28px;
   }
@@ -494,8 +494,8 @@ ul.liststyle.bullet li + li {
 ul li {
   font-size: var(--font-size-b1);
   line-height: var(--line-height-b1);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: var(--color-body);
   list-style: none;
 }

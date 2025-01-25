@@ -2,7 +2,7 @@ from django.urls import path
 from goldours_home.views.services import all_service, bbbee_consulting_and_training, talent_management_and_development, systems_reviews_and_assurance, governance_and_direction
 from goldours_home.views.admin_views import all_accounts
 from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, update_blog
-from goldours_home.views.home import about_goldours, contact, dashboard, faqs, home, privacy, refunds, search, terms_and_conditions, contact_ajax
+from goldours_home.views.home import about_goldours, contact, dashboard, faqs, home, privacy, cookie, search, terms_and_conditions, contact_ajax
 from goldours_home.views.member_views import create_member, delete_member, team_member_details, team_members, update_member
 
 app_name = 'goldours_home'
@@ -15,7 +15,8 @@ urlpatterns = [
     path("dashboard", dashboard, name="dashboard"),
     path("search", search, name="search"),
     path("goldours/faqs", faqs, name="faqs"),
-    path("about-us/privacy", privacy, name="policy"),
+    path("about-us/privacy-policy", privacy, name="policy"),
+    path("about-us/cookie-policy", cookie, name="cookie"),
     path("services", all_service, name="all-services"),
     path("services/bbbee-consulting-and-training", bbbee_consulting_and_training, name="bbbee-consulting-and-training"),
     path("services/talent-management-and-development", talent_management_and_development, name="talent-management-and-development"),

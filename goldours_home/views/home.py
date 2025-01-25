@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.http import JsonResponse
 from goldours_home.forms import EmailForm, SearchForm
-from goldours_home.models import Blog, Member
+from goldours_home.models import Blog, Member, Privacy
 from goldours_home.tasks import send_email_to_admin
 from goldours_home.utilities.decorators import user_not_superuser_or_staff
 from django.contrib.auth.decorators import login_required
@@ -103,13 +103,26 @@ def search(request):
     return render(request, "home/search.html", context=context)
 
 def terms_and_conditions(request):
+    policy = Privacy.objects.filter(slug='privacy-policy').first()
+    context = {}
+    if policy:
+        context['policy'] = policy
     return render(request, "home/terms_and_conditions.html")
 
 def privacy(request):
-    return render(request, "home/privacy.html")
+    policy = Privacy.objects.filter(slug='privacy-policy').first()
+    context = {}
+    if policy:
+        context['policy'] = policy
+    
+    return render(request, "home/privacy.html", context)
 
-def refunds(request):
-    return render(request, "home/refunds.html")
+def cookie(request):
+    policy = Privacy.objects.filter(slug='cookie-policy').first()
+    context = {}
+    if policy:
+        context['policy'] = policy
+    return render(request, "home/cookie.html", context)
 
 def faqs(request):
     blogs = Blog.objects.all()[:5]
