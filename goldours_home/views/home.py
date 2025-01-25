@@ -15,6 +15,9 @@ from goldours_home.utilities.recaptcha import validate_recaptcha
 
 logger = logging.getLogger("tasks")
 
+def test_400(request):
+    return render(request, '404.html')
+
 def home(request):
     blogs = Blog.objects.all()[:5]
     return render(request, "home/home.html", {"posts": blogs})

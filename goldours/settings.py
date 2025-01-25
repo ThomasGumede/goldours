@@ -27,7 +27,7 @@ LOGIN_URL = 'accounts:login'
 SECRET_KEY = config('SECRET', 'django-insecure-^o8sk%36a@45k##tsmt!d4q917m7$azq223#w29h@79-$ufo4+')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
