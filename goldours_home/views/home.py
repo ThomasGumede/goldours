@@ -34,11 +34,11 @@ def contact(request):
             recaptcha_token = form.cleaned_data.get('recaptcha_token')
             print(recaptcha_token)
             try:
-                validate_recaptcha(
-                    token=recaptcha_token,
-                    project_id=settings.RECAPTCHA_ENTERPRISE_PROJECT_ID,
-                    site_key=settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
-                )
+                # validate_recaptcha(
+                #     token=recaptcha_token,
+                #     project_id=settings.RECAPTCHA_ENTERPRISE_PROJECT_ID,
+                #     site_key=settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
+                # )
                 form.save()
                 send_email_to_admin(form.cleaned_data["subject"], form.cleaned_data["message"], form.cleaned_data["from_email"], form.cleaned_data["name"])
                 messages.success(request, "We have successfully receive your email, will be in touch shortly")
