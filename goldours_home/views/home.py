@@ -32,7 +32,7 @@ def contact(request):
         form = EmailForm(request.POST)
         if form.is_valid():
             recaptcha_token = form.cleaned_data.get('recaptcha_token')
-            print(recaptcha_token)
+            # print(recaptcha_token)
             try:
                 # validate_recaptcha(
                 #     token=recaptcha_token,
