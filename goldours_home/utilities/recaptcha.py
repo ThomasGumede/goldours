@@ -2,26 +2,29 @@ from google.cloud import recaptchaenterprise_v1
 from google.cloud.recaptchaenterprise_v1 import Assessment
 
 def validate_recaptcha(token, project_id, site_key):
-    client = recaptchaenterprise_v1.RecaptchaEnterpriseServiceClient()
-    assessment = recaptchaenterprise_v1.Assessment(
-        event=recaptchaenterprise_v1.Event(
-            token=token,
-            site_key=site_key,
+    try:
+        client = recaptchaenterprise_v1.RecaptchaEnterpriseServiceClient()
+        assessment = recaptchaenterprise_v1.Assessment(
+            event=recaptchaenterprise_v1.Event(
+                token=token,
+                site_key=site_key,
+            )
         )
-    )
-    request = recaptchaenterprise_v1.CreateAssessmentRequest(
-        parent=f"projects/{project_id}",
-        assessment=assessment,
-    )
-    response = client.create_assessment(request)
+        request = recaptchaenterprise_v1.CreateAssessmentRequest(
+            parent=f"projects/{project_id}",
+            assessment=assessment,
+        )
+        response = client.create_assessment(request)
 
-    # Check if the token is valid and has a low risk score
-    if not response.token_properties.valid:
-        raise ValueError("Invalid reCAPTCHA token.")
-    if response.risk_analysis.score < 0.5:  # Customize the threshold as needed
-        raise ValueError("reCAPTCHA verification failed (high risk).")
+        # Check if the token is valid and has a low risk score
+        if not response.token_properties.valid:
+            raise ValueError("Invalid reCAPTCHA token.")
+        if response.risk_analysis.score < 0.5:  # Customize the threshold as needed
+            raise ValueError("reCAPTCHA verification failed (high risk).")
 
-    return True
+        return True
+    except Exception as ex:
+        pass
 
 
 def create_assessment(
