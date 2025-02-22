@@ -92,6 +92,27 @@ class EmailModel(AbstractCreate):
     def save(self, *args, **kwargs):
         super(EmailModel, self).save(*args, **kwargs)
 
+class Review(AbstractCreate):
+    logo = models.ImageField(help_text = _(""), help_text="Reviewer logo or image", upload_to="home/images/reviewers", null=True, blank=True)
+    reviewer = models.CharField(max_length=350, help_text="Reviewer names")
+    review = models.TextField()
+    
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
+        
+class Client(AbstractCreate):
+    logo = models.ImageField(help_text = _(""), help_text="client logo or image", upload_to="home/images/clients", null=True, blank=True)
+    client = models.CharField(max_length=350, help_text="client names or title")
+    
+    class Meta:
+        verbose_name = 'Client'
+        verbose_name_plural = 'Clients'
+
+# class TeamSummary(AbstractCreate):
+#     title = models.CharField(max_legnth=200, unique=True, value="OUR TEAM")
+#     slug = models.SlugField(unique=True)
+
 PRIVACY_TITLES = (
     ("Website Terms and Community Guidlines", "Website Terms and Community Guidlines"),
     ("Cookie Policy", "Cookie Policy"),

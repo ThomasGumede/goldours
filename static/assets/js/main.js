@@ -20,7 +20,7 @@
             imJs.counterUp();
             imJs.salActive();
             imJs.progressAvtivation();
-            imJs.stickyHeader();
+            // imJs.stickyHeader();
             imJs.backToTopInit();
             imJs.typeJS();
             imJs.searchOpton();
@@ -63,7 +63,7 @@
                 prevEl: ".swiper-button-prev",
               },
               autoplay: {
-                delay: 3000,
+                delay: 12000,
               },
               breakpoints: {
                 1500: {
@@ -112,7 +112,7 @@
                 prevEl: ".swiper-button-prev",
               },
               autoplay: {
-                delay: 3000,
+                delay: 12000,
               },
               breakpoints: {
                 1500: {
@@ -264,7 +264,7 @@
                 effect: 'fade',
                 speed: 500,
                 autoplay: {
-                    delay: 1500,
+                    delay: 12000,
                 },
                 pagination: {
                   el: ".swiper-pagination",

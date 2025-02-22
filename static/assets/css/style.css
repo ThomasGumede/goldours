@@ -15363,14 +15363,14 @@ body.sal-disabled [data-sal|=flip] {
 }
 
 .header-main-one .thumbnail a {
-  padding: 36px 0;
+  /* padding: 36px 0; */
   display: block;
-  width: 180px;
+  height: max-content;
   max-width: max-content;
 }
 @media only screen and (max-width: 479px) {
   .header-main-one .thumbnail a {
-    padding: 18px 0;
+    /* padding: 18px 0; */
   }
 }
 
