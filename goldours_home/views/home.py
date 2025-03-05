@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.http import JsonResponse
 from goldours_home.forms import EmailForm, SearchForm
-from goldours_home.models import Blog, Member, Privacy
+from goldours_home.models import Blog, Member, Privacy, TeamSummary, Review, Client, Accreditation
 from goldours_home.tasks import send_email_to_admin
 from goldours_home.utilities.decorators import user_not_superuser_or_staff
 from django.contrib.auth.decorators import login_required
@@ -19,13 +19,18 @@ def test_400(request):
     return render(request, '404.html')
 
 def home(request):
+    reviews = Review.objects.all()
+    accreditations = Accreditation.objects.all()
+    teamsummary = TeamSummary.objects.filter(slug="our-team-summary").first()
     blogs = Blog.objects.all()[:5]
-    return render(request, "home/home.html", {"posts": blogs})
+    return render(request, "home/home.html", {"posts": blogs, "reviews": reviews, "teamsummary": teamsummary, "accreditations": accreditations})
 
 def about_goldours(request):
-    members = Member.objects.all()
+    clients = Client.objects.all()
+    reviews = Review.objects.all()
+    teamsummary = TeamSummary.objects.filter(slug="our-team-summary").first()
     blogs = Blog.objects.all()[:5]
-    return render(request, "home/about-us.html", {"members": members, "posts": blogs})
+    return render(request, "home/about-us.html", {"clients": clients, "posts": blogs, "reviews": reviews, "teamsummary": teamsummary})
 
 def contact(request):
     if request.method == 'POST':
@@ -59,9 +64,6 @@ def contact(request):
     form = EmailForm()
     return render(request, "home/contact-us.html", {"form": form})
 
-
-
-
 def contact_ajax(request):
     if request.method == 'POST':
         try:
@@ -83,7 +85,6 @@ def contact_ajax(request):
 @login_required
 @user_not_superuser_or_staff
 def dashboard(request):
-    
     users = get_user_model().objects.all()
     return render(request, "dashboard/dashboard.html", {"users": users})
 

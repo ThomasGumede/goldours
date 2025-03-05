@@ -1,5 +1,5 @@
 from django.contrib import admin
-from goldours_home.models import BlogCategory, Blog, Comment, EmailModel, Privacy, FAQ
+from goldours_home.models import BlogCategory, Blog, Comment, EmailModel, Privacy, Review, TeamSummary, Client, Accreditation
 
 
 class CommentInline(admin.StackedInline):
@@ -7,8 +7,20 @@ class CommentInline(admin.StackedInline):
     readonly_fields = ("commenter", "created", "comment")
     extra = False
 
-@admin.register(FAQ)
-class FAQAdmin(admin.ModelAdmin):
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(TeamSummary)
+class TeamSummaryAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Accreditation)
+class AccreditationAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(BlogCategory)
@@ -22,7 +34,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Blog)
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ["title"]}
-    inlines = [CommentInline]
+
 
 @admin.register(Privacy)
 class PrivacyAdmin(admin.ModelAdmin):

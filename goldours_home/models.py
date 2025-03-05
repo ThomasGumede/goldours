@@ -93,25 +93,51 @@ class EmailModel(AbstractCreate):
         super(EmailModel, self).save(*args, **kwargs)
 
 class Review(AbstractCreate):
-    logo = models.ImageField(help_text = _(""), help_text="Reviewer logo or image", upload_to="home/images/reviewers", null=True, blank=True)
+    logo = models.ImageField( help_text="Reviewer logo or image", upload_to="home/images/reviewers", null=True, blank=True)
     reviewer = models.CharField(max_length=350, help_text="Reviewer names")
+    role = models.CharField(help_text=_("Enter reviewer's role"), max_length=250, null=True, blank=True, default="Director")
     review = models.TextField()
     
     class Meta:
         verbose_name = 'Review'
         verbose_name_plural = 'Reviews'
+    
+    def __str__(self):
+        return self.reviewer
         
 class Client(AbstractCreate):
-    logo = models.ImageField(help_text = _(""), help_text="client logo or image", upload_to="home/images/clients", null=True, blank=True)
+    logo = models.ImageField(help_text="client logo or image", upload_to="home/images/clients", null=True, blank=True)
     client = models.CharField(max_length=350, help_text="client names or title")
     
     class Meta:
         verbose_name = 'Client'
         verbose_name_plural = 'Clients'
+        
+    def __str__(self):
+        return self.client
+    
+class Accreditation(AbstractCreate):
+    logo = models.ImageField(help_text="Accreditation logo or image", upload_to="home/images/Accreditations", null=True, blank=True)
+    accreditation = models.CharField(max_length=350, help_text="Accreditation names or title")
+    
+    class Meta:
+        verbose_name = 'Accreditation'
+        verbose_name_plural = 'Accreditations'
+        
+    def __str__(self):
+        return self.accreditation
 
-# class TeamSummary(AbstractCreate):
-#     title = models.CharField(max_legnth=200, unique=True, value="OUR TEAM")
-#     slug = models.SlugField(unique=True)
+class TeamSummary(AbstractCreate):
+    title = models.CharField(max_length=350, unique=True)
+    slug = models.SlugField(unique=True, default="our-team-summary", max_length=200)
+    summary = models.TextField()
+    
+    class Meta:
+        verbose_name = 'Team summary'
+        verbose_name_plural = 'Team summaries'
+    
+    def __str__(self):
+        return self.title
 
 PRIVACY_TITLES = (
     ("Website Terms and Community Guidlines", "Website Terms and Community Guidlines"),

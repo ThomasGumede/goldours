@@ -385,7 +385,7 @@
                 <div class="single-counter">
                     <img src="{% static 'assets/images/counterup/icon/01.svg' %}" alt="Business_counter">
                     <div class="counter-details">
-                        <h2 class="title"><span class="counter animated fadeInDownBig">40</span></h2>
+                        <h2 class="title"><span class="counter animated fadeInDownBig">{{projects}}</span></h2>
                         <p class="disc">Successful Projects</p>
                     </div>
                 </div>
@@ -396,7 +396,7 @@
                 <div class="single-counter pl--10 justify-content-center two pl--30">
                     <img src="{% static 'assets/images/counterup/icon/02.svg' %}" alt="Business_counter">
                     <div class="counter-details">
-                        <h2 class="title"><span class="counter animated fadeInDownBig">20</span></h2>
+                        <h2 class="title"><span class="counter animated fadeInDownBig">{{media}}</span></h2>
                         <p class="disc">Media Activities</p>
                     </div>
                 </div>
@@ -407,7 +407,7 @@
                 <div class="single-counter pl--10 justify-content-center three pl--50">
                     <img src="{% static 'assets/images/counterup/icon/03.svg' %}" alt="Business_counter">
                     <div class="counter-details">
-                        <h2 class="title"><span class="counter animated fadeInDownBig">20</span></h2>
+                        <h2 class="title"><span class="counter animated fadeInDownBig">{{experts}}</span></h2>
                         <p class="disc">Skilled Experts</p>
                     </div>
                 </div>
@@ -418,7 +418,7 @@
                 <div class="single-counter pl--10 justify-content-end four">
                     <img src="{% static 'assets/images/counterup/icon/04.svg' %}" alt="Business_counter">
                     <div class="counter-details">
-                        <h2 class="title"><span class="counter animated fadeInDownBig">30</span></h2>
+                        <h2 class="title"><span class="counter animated fadeInDownBig">{{clients}}</span></h2>
                         <p class="disc">Happy Clients</p>
                     </div>
                 </div>
@@ -557,15 +557,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="title-area-client text-center">
-                    <p class="client-title">Our Accreditation</p>
+                    <p class="client-title">Our Accreditations</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="client-wrapper-one">
-                <a href="#"><img src="{% static 'assets/images/brands/qcto_logo.svg' %}" alt="QCTO logo"></a>
-                <a href="#"><img src="{% static 'assets/images/brands/fasset.jpg' %}" alt="Fasset logo"></a>
-                <a href="#"><img src="{% static 'assets/images/brands/saiga.png' %}" alt="SAIGA logo"></a>
+                {% for accredit in accreditations %}
+                <a href="#"><img src="{% if accredit.logo %}{{accredit.logo.url}}{% endif %}" alt="{{accredit.accreditation}} logo"></a>
+                {% endfor %}
+                
 
             </div>
         </div>
@@ -587,15 +588,10 @@
                     <p class="pre-title">
                         Our Team
                     </p>
-                    <h2 class="title feature-title">We bring fresh insights to shape your future.</h2>
+                    <h2 class="title feature-title">{{team.title}}</h2>
                     <p>
                     
-                    At GoldOurs, our team is the cornerstone of our success, bringing together over 20 seasoned professionals with diverse
-                    expertise across all <a href="{% url 'goldours_home:all-services' %}"><strong>our services</strong></a>. With an average of 15+ years
-                    in private and public sectors and affiliations with esteemed bodies such as SAICA, COMENSA, IODSA, and IRBA, our team
-                    combines practical experience, academic excellence, and innovative thinking. Armed with advanced qualifications,
-                    including MBAs, PhDs, and Chartered Accountancy credentials, we are dedicated to empowering organizations with
-                    strategies, compliance solutions, and leadership development that drive sustainable growth and transformation.</p>
+                    {{team.summary}}</p>
 
                 </div>
 
@@ -638,30 +634,28 @@
                     <!-- swiper area start -->
                     <div class="swiper mySwipertestimonial">
                         <div class="swiper-wrapper">
+                            {% for review in reviews %}
                             <div class="swiper-slide">
                                 <div class="testimonial-inner">
                                     <p class="disc text-start">
-                                        “The benefits were beyond what we were expecting! We gained invaluable insights
-                                        into accounting, finances, and strategic
-                                        alignment, enabling us to track our financial health effectively. Thanks to
-                                        GoldOurs, we're now tax compliant and ready
-                                        to grow. It's a transformative experience I'd recommend to anyone!”
+                                       {{review.review}}
                                     </p>
                                     <div class="testimonial-bottom-one">
                                         <div class="thumbnail">
-                                            <img src="{% static 'assets/images/R.png' %}"
+                                            <img src="{% if review.logo %}{{review.logo.url}}{% else %}{% static 'assets/images/R.png' %}{% endif %}"
                                                 alt="business-testimonials">
                                         </div>
                                         <div class="details">
                                             <a href="#">
-                                                <h5 class="title">Mazana Security Services</h5>
+                                                <h5 class="title">{{review.reviewer}}</h5>
                                             </a>
-                                            <span>Director</span>
+                                            <span>{{review.role}}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            {% endfor %}
+                            <!-- <div class="swiper-slide">
                                 <div class="testimonial-inner">
                                     <p class="disc text-start">
                                         “GoldOurs clarified our strategic direction and key business drivers. Their
@@ -728,7 +722,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>

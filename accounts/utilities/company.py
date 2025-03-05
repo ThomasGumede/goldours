@@ -15,6 +15,10 @@ try:
         # "youtube": "https://www.youtube.com/@blackbusinessgrowthinitiat6153",
         "address": company.address,
         "vision": company.vision,
+        "clients": company.number_of_clients,
+        "projects": company.number_of_projects_completed,
+        "experts": company.number_of_skilled_experts,
+        "media": company.number_of_media_activities,
         "mission": company.mission
 
     }
@@ -33,6 +37,10 @@ except:
         "address": "Cape Town, 7441, RSA",
     
         "vision": None,
+        "clients": 100,
+        "projects": 50,
+        "experts": 20,
+        "media": 10,
         "mission": None
 
     }

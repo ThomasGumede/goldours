@@ -254,7 +254,10 @@
         </div>
         <div class="row">
             <div class="client-wrapper-one">
-                <a href="#"><img src="{% static 'assets/images/clients/bbgi.png' %}" alt="BBGI logo"></a>
+                {% for client in clients %}
+                    <a href="#"><img src="{% if client.logo %}{{client.logo.url}}{% else %}{% static 'assets/images/clients/bbgi.png' %}{% endif %}" alt="{{client.client}}"></a>
+                {% endfor %}
+                <!-- <a href="#"><img src="{% static 'assets/images/clients/bbgi.png' %}" alt="BBGI logo"></a>
                 <a href="#"><img src="{% static 'assets/images/clients/smtax.png' %}" alt="Fasset logo"></a>
                 
                 <a href="#"><img src="{% static 'assets/images/clients/jade-sky.jpg' %}" alt="jade sky logo"></a>
@@ -288,7 +291,7 @@
                         alt="South African College of Applied Psychology logo"></a>
                 <a href="#"><img src="{% static 'assets/images/clients/pfa.png' %}" alt="Pension Fund Adjudicator logo"></a>
                 <a href="#"><img src="{% static 'assets/images/clients/img5.png' %}" class="bg-dark" alt="Personal Trust logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/mid.png' %}" alt="MID logo"></a>
+                <a href="#"><img src="{% static 'assets/images/clients/mid.png' %}" alt="MID logo"></a> -->
 
             </div>
         </div>
@@ -399,21 +402,10 @@
                     <p class="pre-title">
                         Our Team
                     </p>
-                    <h2 class="title feature-title">We bring fresh insights to shape your future.</h2>
+                    <h2 class="title feature-title">{{team.title}}</h2>
                     <p>
 
-                        At GoldOurs, our team is the cornerstone of our success, bringing together over 20 seasoned
-                        professionals with diverse
-                        expertise across all <a href="{% url 'goldours_home:all-services' %}"><strong>our
-                                services</strong></a>. With an average of 15+ years
-                        in private and public sectors and affiliations with esteemed bodies such as SAICA, COMENSA,
-                        IODSA, and IRBA, our team
-                        combines practical experience, academic excellence, and innovative thinking. Armed with advanced
-                        qualifications,
-                        including MBAs, PhDs, and Chartered Accountancy credentials, we are dedicated to empowering
-                        organizations with
-                        strategies, compliance solutions, and leadership development that drive sustainable growth and
-                        transformation.</p>
+                        {{team.summary}}</p>
 
                 </div>
 
@@ -531,29 +523,27 @@
             </div>
         </div>
         <div class="row g-5 mt--20">
+            {% for review in reviews %}
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="testimopnial-wrapper-two">
                     <div class="test-header">
                         <div class="thumbnail">
-                            <img src="{% static 'assets/images/R.png' %}" alt="Mazana Security Services">
+                            <img src="{% if review.logo %}{{review.logo.url}}{% else %}{% static 'assets/images/R.png' %}{% endif %}" alt="Mazana Security Services">
                         </div>
                         <div class="name-desig">
-                            <h5 class="title">Mazana Security Services</h5>
-                            <span class="designation">Director</span>
+                            <h5 class="title">{{review.reviewer}}</h5>
+                            <span class="designation">{{review.role}}</span>
                         </div>
                     </div>
                     <div class="test-body">
                         <p class="disc">
-                            “The benefits were beyond what we were expecting! We gained invaluable insights into
-                            accounting, finances, and strategic
-                            alignment, enabling us to track our financial health effectively. Thanks to GoldOurs, we're
-                            now tax compliant and ready
-                            to grow. It's a transformative experience I'd recommend to anyone!”
+                            “{{review.review}}”
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            {% endfor %}
+            <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="testimopnial-wrapper-two">
                     <div class="test-header">
                         <div class="thumbnail">
@@ -617,7 +607,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
