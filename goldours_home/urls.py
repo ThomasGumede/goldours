@@ -1,4 +1,5 @@
 from django.urls import path
+from goldours_home.views.media_views import media_details, download_media_file, media_files
 from goldours_home.views.services import all_service, bbbee_consulting_and_training, talent_management_and_development, systems_reviews_and_assurance, governance_and_direction
 from goldours_home.views.admin_views import all_accounts
 from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, update_blog
@@ -25,6 +26,9 @@ urlpatterns = [
     path("about-us/terms-and-conditions", terms_and_conditions, name="terms"),
     path("articles/", blogs, name="blogs"),
     path("articles/<slug:category_slug>/", blogs, name="blogs-by-category"),
+    path("media-and-pictures/", media_files, name="media-files"),
+    path("media-and-pictures/<slug:media_slug>", media_details, name="media-details"),
+    path("media-and-pictures/files/<slug:media_slug>", download_media_file, name="media-file-download"),
     path("dashboard/accounts", all_accounts, name="all-accounts"),
     path("dashboard/blogs", all_blogs, name="all-blogs"),
     path("dashboard/blogs/create", create_blog, name="create-blog"),

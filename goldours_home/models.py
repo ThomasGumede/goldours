@@ -147,6 +147,39 @@ PRIVACY_TITLES = (
     ("Terms of use: Organisers", "Terms of use: Organisers")
 )
 
+class Media(AbstractCreate):
+    image = models.ImageField(help_text=_("Upload media image."), upload_to=handle_post_file_upload, blank=True, null=True)
+    mediafile = models.FileField(help_text=_("Upload media file."), upload_to=handle_post_file_upload, blank=True, null=True)
+    title = models.CharField(help_text=_("Enter title for your media file"), max_length=150)
+    description = models.TextField(help_text=_("Write a short description about this media file"), max_length=200)
+    slug = models.SlugField(max_length=250, blank=True, unique=True)
+    author = models.ForeignKey(get_user_model(), on_delete=models.SET_DEFAULT, default=None, related_name="medias", null=True)
+    category = models.ForeignKey(BlogCategory, on_delete=models.PROTECT, related_name="medias")
+
+    class Meta:
+        verbose_name = 'Media File'
+        verbose_name_plural = 'Media Files'
+
+    def save(self, *args, **kwargs):
+        original_slug = slugify(self.title)
+        queryset =  Media.objects.all().filter(slug__iexact=original_slug).count()
+
+        count = 1
+        slug = original_slug
+        while(queryset):
+            slug = original_slug + '-' + str(count)
+            count += 1
+            queryset = Media.objects.all().filter(slug__iexact=slug).count()
+
+        self.slug = slug
+        super(Media, self).save(*args, **kwargs)
+
+    def __str__(self) -> str:
+        return f"{self.title}"
+
+    def get_absolute_url(self):
+        return reverse("goldours_home:media-details", kwargs={"media_slug": self.slug})
+
 class Privacy(AbstractCreate):
     title = models.CharField(max_length=150, unique=True, choices=PRIVACY_TITLES)
     slug = models.SlugField(max_length=250, unique=True, db_index=True)

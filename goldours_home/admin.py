@@ -1,5 +1,5 @@
 from django.contrib import admin
-from goldours_home.models import BlogCategory, Blog, Comment, EmailModel, Privacy, Review, TeamSummary, Client, Accreditation
+from goldours_home.models import BlogCategory, Blog, Comment, EmailModel, Privacy, Review, TeamSummary, Client, Accreditation, Media
 
 
 class CommentInline(admin.StackedInline):
@@ -33,6 +33,10 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Blog)
 class PostAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ["title"]}
+
+@admin.register(Media)
+class MediaAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ["title"]}
 
 

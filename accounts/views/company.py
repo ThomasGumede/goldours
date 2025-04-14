@@ -1,8 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from django.contrib.sites.shortcuts import get_current_site
 import logging, mimetypes
 from accounts.models import AboutCompany
 

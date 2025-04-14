@@ -1,5 +1,5 @@
 from django import forms
-from goldours_home.models import Blog, Comment, EmailModel, Member
+from goldours_home.models import Blog, Comment, EmailModel, Member, Media
 from tinymce.widgets import TinyMCE
 
 
