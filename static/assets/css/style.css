@@ -16804,7 +16804,7 @@ body.home-eleven #menu-btn:hover {
 }
 
 .breadcrumb-bg {
-  background-image: url(../images/breadcrumb/01.png);
+  background-image: url(../images/breadcrumb/01.png); 
 }
 
 .rts-breadcrumb-area {
@@ -16817,6 +16817,10 @@ body.home-eleven #menu-btn:hover {
   }
 }
 .rts-breadcrumb-area .title {
+  color: #fff;
+  margin-bottom: 0;
+}
+.title_service {
   color: #fff;
   margin-bottom: 0;
 }
@@ -29144,7 +29148,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 }
 .single-blog-one-wrapper .thumbnail img {
   width: 100%;
-  height: auto;
+  height: 200px;
   margin-bottom: 0;
 }
 .single-blog-one-wrapper .thumbnail .blog-badge {

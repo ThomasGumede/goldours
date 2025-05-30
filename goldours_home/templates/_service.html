@@ -8,13 +8,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">{% block service_title %}B-BBEE Consulting & Training{% endblock service_title %}</h1>
+                <h1 class="title">Service Details</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div aria-label="breadcrumb" class="bread-tag">
+                <div class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="{% url 'goldours_home:all-services' %}" class="active">Our Services</a>
+                    <a href="{% url 'goldours_home:all-services' %}">Our Services</a>
                     <span> / </span>
                     <a href="{% block link %}{% endblock link %}" class="active">{% block service_title_2 %}B-BBEE Consulting & Training{% endblock service_title_2 %}</a>
                 </div>
@@ -22,6 +22,7 @@
         </div>
     </div>
 </div>
+
 <!-- end breadcrumb area -->
 
 <!-- start service details area -->
@@ -104,7 +105,7 @@
                 <!-- single wizered start -->
                 <div class="rts-single-wized contact service">
                     <div class="wized-header">
-                        <a href="#"><img src="{% static 'assets/images/logo/logo-2.png' %}" alt="Business_logo"></a>
+                        <a href="#"><img src="{% static 'assets/images/logo/logo-2.png' %}" alt="Goldours logo"></a>
                     </div>
                     <div class="wized-body">
                         <h5 class="title">Need Help? We Are Here

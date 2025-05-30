@@ -222,7 +222,7 @@
                     </div>
                     <div class="service-details">
                         <a href="{% url 'goldours_home:governance-and-direction' %}">
-                            <h5 class="title">Governance & direction</h5>
+                            <h5 class="title">Governance & Direction</h5>
                         </a>
                         <p class="disc">
                             Strategic planning, risk management, and board training to drive organizational success.
@@ -642,7 +642,7 @@
                                     </p>
                                     <div class="testimonial-bottom-one">
                                         <div class="thumbnail">
-                                            <img src="{% if review.logo %}{{review.logo.url}}{% else %}{% static 'assets/images/R.png' %}{% endif %}"
+                                            <img src="{% if review.logo %}{{review.logo.url}}{% else %}{% static 'assets/images/logo/logo.png' %}{% endif %}"
                                                 alt="business-testimonials">
                                         </div>
                                         <div class="details">
@@ -734,7 +734,7 @@
             <!-- images area -->
             <div class="col-lg-5">
                 <div class="rts-test-one-image-inner">
-                    <img src="{% static 'assets/images/testimonials/01.png' %}" alt="business_testimobials">
+                    <img src="{% static 'assets/images/testimonials/01.png' %}" alt="goldours business testimonials">
                 </div>
             </div>
             <!-- image area end -->
@@ -762,7 +762,7 @@
                         <div class="single-blog-one-wrapper">
                             <div class="thumbnail">
                                 <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/blog/details/01.jpg' %}{% endif %}"
-                                    alt="business_Blog">
+                                    alt="{{post.title}}">
                                 <div class="blog-badge">
                                     <span>{{post.created|date:"b d, Y"}}</span>
                                 </div>
@@ -795,7 +795,7 @@
                 <!-- map area left -->
                 <div class="mapdetails-inner-one">
                     <div class="left-area single-wized">
-                        <h5 class="title">Get in touch</h5>
+                        <h5 class="title">Get in Touch</h5>
                         <div class="details">
                             <p>Work and general inquiries</p>
                             <a class="number" href="tel:{{ '0215259188'|obfuscate_phone|safe }}">{{ '0215259188'|obfuscate_phone|safe }}</a>
@@ -809,7 +809,7 @@
                         </div>
                     </div>
                     <div class="right-area single-wized">
-                        <h5 class="title">Post Address</h5>
+                        <h5 class="title">Address</h5>
                         <div class="details">
                             <p>Service Office</p>
                             

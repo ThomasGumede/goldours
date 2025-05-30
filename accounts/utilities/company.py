@@ -22,7 +22,7 @@ try:
         "mission": company.mission
 
     }
-except:
+except AboutCompany.DoesNotExist as ex:
 
     COMPANY = {
         "facebook": None,
@@ -44,16 +44,3 @@ except:
         "mission": None
 
     }
-
-def generate_order_number(model) -> str:
-    order_id_start = f'BBGI{timezone.now().year}{timezone.now().month}'
-    queryset = model.objects.filter(order_id__iexact=order_id_start).count()
-      
-    count = 1
-    order_id = order_id_start
-    while(queryset):
-        order_id = f'BBGI{timezone.now().year}{timezone.now().month}{count}'
-        count += 1
-        queryset = model.objects.all().filter(order_id__iexact=order_id).count()
-
-    return order_id
