@@ -10,6 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="max-image-preview:large">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/icon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/icon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/icon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/images/icon/site.webmanifest' %}">
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_MEASUREMENT_ID }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,6 +22,7 @@
 
         gtag('config', '{{ GOOGLE_ANALYTICS_MEASUREMENT_ID }}');
     </script>
+
     {% block seo %}
     <title>GoldOurs - Empowering Growth & Excellence</title>
     <meta name="description"
