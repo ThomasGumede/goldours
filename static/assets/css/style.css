@@ -14637,11 +14637,22 @@ Copyright (c) 2015 Daniel Eden
   overflow: hidden;
 }
 
+.cd-headline-2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
 @media only screen and (min-width: 768px) {
   .cd-headline {
     font-size: 4.4rem;
     font-weight: 300;
   }
+
+  .cd-headline-2 {
+  font-size: 3.4rem;
+  font-weight: 300;
+}
 }
 @media only screen and (min-width: 1170px) {
   .cd-headline {
@@ -15363,11 +15374,16 @@ body.sal-disabled [data-sal|=flip] {
 }
 
 .header-main-one .thumbnail a {
-  padding: 36px 0;
+  /* padding: 36px 0; */
   display: block;
   height: max-content;
   max-width: max-content;
 }
+
+#go-logo {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 479px) {
   .header-main-one .thumbnail a {
     padding: 18px 0;
