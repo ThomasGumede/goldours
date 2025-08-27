@@ -2,6 +2,54 @@
 {% load static %}
 {% load email_filters %}
 
+{% block seo %}
+<script src="https://www.google.com/recaptcha/enterprise.js?render={{ site_key }}"></script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("contact-form-").submit();
+    }
+
+    function loadRecaptcha() {
+        grecaptcha.enterprise.ready(function () {
+            grecaptcha.enterprise.execute('{{ site_key }}', {action: 'submit'}).then(function (token) {
+                document.getElementById('id_recaptcha_token').value = token;
+            });
+        });
+    }
+
+    window.onload = loadRecaptcha;
+</script>
+<title>Asset Management Online Course</title>
+<meta name="description"
+    content="This course will equip you with the practical skills and strategic insights to manage and grow your assets for long-term financial success." />
+<meta name="keywords"
+    content="GoldOurs, about us, governance, B-BBEE contributor, Asset management online course, Asset management Cape Town, leadership coaching, business consulting, contact goldours, contacts" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="Asset Management Online Course" />
+<meta property="og:description"
+    content="This course will equip you with the practical skills and strategic insights to manage and grow your assets for long-term financial success." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="author" content="GoldOurs Team">
+<meta name="robots" content="index, nofollow">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+<meta name="distribution" content="global">
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Asset Management Online Course">
+<meta name="twitter:description"
+    content="This course will equip you with the practical skills and strategic insights to manage and grow your assets for long-term financial success.">
+<meta name="twitter:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:creator" content="@GoldOursOfficial">
+{% endblock seo %}
+
 {% block content %}
 <!-- start breadcrumb area -->
 <div class="banner-area-nine bg_image">
