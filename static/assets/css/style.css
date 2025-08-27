@@ -50,12 +50,12 @@
 :root {
   --svd-color: #DF0A0A;
   --color-primary: #D4A841;
-  --color-primary-2: #0B4DF5;
+  --color-primary-2: #e4a513;
   --color-primary-3: #D4A841;
   --color-primary-4: #5264F3;
   --color-primary-5: #D4A841;
   --color-primary-6: #D4A841;
-  --color-primary-7: #E87556;
+  --color-primary-7: #D4A841;
   --color-primary-8: #845CFF;
   --color-primary-9: #4A3BCA;
   --color-primary-alta: #FFECEC;
@@ -14632,7 +14632,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 .cd-headline {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   overflow: hidden;
 }
@@ -14656,12 +14656,12 @@ Copyright (c) 2015 Daniel Eden
 }
 @media only screen and (min-width: 1170px) {
   .cd-headline {
-    font-size: 48px;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .cd-headline {
-    font-size: 40px;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -15418,7 +15418,7 @@ body.sal-disabled [data-sal|=flip] {
   margin-right: 36px;
 }
 .main-header .nav-main ul li a {
-  padding: 48px 0;
+  padding: 28px 0;
   display: block;
   color: #1C2539;
   font-size: 16px;
@@ -16375,7 +16375,7 @@ li.has-droupdown {
 }
 
 header.header-home-nine .button-area .btn-primary-4 {
-  background: #E87556 !important;
+  background: #D4A841 !important;
 }
 
 .header--sticky.header-home-nine.sticky {
@@ -18050,13 +18050,13 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 }
 
 .rts-btn.btn-nine {
-  background: #E87556 !important;
+  background: #D4A841 !important;
   border-radius: 30px !important;
   color: #fff !important;
 }
 .rts-btn.btn-nine:hover {
   background: #fff !important;
-  color: #E87556 !important;
+  color: #D4A841 !important;
 }
 
 .sign-up-u-btn {
@@ -18857,7 +18857,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 }
 
 .banner-three-inner {
-  padding: 300px 0 100px 0;
+  padding: 100px 0 100px 0;
   max-width: 100%;
   position: relative;
   z-index: 2;
@@ -18942,9 +18942,15 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
   }
 }
 .banner-three-inner .subtitle-banner {
-  color: #fff;
+  color: var(--color-primary);
   letter-spacing: 0.3em;
-  text-transform: uppercase;
+  
+}
+
+.cta-text {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0;
 }
 @media only screen and (max-width: 575px) {
   .banner-three-inner .subtitle-banner {
@@ -18954,7 +18960,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 }
 .banner-three-inner .title {
   color: #fff;
-  font-size: 100px;
+  font-size: 72px;
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 5px;
@@ -21687,7 +21693,7 @@ body.thirteen-body .title-area span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e875561a;
+  background: #D4A8411a;
 }
 .single-feature-area-nine .info-area .title {
   margin-bottom: 10px;
@@ -21702,7 +21708,7 @@ body.thirteen-body .title-area span {
   position: relative;
 }
 .about-left-style-nine .business-revinew {
-  background: #E87556;
+  background: #D4A841;
   border-radius: 20px;
   position: absolute;
   width: 280px;
@@ -23929,7 +23935,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 }
 
 .bg-call-to-action-two {
-  background-image: url(../images/cta/02.jpg);
+  background-image: url(../images/cta/01.jpg);
   background-repeat: no-repeat;
   background-color: var(--color-primary-3);
   background-blend-mode: multiply;
@@ -32133,7 +32139,7 @@ p.disc {
 .rts-working-process-1 .inner {
   width: 192px;
   height: 192px;
-  border: 2px dashed #0b4df52f;
+  border: 2px dashed #D4A841;
   display: flex;
   align-items: center;
   justify-content: center;

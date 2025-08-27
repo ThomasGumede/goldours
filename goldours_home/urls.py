@@ -3,13 +3,14 @@ from goldours_home.views.media_views import media_details, download_media_file, 
 from goldours_home.views.services import all_service, bbbee_consulting_and_training, talent_management_and_development, systems_reviews_and_assurance, governance_and_direction
 from goldours_home.views.admin_views import all_accounts
 from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, update_blog
-from goldours_home.views.home import about_goldours, contact, dashboard, test_400, home, privacy, cookie, search, terms_and_conditions, contact_ajax
+from goldours_home.views.home import about_goldours, contact, course_details, dashboard, test_400, home, privacy, cookie, search, terms_and_conditions, contact_ajax
 from goldours_home.views.member_views import create_member, delete_member, team_member_details, team_members, update_member
 
 app_name = 'goldours_home'
 urlpatterns = [
     path("", home, name="goldours-home"),
     path("about-us/", about_goldours, name="about-goldours"),
+    path("about-us/asset-management-online-course", course_details, name="course-details"),
     path("about-us/teams/<member_id>", team_member_details, name="team-member"),
     path("contact-us/", contact, name="contact"),
     path("api/contact-us", contact_ajax, name="api-contact"),

@@ -5,80 +5,26 @@
 {% block content %}
 <!-- banner blank space area -->
 <div class="rts-banner-area banner-three">
-    <div class="swiper mySwiperh3_banner">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class=" bg_banner-three bg_image rts-section-gap">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="banner-three-inner">
-                                    <span class="subtitle-banner">Empowering Growth & Excellence</span>
-                                    <!-- type headline start-->
-                                    <h1 class="title cd-headline clip is-full-width">
-                                        Unearth Your Potential
-                                    </h1>
-                                    <p class="disc">
-                                        Partner with us to uncover the gold within you or your organization. From
-                                        governance and strategy to coaching and
-                                        training, we help you shine brighter in your industry.
-                                    </p>
-                                    <div class="button-group">
-                                        
-                                        <a href="{% url 'goldours_home:about-goldours' %}"
-                                            class="rts-btn btn-primary-3 transparent">About Us</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class=" bg_banner-three slide-2 bg_image rts-section-gap">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="banner-three-inner">
-                                    <span class="subtitle-banner">Make Your Strategy Strong</span>
-                                    <!-- type headline start-->
-                                    <h2 class="title cd-headline clip is-full-width">
-                                        Empower. Transform. Lead.
-                                    </h2>
-                                    <p class="disc">
-                                        We help African businesses and institutions align leadership, unlock compliance as a competitive advantage, and deliver
-                                        measurable outcomes across growth, governance, and impact.
-                                    </p>
-                                    <div class="button-group">
-                                        <a href="{% url 'goldours_home:all-services' %}"
-                                            class="rts-btn btn-primary-3">Explore Our Services</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
+    <div class="swipe">
+        <div class="swiper-wrappe">
+            
+            <div class="swiper-slid">
                 <div class=" bg_banner-three slide-3 bg_image rts-section-gap">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
                                 <div class="banner-three-inner">
-                                    <span class="subtitle-banner">Goldours</span>
+                                    <span class="subtitle-banner">Goldours - Empowering Growth & Excellence</span>
                                     <!-- type headline start-->
-                                    <h2 class="title cd-headline clip is-full-width">
-                                        Sustain. Grow. Thrive.
-                                    </h2>
+                                    <h1 class="title cd-headline clip is-full-width">
+                                        Unlock Your Enterprise's Potential for Measurable Growth
+                                    </h1>
                                     <p class="disc">
-                                        Discover innovative ways to grow your business through risk management, internal
-                                        controls, and financial insights. Let
-                                        us help you achieve lasting success.
+                                        We help leaders turn compliance, talent, and strategy into a single, powerful engine for tangible results.
                                     </p>
                                     <div class="button-group">
                                         <a href="{% url 'goldours_home:contact' %}"
-                                            class="rts-btn btn-primary-3">Contact Us</a>
+                                            class="rts-btn btn-primary-3">Book Your Free Discovery Call</a>
                                         
                                     </div>
                                 </div>
@@ -103,7 +49,7 @@
                     <p class="pre-title">
                         More About Us
                     </p>
-                    <h2 class="title">Delivering Measurable Outcomes</h2>
+                    <h2 class="title">Our Commitment to Impact</h2>
                 </div>
                 <div class="about-inner">
                     <p class="disc">
@@ -201,7 +147,7 @@
             <div class="col-12">
                 <div class="rts-title-area service text-center">
                     <p class="pre-title">
-                        Our Solutions
+                        Our Pillars
                     </p>
                     <h2 class="title">Turning Challenges Into Outcomes</h2>
                 </div>
@@ -218,16 +164,13 @@
                     </div>
                     <div class="service-details">
                         <a href="{% url 'goldours_home:governance-and-direction' %}">
-                            <h5 class="title">Governance & Direction</h5>
+                            <h5 class="title">Align Your Leadership, Accelerate Your Mission</h5>
                         </a>
                         <p class="disc">
-                            Achieve audit-ready governance and board excellence to unlock investor
-                            confidence.
+                            Stop operating in silos. We create a unified vision and provide a clear roadmap so your leadership team can make
+                            confident, high-impact decisions, every time.
                         </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:governance-and-direction' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
+                        
                     </div>
                 </div>
             </div>
@@ -240,16 +183,13 @@
                     </div>
                     <div class="service-details">
                         <a href="{% url 'goldours_home:talent-management-and-development' %}">
-                            <h5 class="title">Talent Management & Development</h5>
+                            <h5 class="title">Transform Metrics into Momentum</h5>
                         </a>
                         <p class="disc">
-                            Build agile leadership teams and foster a culture of accountability to
-                            deliver on strategic goals.
+                            Goals are not enough. We build a culture of genuine accountability and high-impact execution, ensuring every team member
+                            is empowered to deliver against your strategic objectives.
                         </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:talent-management-and-development' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
+                        
                     </div>
                 </div>
             </div>
@@ -262,18 +202,14 @@
                     </div>
                     <div class="service-details">
                         <a href="{% url 'goldours_home:systems-reviews-and-assurance' %}">
-                            <h5 class="title">Systems, Reviews & Assurance</h5>
+                            <h5 class="title">Turn Compliance into a Competitive Edge</h5>
                         </a>
                         <p class="disc">
-                            Implement robust systems and controls to protect assets and ensure
-                                operational
-                                resilience.
+                            Stop seeing governance and B-BBEE as just a checklist. We show you how to leverage good compliance to win bigger tenders
+                            and drive sustainable, long-term growth.
 
                         </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:systems-reviews-and-assurance' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
+                        
                     </div>
                 </div>
             </div>
@@ -286,34 +222,50 @@
                     </div>
                     <div class="service-details">
                         <a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">
-                            <h5 class="title">B-BBEE Consulting & Training</h5>
+                            <h5 class="title">Empower Your Team. Unleash Your Business.</h5>
                         </a>
                         <p class="disc">
                             
-                            Optimise your B-BBEE scorecard to win larger contracts and accelerate
-                            business growth.
+                            The future of your business rests on your leaders. We provide the essential skills and frameworks they need to drive
+                            change and execute flawlessly, turning talent into your greatest asset.
 
                         </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:bbbee-consulting-and-training' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
+                        
                     </div>
                 </div>
             </div>
             <!-- end single Services -->
-
+            <div class="">
+                <div class="service-one-inner four">
+                    <div class="thumbnail">
+                        <img src="{% static 'assets/images/service/icon/06.svg' %}" alt="Goldours_service">
+                    </div>
+                    <div class="service-details">
+                        <a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">
+                            <h5 class="title">Purpose-Driven Profits, Measurable Impact</h5>
+                        </a>
+                        <p class="disc">
+            
+                            We help you design and implement Corporate Social Investment (CSI) initiatives that not only create tangible social
+                            change but also directly support your core business values and brand growth.
+            
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
             <!-- end single Services -->
         </div>
         <div class="row">
             <div class="cta-one-bg col-12">
                 <div class="cta-one-inner">
                     <div class="cta-left">
-                        <h3 class="title">Let's discuss about how we can help
-                            make your organisation better</h3>
+                        <h3 class="title">Ready to See What's Possible?</h3>
+                        <p class="cta-text">Don't settle for static growth. Book a free, no-obligation discovery call with our team to discuss your current
+                        challenges and map out a tailored plan for unlocking your organization's full potential.</p>
                     </div>
                     <div class="cta-right">
-                        <a class="rts-btn btn-white" href="{% url 'goldours_home:contact' %}">Let's Work Together</a>
+                        <a class="rts-btn btn-white" href="{% url 'goldours_home:contact' %}">Book Your Discovery Call</a>
                     </div>
                 </div>
             </div>

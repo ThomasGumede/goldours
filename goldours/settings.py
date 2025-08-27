@@ -46,7 +46,7 @@ TINYMCE_DEFAULT_CONFIG = {
 GOOGLE_ANALYTICS_MEASUREMENT_ID = config('GOOGLE_G')
 
 TAILWIND_APP_NAME = 'theme'
-NPM_BIN_PATH = "/usr/bin/npm"
+NPM_BIN_PATH = "npm.cmd"
 INTERNAL_IPS = [
     "127.0.0.1", '0.0.0.0'
 ]

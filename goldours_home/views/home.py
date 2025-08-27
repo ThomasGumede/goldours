@@ -131,3 +131,6 @@ def cookie(request):
 def faqs(request):
     blogs = Blog.objects.all()[:5]
     return render(request, "home/faqs.html", {"posts": blogs})
+
+def course_details(request):
+    return render(request, "home/course.html")
