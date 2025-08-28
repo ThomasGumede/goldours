@@ -3,22 +3,6 @@
 {% load email_filters %}
 
 {% block seo %}
-<script src="https://www.google.com/recaptcha/enterprise.js?render={{ site_key }}"></script>
-<script>
-    function onSubmit(token) {
-        document.getElementById("contact-form-").submit();
-    }
-
-    function loadRecaptcha() {
-        grecaptcha.enterprise.ready(function () {
-            grecaptcha.enterprise.execute('{{ site_key }}', {action: 'submit'}).then(function (token) {
-                document.getElementById('id_recaptcha_token').value = token;
-            });
-        });
-    }
-
-    window.onload = loadRecaptcha;
-</script>
 <title>Asset Management Online Course</title>
 <meta name="description"
     content="This course will equip you with the practical skills and strategic insights to manage and grow your assets for long-term financial success." />
@@ -70,8 +54,19 @@
                                 This course will equip you with the practical skills and strategic insights to manage and grow your assets for long-term
                                 financial success.
                             </p>
-                            <a href="{% url 'goldours_home:contact' %}" class="rts-btn btn-nine">Book Your Seat Now</a>
+                            
+                            
 
+                            <div class="dropdown rts-btn-cont tw-w-fit">
+                                <button class="dropdown-toggle rts-btn btn-nine  tw-w-fit" type="button" id="bookSeatDropdown" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Book Your Seat Now
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="bookSeatDropdown">
+                                    <li><a class="dropdown-item" href="https://www.quicket.co.za/events/333479-master-the-art-of-asset-management-10-sept/">10 September, 7 pm</a></li>
+                                    <li><a class="dropdown-item" href="https://www.quicket.co.za/events/333484-master-the-art-of-asset-management-13-sept/">13 September, 10 am</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,11 +198,21 @@
             <div class="col-12">
                 <div class="cta-two-wrapper">
                     <div class="title-area">
-                        <h3 class="title animated fadeIn">Ready to Invest in Your Future?</h3>
+                        <h3 class="title animated fadeIn tw-text-custom-primary">Ready to Invest in Your Future?</h3>
                         <p class="tw-text-white">Spaces are limited. Secure your spot in the Asset Management online
                             course today.</p>
                     </div>
-                    <a class="rts-btn btn-secondary-3" href="{% url 'goldours_home:contact' %}">BOOK NOW</a>
+                    <div class="dropdown tw-w-fit">
+                        <button class="dropdown-toggle rts-btn btn-nine  tw-w-fit" type="button" id="bookSeatDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            BOOK NOW
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="bookSeatDropdown">
+                            <li><a class="dropdown-item" href="https://www.quicket.co.za/events/333479-master-the-art-of-asset-management-10-sept/">10 September, 7 pm</a></li>
+                            <li><a class="dropdown-item" href="https://www.quicket.co.za/events/333484-master-the-art-of-asset-management-13-sept/">13 September, 10 am</a></li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -244,9 +249,9 @@
                     </div>
                     <div class="">
                         <!-- single wirking process -->
-                        <div class="rts-working-process-1 process-lg text-center">
+                        <div class="rts-working-process-1 text-center">
                             <div class="inner two">
-                                <div class="tw-w-32 tw-h-32">
+                                <div class="tw-w-20 tw-h-20">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                         <path fill="#D4A841"
@@ -255,20 +260,19 @@
                                 </div>
                             </div>
                             <div class="content tw-text-center">
-                                <h6 class="title">Learn at Your Pace</h6>
+                                <h6 class="title">Learn Online</h6>
                                 <p class="disc tw-text-center">
-                                    Engage with video lessons, <br> exercises, and exclusive resources.
+                                    Join a live, 2-hours interactive season <br> from the comfort of your home.
                                 </p>
                             </div>
                         </div>
                         <!-- single wirking process End -->
                     </div>
-                    
                     <div class="">
                         <!-- single wirking process -->
-                        <div class="rts-working-process-1 process-lg text-center">
+                        <div class="rts-working-process-1 text-center">
                             <div class="inner three">
-                                <div class="tw-w-36 tw-h-36">
+                                <div class="tw-w-20 tw-h-20">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                         <path fill="#D4A841"
@@ -279,7 +283,7 @@
                             <div class="content tw-text-center">
                                 <h6 class="title">Earn Your Certificate</h6>
                                 <p class="disc tw-text-center">
-                                    Complete the course and <br> receive a professional certificate.
+                                    Receive a professional certificate of <br> attendance to showcase your new skills.
                                 </p>
                             </div>
                         </div>

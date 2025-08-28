@@ -18944,7 +18944,6 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 .banner-three-inner .subtitle-banner {
   color: var(--color-primary);
   letter-spacing: 0.3em;
-  
 }
 
 .cta-text {
@@ -19723,6 +19722,7 @@ header.header-home-nine {
   display: flex;
   align-items: center;
 }
+
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner-area-nine .banner-inner-content {
     height: 850px;
@@ -19779,7 +19779,7 @@ header.header-home-nine {
     max-width: 100%;
   }
 }
-.banner-area-nine .banner-inner-content a.rts-btn {
+.banner-area-nine .banner-inner-content div.rts-btn-cont {
   display: block;
   max-width: max-content;
   margin: auto;
