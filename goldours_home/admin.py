@@ -1,5 +1,41 @@
 from django.contrib import admin
 from goldours_home.models import BlogCategory, Blog, Comment, EmailModel, Privacy, Review, TeamSummary, Client, Accreditation, Media
+from django.utils.html import format_html
+
+
+@admin.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" width="35" style="border-radius:8px;"/>', obj.image.url)
+        return "No Image"
+    image_preview.short_description = "Preview"
+
+    def status_colored(self, obj):
+        # Example — if you later add a "status" field to Blog
+        return format_html('<span style="color:green;font-weight:bold;">Published</span>')
+    status_colored.short_description = "Status"
+    
+    list_display = ('title', 'category', 'author', 'image_preview', 'created', 'status_colored')
+    list_filter = ('category', 'author')
+    search_fields = ('title', 'description', 'content')
+    prepopulated_fields = {'slug': ('title',)}
+    readonly_fields = ('image_preview',)
+    list_per_page = 20
+
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('title', 'slug', 'description', 'category', 'author')
+        }),
+        ('Content', {
+            'fields': ('content',)
+        }),
+        ('Image', {
+            'fields': ('image', 'image_preview')
+        }),
+    )
+
+    
 
 
 class CommentInline(admin.StackedInline):
@@ -31,9 +67,9 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ["label"]}
 
 
-@admin.register(Blog)
-class PostAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ["title"]}
+# @admin.register(Blog)
+# class PostAdmin(admin.ModelAdmin):
+#     prepopulated_fields = {"slug": ["title"]}
 
 @admin.register(Media)
 class MediaAdmin(admin.ModelAdmin):

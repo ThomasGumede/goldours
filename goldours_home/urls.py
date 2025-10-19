@@ -2,7 +2,7 @@ from django.urls import path
 from goldours_home.views.media_views import media_details, download_media_file, media_files
 from goldours_home.views.services import all_service, bbbee_consulting_and_training, talent_management_and_development, systems_reviews_and_assurance, governance_and_direction
 from goldours_home.views.admin_views import all_accounts
-from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, update_blog
+from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, tinymce_image_upload, update_blog
 from goldours_home.views.home import about_goldours, contact, course_details, dashboard, test_400, home, privacy, cookie, search, terms_and_conditions, contact_ajax
 from goldours_home.views.member_views import create_member, delete_member, team_member_details, team_members, update_member
 
@@ -41,4 +41,6 @@ urlpatterns = [
     path("dashboard/member/create", create_member, name="create-member"),
     path("dashboard/member/update/<member_id>", update_member, name="update-member"),
     path("dashboard/member/delete/<member_id>", delete_member, name="delete-member"),
+    
+    path('tinymce-upload/', tinymce_image_upload, name='tinymce_upload'),
 ]
