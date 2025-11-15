@@ -22,13 +22,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">Post Details</h1>
+                <h1 class="title">{{post.title}}</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="{{ request.build_absolute_uri }}" class="active">Post Details</a>
+                    <a href="{{ request.build_absolute_uri }}" class="active">{{post.title}}</a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     <div class="thumbnail">
                         <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
                     </div>
-                    <div class="blog-listing-content">
+                    <div class="blog-listing-content ">
                         <div class="user-info">
                             <!-- single info -->
                             <div class="single">
@@ -75,11 +75,20 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="details-share">
                                     <h6>Share:</h6>
-                                    <button><i class="fab fa-facebook-f"></i></button>
-                                    <button><i class="fab fa-twitter"></i></button>
-                                    <button><i class="fab fa-instagram"></i></button>
-                                    <button><i class="fab fa-linkedin-in"></i></button>
+                                
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                
+                                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text=Check%20this%20out" target="_blank" class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank" class="share-btn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
                                 </div>
+
                             </div>
                         </div>
                         

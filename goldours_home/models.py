@@ -151,10 +151,11 @@ class Media(AbstractCreate):
     image = models.ImageField(help_text=_("Upload media image."), upload_to=handle_post_file_upload, blank=True, null=True)
     mediafile = models.FileField(help_text=_("Upload media file."), upload_to=handle_post_file_upload, blank=True, null=True)
     title = models.CharField(help_text=_("Enter title for your media file"), max_length=150)
-    description = models.TextField(help_text=_("Write a short description about this media file"), max_length=200)
+    description = HTMLField(help_text=_("Write a short description about this media file"))
     slug = models.SlugField(max_length=250, blank=True, unique=True)
     author = models.ForeignKey(get_user_model(), on_delete=models.SET_DEFAULT, default=None, related_name="medias", null=True)
     category = models.ForeignKey(BlogCategory, on_delete=models.PROTECT, related_name="medias")
+    # content = HTMLField()
 
     class Meta:
         verbose_name = 'Media File'
@@ -236,6 +237,10 @@ class Member(AbstractCreate):
         self.slug = slug
         super(Member, self).save(*args, **kwargs)
 
+# class Gallery(AbstractCreate):
+#     title = models.CharField(help_text=_("Enter title for your image"), max_length=150)
+#     image = models.ImageField(help_text=_("Upload media image."), upload_to=handle_post_file_upload, blank=True, null=True)
+    
 @receiver(pre_delete, sender=Blog)
 def delete_Post_image_hook(sender, instance, using, **kwargs):
     instance.image.delete()

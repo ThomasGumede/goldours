@@ -36,125 +36,28 @@
     </div>
 </div>
 <!-- end breadcrumb area -->
-
-<!-- rts blog list area -->
-<div class="rts-blog-list-area rts-section-gap">
+<section class="portfolio-area style-4 pt--120 pb--120 pt_xs--60 pt_xs--60">
     <div class="container">
-        <div class="row g-5">
-            <!-- rts blog post area -->
-            <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                <!-- single post -->
-                {% for post in posts %}
-                <div class="blog-single-post-listing">
-                    <div class="thumbnail">
-                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}"
-                            alt="Business-Blog">
-                    </div>
-                    <div class="blog-listing-content">
-                        <div class="user-info">
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-user-circle"></i>
-                                <span>by Admin</span>
-                            </div>
-                            <!-- single infoe end -->
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-clock"></i>
-                                <span>{{post.created|date:"b d, Y"}}</span>
-                            </div>
-                            <!-- single infoe end -->
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-tags"></i>
-                                <span>{{post.category.label}}</span>
-                            </div>
-                            <!-- single info end -->
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4 tw-overflow-hidden col-md-6 col-sm-12">
+                <div class="item tw-overflow-hidden">
+                    <div class="portfolio-wrapper tw-overflow-hidden">
+                        <div class="img-fluid">
+                            
+                            <img class="tw-w-[335px] tw-h-[275px]" src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
                         </div>
-                        <a class="blog-title" href="{{post.get_absolute_url}}">
-                            <h3 class="title">{{post.title}}</h3>
-                        </a>
-                        <p class="disc">
-                            {{post.description}}
-                        </p>
-                        <a class="rts-btn btn-primary" href="{{post.get_absolute_url}}">Read
-                            Details</a>
-                    </div>
-                </div>
-                {% endfor %}
-                <!-- single post End-->
-
-
-
-                <!-- <div class="row">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <div class="pagination">
-                                <button class="active">01</button>
-                                <button>02</button>
-                                <button>03</button>
-                                <button>04</button>
-                                <button><i class="fal fa-angle-double-right"></i></button>
-                            </div>
+                        <div class="single-portfolio">
+                            <span>{{post.category.label}}</span>
+                            <h4 class="portfolio-title text-white">{{post.title}}</h4>
                         </div>
+                        <a class="pf-btn" href="{{post.get_absolute_url}}"><i class="fal fa-long-arrow-right"></i></a>
                     </div>
-                </div> -->
-
+                </div>
             </div>
-            <!-- rts-blog post end area -->
-            <!--rts blog wized area -->
-            <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60">
-                <!-- single wized start -->
-                <div class="rts-single-wized search">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Search Here
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <form class="rts-search-wrapper" action="{% url 'goldours_home:blogs' %}">
-                            <input class="Search" type="text" name="query" placeholder="Enter Keyword">
-                            <button><i class="fal fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized Categories">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Categories
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        {% for category in blog_categories %}
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="{% url 'goldours_home:blogs-by-category' category.slug %}">{{category.label}}
-                                    <i class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        {% endfor %}
-
-                    </div>
-                </div>
-
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized contact">
-                    <div class="wized-header">
-                        <a href="#"><img src="{% static 'assets/images/logo/logo-2.png' %}" alt="Business_logo"></a>
-                    </div>
-                    <div class="wized-body">
-                        <h5 class="title">Need Help? We Are Here
-                            To Help You</h5>
-                        <a class="rts-btn btn-primary" href="{% url 'goldours_home:contact' %}">Contact Us</a>
-                    </div>
-                </div>
-                <!-- single wized End -->
-            </div>
-            <!-- rts- blog wized end area -->
+            {% endfor %}
+            
         </div>
     </div>
-</div>
-<!-- rts blog list area End -->
+</section>
 {% endblock content %}

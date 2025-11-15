@@ -78,11 +78,23 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="details-share">
                                     <h6>Share:</h6>
-                                    <button><i class="fab fa-facebook-f"></i></button>
-                                    <button><i class="fab fa-twitter"></i></button>
-                                    <button><i class="fab fa-instagram"></i></button>
-                                    <button><i class="fab fa-linkedin-in"></i></button>
+                            
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"
+                                        class="share-btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                            
+                                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text=Check%20this%20out"
+                                        target="_blank" class="share-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                            
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank"
+                                        class="share-btn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
                                 </div>
+                            
                             </div>
                         </div>
 
