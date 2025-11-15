@@ -187,7 +187,7 @@ ul,
 table,
 hr {
   margin: 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 h1,
@@ -446,7 +446,7 @@ cite,
 .wp-block-pullquote cite,
 .wp-block-pullquote.is-style-solid-color blockquote cite,
 .wp-block-quote cite {
-  color: var(--color-heading);
+
 }
 
 var {
@@ -521,7 +521,6 @@ ol li {
   margin-bottom: 10px;
 }
 ol li a {
-  color: var(--color-heading);
   text-decoration: none;
 }
 ol li a:hover {
@@ -9077,7 +9076,7 @@ audio:not([controls]) {
 }
 
 a {
-  color: var(--color-heading);
+
   text-decoration: none;
   outline: none;
 }
@@ -9173,7 +9172,7 @@ dd {
 
 dt {
   font-weight: bold;
-  color: var(--color-heading);
+
 }
 
 menu,
