@@ -40,63 +40,48 @@
     <div class="container">
         <div class="row g-5">
             <!-- rts blog post area -->
-            <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                <!-- single post -->
-                {% for post in posts %}
-                <div class="blog-single-post-listing">
-                    <div class="thumbnail">
-                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="Business-Blog">
-                    </div>
-                    <div class="blog-listing-content">
-                        <div class="user-info">
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-user-circle"></i>
-                                <span>by Admin</span>
+             <div class="col-xl-8 col-md-12 col-sm-12 col-12 pr--40 pr_md--0 pr_sm-controler--0">
+                <div class="row g-5">
+                    
+                        <!-- start blog grid inner -->
+                        {% for post in posts %}
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="blog-grid-inner">
+                                <div class="blog-header">
+                                    <a class="thumbnail" href="{% url 'goldours_home:details-blog' post.slug %}">
+                                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
+                                    </a>
+                                    <div class="blog-info">
+                                        <div class="user">
+                                            <i class="fal fa-user-circle"></i>
+                                            <span>by Admin</span>
+                                        </div>
+                                        <div class="user">
+                                            <i class="fal fa-tags"></i>
+                                            <span>{{post.category.label}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <h6 class="title">{{post.created|date:"d"}}</h6>
+                                        <span>{{post.created|date:"b"}}</span>
+                                    </div>
+                                </div>
+                                <div class="blog-body">
+                                    <a href="{% url 'goldours_home:details-blog' post.slug %}">
+                                        <h5 class="title">
+                                            {{post.title}}
+                                        </h5>
+                                    </a>
+                                </div>
                             </div>
-                            <!-- single infoe end -->
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-clock"></i>
-                                <span>{{post.created|date:"b d, Y"}}</span>
-                            </div>
-                            <!-- single infoe end -->
-                            <!-- single info -->
-                            <div class="single">
-                                <i class="far fa-tags"></i>
-                                <span>{{post.category.label}}</span>
-                            </div>
-                            <!-- single info end -->
                         </div>
-                        <a class="blog-title" href="{% url 'goldours_home:details-blog' post.slug %}">
-                            <h3 class="title">{{post.title}}</h3>
-                        </a>
-                        <p class="disc">
-                            {{post.description}}
-                        </p>
-                        <a class="rts-btn btn-primary" href="{% url 'goldours_home:details-blog' post.slug %}">Read Details</a>
-                    </div>
+                        
+                        {% endfor %}
+                        <!-- end blog grid inner -->
+                    
                 </div>
-                {% endfor %}
-                <!-- single post End-->
-                
-
-                
-                <!-- <div class="row">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <div class="pagination">
-                                <button class="active">01</button>
-                                <button>02</button>
-                                <button>03</button>
-                                <button>04</button>
-                                <button><i class="fal fa-angle-double-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
             </div>
+            
             <!-- rts-blog post end area -->
             <!--rts blog wized area -->
             <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60">
