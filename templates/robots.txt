@@ -1,7 +1,15 @@
 User-agent: *
-Disallow: /
+# Block admin and system areas
+Disallow: {% url 'admin:index' %}
+Disallow: /accounts/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /register/
+Disallow: /password-reset/
+Disallow: /dashboard/
 
 User-agent: *
+Allow: /
 Allow: {% url 'goldours_home:goldours-home' %}
 Allow: {% url 'goldours_home:about-goldours' %}
 Allow: {% url 'goldours_home:contact' %}
