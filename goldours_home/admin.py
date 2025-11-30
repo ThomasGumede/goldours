@@ -18,6 +18,7 @@ class BlogAdmin(admin.ModelAdmin):
     
     list_display = ('title', 'category', 'author', 'image_preview', 'created', 'status_colored')
     list_filter = ('category', 'author')
+    # filter_horizontal = ("tags",)
     search_fields = ('title', 'description', 'content')
     prepopulated_fields = {'slug': ('title',)}
     readonly_fields = ('image_preview',)
@@ -27,8 +28,8 @@ class BlogAdmin(admin.ModelAdmin):
         ('Basic Information', {
             'fields': ('title', 'slug', 'description', 'category', 'author')
         }),
-        ('Content', {
-            'fields': ('content',)
+        ('Details', {
+            'fields': ('content', 'tags')
         }),
         ('Image', {
             'fields': ('image', 'image_preview')

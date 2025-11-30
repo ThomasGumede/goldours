@@ -2,7 +2,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.conf import settings
 from accounts.utilities.company import COMPANY
 from goldours_home.models import BlogCategory, Blog, Review, TeamSummary
-
+from goldours_home.views.blog_views import get_popular_tags
 def global_context(request):
     PROTOCOL = "https" if request.is_secure() else "http"
     DOMAIN = get_current_site(request).domain
@@ -32,6 +32,7 @@ def global_context(request):
         'GOOGLE_ANALYTICS_MEASUREMENT_ID': getattr(settings, 'GOOGLE_ANALYTICS_MEASUREMENT_ID', None),
         "site_key": getattr(settings, 'RECAPTCHA_ENTERPRISE_SITE_KEY', None),
         "project_id": getattr(settings, 'RECAPTCHA_ENTERPRISE_PROJECT_ID', None),
+        "popular_tags": get_popular_tags()
     }
 
     

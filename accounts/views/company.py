@@ -1,8 +1,8 @@
-from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib import messages
 from django.http import HttpResponse
 import logging, mimetypes
-from accounts.models import AboutCompany
+from accounts.models import AboutCompany, CompanyCommunication
 
 logger = logging.getLogger("accounts")
 
@@ -27,3 +27,20 @@ def download_profile(request):
             logger.error("Missing company profile")
             messages.error(request, "Company profile not aploaded yet, send us an email if you have questions")
             return redirect("goldours_home:contact")
+        
+def communications(request):
+    communications = CompanyCommunication.objects.all()
+    context = {
+        "communications": communications,
+    }
+    return render(request, "communications/communications.html", context)
+
+def communication_detail(request, slug):
+    communication = get_object_or_404(CompanyCommunication, slug=slug)
+    images = communication.images.all()
+
+    context = {
+        "com": communication,
+        "images": images
+    }
+    return render(request, "communications/communication_detail.html", context)

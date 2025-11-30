@@ -1,0 +1,286 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>{{com.title}} - GoldOurs</title>
+<meta name="description"
+    content="{{com.short_description}}" />
+<meta name="keywords"
+    content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting, goldours cape town, goldours johannersburg, goldours photos, goldours services" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="About Us - GoldOurs" />
+<meta property="og:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="author" content="GoldOurs Team">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+<meta name="distribution" content="global">
+
+<link rel="stylesheet" href="{% static 'assets/css/glightbox.css' %}">
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
+<meta name="twitter:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
+<meta name="twitter:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:creator" content="@GoldOursOfficial">
+
+
+<script type="application/ld+json">
+        {
+                "@context": "https://schema.org",
+                    "@type": "Webpage",
+                        "name": "{{com.title}} - GoldOurs",
+                            "description": "Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals.",
+                                "url": "https://www.goldours.com/about-us",
+                                    "mainEntity": {
+                    "@type": "Organization",
+                        "name": "GoldOurs",
+                            "mission": "To empower individuals and organizations to achieve sustainable growth and transformation.",
+                                "vision": "To be world-renowned for unearthing the optimal value of institutions and leaders.",
+                                    "values": [
+                                        "People are treasure",
+                                        "Pursue joy and protect peace",
+                                        "Honor commitments",
+                                        "Grow always"
+                                    ]
+                }
+            }
+
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <style>
+        /*============= popup gallery =============*/
+
+        .goverlay {
+        background: var(--section-bg-2);
+        opacity: 0.9;
+        }
+
+        .gcontainer {
+        cursor: pointer;
+        }
+
+        .gslide-media {
+        margin: 0 50px;
+        }
+
+        .gslide-count {
+        font-size: 11px;
+        color: #8cb2b2;
+        }
+
+        .plyr__control--overlaid {
+        border-radius: 15px;
+        background: red !important;
+        padding: 15px 25px;
+        }
+
+        .plyr--video .plyr__control:hover {
+        background: red;
+        }
+
+        .plyr--full-ui input[type="range"] {
+        color: red;
+        }
+
+        .plyr--full-ui input[type="range"]:last-child {
+        color: white;
+        }
+
+        .gprev,
+        .gnext,
+        .gclose {
+        width: 24px !important;
+        height: 24px !important;
+        border: 1px solid white;
+        border-radius: 100% !important;
+        background: transparent;
+        opacity: 0.5;
+        }
+
+        .glightbox-clean .gnext,
+        .glightbox-clean .gprev {
+        top: 90%;
+        }
+
+        .gclose {
+        width: 24px !important;
+        height: 24px !important;
+        }
+
+        .gprev:hover,
+        .gnext:hover,
+        .gclose:hover {
+        box-shadow: 0 0 19px rgba(255, 255, 255, 0.4) !important;
+        opacity: 1;
+        }
+
+        .glightbox-clean button {
+        background: transparent;
+        }
+
+        .gprev svg,
+        .gnext svg,
+        .gclose svg {
+        width: 10px;
+        height: auto;
+        }
+
+        .gclose svg {
+        width: 10px !important;
+        height: auto;
+        }
+
+        .gslide-inline {
+        overflow: visible;
+        background-color: transparent;
+        }
+
+        .gslide-inline .ginlined-content {
+        background-color: white;
+        overflow: auto;
+        }
+
+        .gslide-external {
+        overflow: visible;
+        background-color: transparent;
+        }
+    </style>
+{% endblock seo %}
+
+{% block content %}
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Company Socialization</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
+                    <span> / </span>
+                    <a href="#" class="active">Company Socialization</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rts-project-details-area rts-section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="big-bg-porduct-details">
+                    <img class="md:tw-w-[950px] md:tw-h-[512px] lg:tw-w-[1220px] lg:tw-h-[660px]" src="{% if com.image %}{{com.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="Business_Finbiz">
+                    <div class="project-info">
+                        <div class="info-head">
+                            <h5 class="title">Event Information</h5>
+                        </div>
+                        <div class="info-body">
+                            <!-- single info -->
+                            <div class="single-info">
+                                <div class="info-ico">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Title:</span>
+                                    <h6 class="name">{{com.title}}</h6>
+                                </div>
+                            </div>
+                            <!-- end single info -->
+                            <!-- single info -->
+                            <div class="single-info">
+                                <div class="info-ico">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Category:</span>
+                                    <h6 class="name">Company Socialization</h6>
+                                </div>
+                            </div>
+                            <!-- end single info -->
+                            <!-- single info -->
+                            <div class="single-info">
+                                <div class="info-ico">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Date:</span>
+                                    <h6 class="name">{{com.event_date}}</h6>
+                                </div>
+                            </div>
+                            <!-- end single info -->
+                            <!-- single info -->
+                            <div class="single-info">
+                                <div class="info-ico">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Address:</span>
+                                    <h6 class="name">{{com.location}}</h6>
+                                </div>
+                            </div>
+                            <!-- end single info -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt--70 mb--50">
+            <div class="col-12">
+                <div class="product-details-main-inner">
+                    <span>Company Socialization</span>
+                    <h3 class="title animated fadeIn">{{com.title}}</h3>
+                    {{com.description|safe}}
+                </div>
+            </div>
+        </div>
+        <div class="row g-5 mb--60">
+            
+                
+                {% for image in com.images.all %}
+                
+                    <a href="{{image.image.url}}" data-glightbox="type:image;" data-width="82.5vh"  class="glightbox col-lg-4 thumbnail">
+                        
+                            <img class="tw-w-[330px] tw-h-[271px] lg:tw-w-[414px] lg:tw-h-[333px]" src="{% if image.image %}{{image.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{image.caption}}">
+                        
+                    </a>
+               
+                
+                {% endfor %}
+                    
+                
+            
+            
+        </div>
+        
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block js %}
+    <script src="{% static 'assets/js/glightbox.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        //glightbox
+            const lightbox = GLightbox({
+                    touchNavigation: true,
+                    loop: true,
+                    autoplayVideos: false,
+                    selector: ".glightbox",
+                    slideEffect: "fade",
+                    videosWidth: "800px",
+                });
+            
+    </script>
+{% endblock js %}
+    

@@ -32,8 +32,15 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = []
 
 TINYMCE_DEFAULT_CONFIG = {
-    'content_style': '* { margin: 0 !important; padding: 0 !important; }',
-    'theme_advanced_fonts': 'DM Sans=dm-sans,Arial=arial,helvetica,sans-serif',
+    'content_style': '''
+    * { margin: 0 !important; padding: 0 !important; }
+    body { 
+            color: #5D666F !important; 
+            font-family: "DM Sans", sans-serif !important;
+        }
+    ''',
+    'font_family_formats': "DM Sans='DM Sans', sans-serif;Arial=arial,helvetica,sans-serif",
+
     'height': "400px",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 20,
@@ -66,6 +73,9 @@ TINYMCE_DEFAULT_CONFIG = {
     """,
     "menubar": "file edit view insert format tools table help",
     "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks fullscreen insertdatetime media table paste help",
+    'textcolor_map': [
+        "5D666F", "Brand Grey",
+    ],
     "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen preview save print | a11ycheck ltr rtl | showcomments addcomment",
 }
 
@@ -99,6 +109,8 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'tinymce',
+    'taggit',
+    'taggit_autosuggest',
     # 'django_recaptcha',
 ]
 
@@ -182,8 +194,12 @@ if DEBUG:
     
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'goldoursdb',
+            'USER': config("DB_USER"),
+            'PASSWORD': config("DB_PASSWORD"),
+            'HOST': 'localhost',
+            'PORT': '5432',
         }
     }
     
@@ -192,6 +208,9 @@ if DEBUG:
         BASE_DIR / 'static'
     ]
     STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+    CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://localhost', 'https://goldours.co.za', 'https://www.goldours.co.za']
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    X_FRAME_OPTIONS = "SAMEORIGIN"
     
 else:
     ALLOWED_HOSTS = ['goldours.co.za', 'www.goldours.co.za', 'localhost']

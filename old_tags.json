@@ -1,0 +1,1 @@
+[{"model": "taggit.tag", "pk": 5, "fields": {"name": "Bussiness", "slug": "bussiness"}}, {"model": "taggit.tag", "pk": 6, "fields": {"name": "Economics", "slug": "economics"}}]

@@ -14,6 +14,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/icon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/icon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'assets/images/icon/site.webmanifest' %}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_MEASUREMENT_ID }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -196,7 +198,11 @@
     <script src="{% static 'assets/js/main.js' %}"></script>
     <!-- scripts end form hear -->
 
-
+    
+    {% block js %}
+        
+    {% endblock js %}
+        
     <script id="_agile_min_js" async type="text/javascript" src="https://goldoursconsulting.agilecrm.com/stats/min/agile-min.js"> </script>
     <script type="text/javascript" >
          var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account('b5nkkppm9ukltf4iftd6nti0e', 'goldoursconsulting', false);

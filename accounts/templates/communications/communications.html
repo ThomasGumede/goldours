@@ -1,0 +1,106 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>Company Communications & Events - GoldOurs</title>
+<meta name="description"
+    content="GoldOurs a South African-based private company operating in Cape Town and Johannesburg. We offer expertise in executive leadership coaching, accounting services, leadership training," />
+<meta name="keywords"
+    content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting, goldours cape town, goldours johannersburg, goldours photos, goldours services" />
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+<meta property="og:title" content="About Us - GoldOurs" />
+<meta property="og:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="author" content="GoldOurs Team">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+<meta name="distribution" content="global">
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
+<meta name="twitter:description"
+    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
+<meta name="twitter:image"
+    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:creator" content="@GoldOursOfficial">
+
+
+<script type="application/ld+json">
+        {
+                "@context": "https://schema.org",
+                    "@type": "Webpage",
+                        "name": "About Us - GoldOurs",
+                            "description": "Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals.",
+                                "url": "https://www.goldours.com/about-us",
+                                    "mainEntity": {
+                    "@type": "Organization",
+                        "name": "GoldOurs",
+                            "mission": "To empower individuals and organizations to achieve sustainable growth and transformation.",
+                                "vision": "To be world-renowned for unearthing the optimal value of institutions and leaders.",
+                                    "values": [
+                                        "People are treasure",
+                                        "Pursue joy and protect peace",
+                                        "Honor commitments",
+                                        "Grow always"
+                                    ]
+                }
+            }
+
+    </script>
+{% endblock seo %}
+
+{% block content %}
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Company Communications & Events</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
+                    <span> / </span>
+                    <a href="{% url 'accounts:communications' %}" class="active">Company Communications & Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="portfolio-area style-3 pt--110 pb--90 pt--md--60 pb--md-30 pt_xs--60 pb_xs--30">
+    <div class="container">
+        <div class="grid row align-items-center">
+            
+            {% for com in communications %}
+                <div class="col-lg-4 col-md-6 col-sm-12 grid-item cat3">
+                    <div class="portfolio-wrapper2 tw-overflow-hidden mb-30">
+                        <div class="img-fluid tw-overflow-hidden">
+                            <img class="tw-w-[330px] tw-h-[271px] lg:tw-w-[414px] lg:tw-h-[333px]" src="{% if com.image %}{{com.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{com.title}}">
+                            <div class="portfolio-content">
+                                <a class="fw-bold text-white" href="{{com.get_absolute_url}}">Veiw Details </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-text">
+                            <div class="text">
+                                <p class="p-category">
+                                    <a href="{% url 'accounts:communications' %}">Company Communications</a>
+                                </p>
+                                <div class="p-title">
+                                    <a href="{{com.get_absolute_url}}">{{com.title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

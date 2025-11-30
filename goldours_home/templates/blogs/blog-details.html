@@ -5,7 +5,7 @@
 <title>{{post.title}}</title>
 <meta name="description"
     content="{{post.description}}" />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, {{post.title}}, {{post.category.label}}" />
+<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, {{post.title}}, {{post.category.label}}, {% for tag in tags %}{{tag.name}}{% endfor %}" />
 <link rel="canonical" href="{{ request.build_absolute_uri }}" />
 <meta property="og:title" content="{{post.title}}" />
 <meta property="og:description"
@@ -22,13 +22,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">{{post.title}}</h1>
+                <h1 class="title">Article Details</h1>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="bread-tag">
                     <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
                     <span> / </span>
-                    <a href="{{ request.build_absolute_uri }}" class="active">{{post.title}}</a>
+                    <a href="{{ request.build_absolute_uri }}" class="active">{{post.title|truncatewords:5}}</a>
                 </div>
             </div>
         </div>
@@ -70,25 +70,39 @@
                         </div>
                         <h3 class="title">{{post.title}}</h3>
                         {{post.content|safe}}
-                        <div class="row  align-items-center">
-                            
+                        
+                        <div class="row mt--30 align-items-center">
+                            <div class="col-lg-6 col-md-12">
+                                <!-- tags details -->
+                                <div class="details-tag">
+                                    <h6>Tags:</h6>
+                                    
+                                    {% for tag in tags %}
+                                    <a>{{tag.name}}</a>
+                                    {% endfor %}
+                                        
+                                    
+                                </div>
+                                <!-- tags details End -->
+                            </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="details-share">
                                     <h6>Share:</h6>
-                                
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="share-btn">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"
+                                        class="share-btn">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                
-                                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text=Check%20this%20out" target="_blank" class="share-btn">
+                                    
+                                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text=Check%20this%20out" target="_blank"
+                                        class="share-btn">
                                         <i class="fab fa-twitter"></i>
                                     </a>
-                                
-                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank" class="share-btn">
+                                    
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank"
+                                        class="share-btn">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                         
@@ -163,7 +177,7 @@
                         <div class="recent-post-single">
                             <div class="thumbnail">
                                 <a href="{% url 'goldours_home:details-blog' post.slug %}"><img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}"
-                                        alt="{{post.tilte}}"></a>
+                                        alt="{{post.tilte|truncatewords:5}}"></a>
                             </div>
                             <div class="content-area">
                                 <div class="user">
@@ -178,7 +192,24 @@
                         {% endfor %}
                     </div>
                 </div>
-                
+                <div class="rts-single-wized">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Popular Tags
+                        </h5>
+                    </div>
+                    <div class="wized-body">
+                        <div class="tags-wrapper">
+                            
+                            {% for tagpop in popular_tags %}
+                                <a href="{% url 'goldours_home:blogs_by_tag' tagpop.slug %}">{{tagpop.name}}</a>
+                            {% endfor %}
+                                
+                            
+                            
+                        </div>
+                    </div>
+                </div>
                 <!-- single wizered End -->
                 <!-- single wizered start -->
                 <div class="rts-single-wized contact">

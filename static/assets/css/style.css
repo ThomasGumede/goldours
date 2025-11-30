@@ -25822,6 +25822,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   width: 100%;
   border-radius: 16px;
 }
+
 .big-bg-porduct-details .project-info {
   position: absolute;
   right: 0;
@@ -26350,6 +26351,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 }
 .portfolio-area.style-3 .portfolio-wrapper2 .img-fluid img {
   width: 100%;
+  border-radius: 20px;
 }
 .portfolio-area.style-3 .portfolio-wrapper2 .img-fluid .portfolio-content {
   position: absolute;
@@ -29610,6 +29612,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  column-gap: 10px
 }
 @media only screen and (max-width: 479px) {
   .blog-single-post-listing.details .details-tag {
@@ -29621,7 +29624,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   font-size: 18px;
   margin-right: 15px;
 }
-.blog-single-post-listing.details .details-tag button {
+.blog-single-post-listing.details .details-tag a {
   padding: 8px 12px;
   background: #F6F6F6;
   max-width: max-content;
@@ -29633,12 +29636,12 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   transition: 0.3s;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .blog-single-post-listing.details .details-tag button:last-child {
+  .blog-single-post-listing.details .details-tag a:last-child {
     margin-top: 10px;
     margin-left: -2px;
   }
 }
-.blog-single-post-listing.details .details-tag button:hover {
+.blog-single-post-listing.details .details-tag a:hover {
   background: var(--color-primary);
   color: #fff;
   transform: translateY(-2px) scale(1.02);

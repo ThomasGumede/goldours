@@ -133,6 +133,24 @@
                         
                     </div>
                 </div>
+                <div class="rts-single-wized">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Popular Tags
+                        </h5>
+                    </div>
+                    <div class="wized-body">
+                        <div class="tags-wrapper">
+                
+                            {% for tagpop in popular_tags %}
+                            <a href="{% url 'goldours_home:blogs_by_tag' tagpop.slug %}">{{tagpop.name}}</a>
+                            {% endfor %}
+                
+                
+                
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- single wized End -->
                 <!-- single wized start -->

@@ -7,6 +7,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import gettext as _
 from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import pre_delete, post_save
+from tinymce.models import HTMLField
 from accounts.utilities.abstracts import AbstractCreate, AbstractProfile
 from accounts.utilities.choices import TITLE_CHOICES, RoleChoice
 from accounts.utilities.file_handlers import handle_profile_upload
@@ -73,3 +74,51 @@ class AboutCompany(AbstractCreate):
     class Meta:
         verbose_name = 'About Company'
         verbose_name_plural = 'About Companys'
+
+
+class CompanyCommunication(AbstractCreate):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True, blank=True)
+    image = models.ImageField(help_text=_("Upload image for this event"), upload_to=handle_profile_upload, null=True, blank=True)
+    short_description = models.TextField(help_text=_("Write a short description about this post"), max_length=200)
+    description = HTMLField(blank=True, help_text=_("Describe this event or ceremony"))
+    location = models.CharField(max_length=255, blank=True, null=True)
+    event_date = models.DateField(default=timezone.now)
+
+
+    class Meta:
+        ordering = ['-event_date']
+        verbose_name = "Company Communication"
+        verbose_name_plural = "Company Communications"
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("accounts:company_communication_detail", args=[self.slug])
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base_slug = slugify(self.title)
+            slug = base_slug
+            count = 1
+            while CompanyCommunication.objects.filter(slug=slug).exists():
+                slug = f"{base_slug}-{count}"
+                count += 1
+            self.slug = slug
+
+        super().save(*args, **kwargs)
+
+
+class CompanyCommunicationImage(models.Model):
+    event = models.ForeignKey(
+        CompanyCommunication,
+        related_name='images',
+        on_delete=models.CASCADE
+    )
+    image = models.ImageField(upload_to='company_communications/')
+    caption = models.CharField(max_length=255, blank=True, null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Image — {self.event.title}"
