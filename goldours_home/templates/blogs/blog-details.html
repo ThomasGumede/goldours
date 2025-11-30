@@ -185,7 +185,7 @@
                                     <span>{{post.created|date:"b d, Y"}}</span>
                                 </div>
                                 <a class="post-title" href="{% url 'goldours_home:details-blog' post.slug %}">
-                                    <h6 class="title">{{post.title}}</h6>
+                                    <h6 class="title">{{post.title|truncatewords:5}}</h6>
                                 </a>
                             </div>
                         </div>

@@ -22,7 +22,7 @@
 
                             <li><a href="{% url 'goldours_home:policy' %}"><i class="far fa-arrow-right"></i> Privacy Policy</a></li>
                             <li><a href="{% url 'goldours_home:media-files' %}"><i class="far fa-arrow-right"></i> Media</a></li>
-                            <li><a href="{% url 'accounts:communications' %}"><i class="far fa-arrow-right"></i> Communications & Events</a></li>
+                            <li><a href="{% url 'accounts:communications' %}"><i class="far fa-arrow-right"></i>Communications & Events</a></li>
                         </ul>
                         <ul class="links margin-left-70">
                             <li><a href="{% url 'goldours_home:about-goldours' %}"><i class="far fa-arrow-right"></i> About Us</a></li>
@@ -77,7 +77,7 @@
                             <div class="post-right">
                                 <p> <i class="fal fa-clock"></i> {{post.created|date:"b d, Y"}}</p>
                                 <a href="{% url 'goldours_home:details-blog' post.slug %}">
-                                    <h6 class="title">{{post.title}}</h6>
+                                    <h6 class="title">{{post.title|truncatewords:5}}</h6>
                                 </a>
                                 <a class="red-more" href="{% url 'goldours_home:details-blog' post.slug %}">Read More<i
                                         class="far fa-arrow-right"></i></a>
