@@ -101,8 +101,7 @@
         ['Questions worth asking', 'What is happening today? What should success look like? Which priorities deserve attention? How will leaders know whether the organisation is moving in the right direction? Honest answers create the basis for better decisions and lasting improvement.'],
         ['Building a sustainable response', 'GoldOurs encourages organisations to combine thoughtful governance with leadership development, reliable systems and meaningful accountability. The objective is not more activity for its own sake, but greater clarity and more effective execution.']
       ];
-      $('#article-body').innerHTML = `` + body.map(([h,p]) => `<h3>${safe(h)}</h3><p>${safe(p)}</p>`).join('') + `<p>Explore more from the <a href="https://www.goldours.co.za/articles/" target="_blank" rel="noopener noreferrer">GoldOurs Insights archive</a>.</p>`;
-      $('#article-related').innerHTML = data.articles.filter(a => a.id !== article.id).slice(0,5).map(a => `<a href="blog-details.html?article=${encodeURIComponent(a.id)}">${safe(a.title)}<i class="fas fa-angle-right" aria-hidden="true"></i></a>`).join('');
+      
     }
     $('#copy-article-link')?.addEventListener('click', async e => {
       try {await navigator.clipboard.writeText(location.href); e.currentTarget.textContent = 'Link copied';}
