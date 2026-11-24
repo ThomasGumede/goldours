@@ -4,14 +4,13 @@ from goldours_home.views.services import all_service, bbbee_consulting_and_train
 from goldours_home.views.admin_views import all_accounts
 from goldours_home.views.blog_views import all_blogs, blog_details, blogs, create_blog, delete_blog, tinymce_image_upload, update_blog
 from goldours_home.views.home import about_goldours, contact, course_details, dashboard, test_400, home, privacy, cookie, search, terms_and_conditions, contact_ajax
-from goldours_home.views.member_views import create_member, delete_member, team_member_details, team_members, update_member
+from goldours_home.views.our_impacts import get_accreditations, get_clients, get_team, get_testimonials, get_contributions
 
 app_name = 'goldours_home'
 urlpatterns = [
     path("", home, name="goldours-home"),
     path("about-us/", about_goldours, name="about-goldours"),
     path("about-us/asset-management-online-course", course_details, name="course-details"),
-    path("about-us/teams/<member_id>", team_member_details, name="team-member"),
     path("contact-us/", contact, name="contact"),
     path("api/contact-us", contact_ajax, name="api-contact"),
     path("dashboard", dashboard, name="dashboard"),
@@ -36,13 +35,12 @@ urlpatterns = [
     path("dashboard/blogs", all_blogs, name="all-blogs"),
     path("dashboard/blogs/create", create_blog, name="create-blog"),
     path("article/<slug:post_slug>", blog_details, name="details-blog"),
-    path("dashboard/blogs/update/<slug:post_slug>", update_blog, name="update-blog"),
-    path("dashboard/blogs/delete/<slug:post_slug>", delete_blog, name="delete-blog"),
+    path("about-us/our-team", get_team, name='get-team'),
+    path("about-us/our-contributions", get_contributions, name='get-contributions'),
+    path("about-us/our-testimonials", get_testimonials, name='get-testimonials'),
+    path("about-us/our-accreditations", get_accreditations, name='get-accreditations'),
+    path("about-us/our-clients", get_clients, name='get-clients'),
 
-    path("dashboard/members", team_members, name="team-members"),
-    path("dashboard/member/create", create_member, name="create-member"),
-    path("dashboard/member/update/<member_id>", update_member, name="update-member"),
-    path("dashboard/member/delete/<member_id>", delete_member, name="delete-member"),
     
     path('tinymce-upload/', tinymce_image_upload, name='tinymce_upload'),
 ]

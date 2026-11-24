@@ -2,135 +2,233 @@
 {% load static %}
 
 {% block seo %}
-<title>B-BBEE Consulting & Training</title>
-<meta name="description" content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Consulting & Training services.." />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, B-BBEE strategy, B-BBEE Consulting, BBBEE Training, bbbee, black business empowerement, B-BBEE audit" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="B-BBEE Consulting & Training" />
-<meta property="og:description" content="GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE Consulting & Training services.." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/service/service-1.jpg' %}">
+<title>B-BBEE Consulting &amp; Training | GoldOurs</title>
+<meta
+    content="GoldOurs helps organisations design and implement B-BBEE strategies, coordinate enterprise and skills development, report progress and support B-BBEE audits."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="B-BBEE Consulting &amp; Training | GoldOurs" property="og:title" />
+<meta
+    content="GoldOurs helps organisations design and implement B-BBEE strategies, coordinate enterprise and skills development, report progress and support B-BBEE audits."
+    property="og:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="B-BBEE Consulting &amp; Training | GoldOurs" name="twitter:title" />
+<meta
+    content="GoldOurs helps organisations design and implement B-BBEE strategies, coordinate enterprise and skills development, report progress and support B-BBEE audits."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"https://www.goldours.co.za/bbbee-consulting-training.html#webpage","url":"https://www.goldours.co.za/bbbee-consulting-training.html","name":"B-BBEE Consulting & Training | GoldOurs","description":"GoldOurs helps organisations design and implement B-BBEE strategies, coordinate enterprise and skills development, report progress and support B-BBEE audits.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"Service","@id":"https://www.goldours.co.za/bbbee-consulting-training.html#service","name":"B-BBEE Consulting & Training","serviceType":"B-BBEE Consulting & Training","description":"B-BBEE strategy design, implementation, enterprise and skills development coordination, reporting and audit support.","provider":{"@id":"https://www.goldours.co.za/#organization"},"areaServed":{"@type":"Country","name":"South Africa"},"url":"https://www.goldours.co.za/bbbee-consulting-training.html"}]}</script>
 {% endblock seo %}
 
-{% block service_title %}
-B-BBEE Consulting & Training
-{% endblock service_title %}
 
-{% block service_title_2 %}
-B-BBEE Consulting & Training
-{% endblock service_title_2 %}
+{% block content %}
 
-{% block link %}
-{% url 'goldours_home:bbbee-consulting-and-training' %}
-{% endblock link %}
-
-{% block service %}
-<div class="col-xl-8 col-md-12 col-sm-12 col-12">
-    <!-- service details left area start -->
-    <div class="service-detials-step-1">
-        <div class="thumbnail">
-            <img src="{% static 'assets/images/service/service-1.jpg' %}" alt="Photo by Jep Gambardella: https://www.pexels.com/photo/people-working-in-the-office-7689864/">
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>B-BBEE Consulting &amp; Training</span></div><span
+                class="eyebrow">SERVICE DETAILS</span>
+            <h1>B-BBEE Consulting &amp; Training</h1>
+            <p>Practical transformation with measurable outcomes.</p>
         </div>
-        <h4 class="title">B-BBEE Consulting & Training</h4>
-        <p class="disc">
-            GoldOurs empowers businesses to embrace transformation and achieve compliance with our comprehensive B-BBEE
-            Consulting &
-            Training services.
-
-        </p>
-
-        <div class="row g-5 mt--30 mb--40">
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Strategy</h6>
-                        <p class="disc">We design customized B-BBEE strategies to help organizations achieve their
-                            desired score, integrate these efforts into
-                            overall business strategies, and implement actionable plans to drive measurable impact</p>
+    </section>
+    <section class="section">
+        <div class="container detail-layout">
+            <div class="detail-main"><img alt="B-BBEE Consulting &amp; Training consulting" class="detail-photo"
+                    id="service-image" src="{% static 'assets/images/service/service-4.jpg' %}" /><span class="eyebrow"
+                    id="service-tag">Strategy • Implementation • Reporting</span>
+                <h2 id="service-title">B-BBEE Consulting &amp; Training</h2>
+                <p class="big-p" id="service-summary">Develop B-BBEE strategy, coordinate implementation and produce
+                    credible reporting for ongoing transformation.</p>
+                <div class="rich-copy" id="service-intro">
+                    <p>GoldOurs supports organisations with B-BBEE strategy design, the implementation of action
+                        plans and reporting to decision-makers.</p>
+                    <p>The focus includes enterprise and skills development, supplier development, in-house staff
+                        training and support during B-BBEE audits.</p>
+                </div>
+                <h3>How we can help</h3>
+                <div class="point-grid" id="service-points">
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Strategy</h3>
+                            <p>Design B-BBEE strategies for desired scores, plan implementation and align
+                                transformation activity with wider organisational strategy.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Implementation</h3>
+                            <p>Implement action plans, coordinate enterprise and skills development, manage supplier
+                                development and deliver staff training.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Reporting</h3>
+                            <p>Quarterly client reporting, B-BBEE audit support, annual integrated reporting and
+                                quarterly board-meeting support.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- single service details card End -->
-            </div>
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Implementation</h6>
-                        <p class="disc">Our team facilitates the execution of B-BBEE strategies through enterprise and
-                            supplier development programs, skills
-                            training, and in-house staff development to ensure lasting results.</p>
+                <div class="benefit-panel">
+                    <h3>Client benefits</h3>
+                    <div class="benefit-list" id="service-benefits">
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Brand enhancement</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Sustainable succession planning</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Compliance with legal prescripts</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Contribution to reducing poverty and
+                            unemployment</div>
                     </div>
                 </div>
-                <!-- single service details card End -->
-            </div>
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Reporting</h6>
-                        <p class="disc">We provide ongoing support with quarterly reports, B-BBEE audits, integrated
-                            annual reporting, and board meeting
-                            preparation to ensure your organization stays on track and meets its transformation goals..
+                <section aria-labelledby="team-bbbee" class="go-service-team">
+                    <div class="go-service-section-label"><span class="eyebrow">OUR TEAM</span><span
+                            class="go-team-id"><i aria-hidden="true" class="fas fa-award"></i> Expertise behind
+                            every outcome</span></div>
+                    <h2 id="team-bbbee">Transformation and business growth practitioners</h2>
+                    <p class="go-team-intro">Our B-BBEE Consulting &amp; Training team combines entrepreneurship,
+                        organisational change, coaching and finance skills to support sustainable transformation.
+                    </p>
+                    <div aria-label="Team qualifications and experience" class="go-team-stat-grid">
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-users"></i></span><strong>7</strong><span>Experienced
+                                professionals</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-briefcase"></i></span><strong>20 years</strong><span>Average
+                                executive experience</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-user-tie"></i></span><strong>8 years</strong><span>Average
+                                non-executive experience</span></div>
+                    </div>
+                    <div class="go-team-qualifications">
+                        <div class="go-team-qual-icon"><i aria-hidden="true" class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Professional qualifications</h3>
+                            <p>BCom Economics, Board Leadership, Advanced Coaching Practice, Master Coach,
+                                Industrial Psychology, MBA, Master of Business Leadership, CA(SA)</p>
+                        </div>
+                    </div>
+                    <h3 class="go-mini-heading">Experience across sectors</h3>
+                    <div class="go-sector-grid">
+                        <div><i aria-hidden="true" class="fas fa-building"></i><strong>15
+                                years</strong><span>Private sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-landmark"></i><strong>8 years</strong><span>Public
+                                sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-university"></i><strong>3
+                                years</strong><span>Academic sector</span></div>
+                    </div>
+                    <h3 class="go-mini-heading">Professional affiliations &amp; accreditations</h3>
+                    <ul class="go-team-affiliations">
+                        <li>Black Management Forum</li>
+                        <li>SEDFA</li>
+                    </ul>
+                </section>
+                <section aria-labelledby="clients-bbbee" class="go-service-clients">
+                    <span class="eyebrow">OUR CLIENTS</span>
+                    <div class="go-client-heading">
+                        <h2 id="clients-bbbee">Trusted by organisations across South Africa.</h2>
+                        <p>Clients and organisations referenced in our B-BBEE Consulting &amp; Training portfolio.
                         </p>
                     </div>
-                </div>
-                <!-- single service details card End -->
-            </div>
-
-        </div>
-        <p class="disc">
-            GoldOurs is proud to have partnered with esteemed clients such as SM Tax, Kuhle Apha, Jade-Sky Project
-            Management,
-            Business Partner, and the College of Cape Town. With proven expertise and dedication, we are committed to
-            helping
-            businesses drive transformation and growth while leaving a positive societal impact.
-
-        </p>
-    </div>
-
-    <!-- service details left area end -->
-    <div class="service-detials-step-3 mt--70 mt_md--50">
-        <div class="row g-5 align-items-center">
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="thumbnail sm-thumb-service">
-                    <img src="{% static 'assets/images/service/sm-01.jpg' %}" alt="Service">
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
-                <h4 class="title">Customer Benefits</h4>
-                <p class="disc">Our services enhance brand reputation, ensure legal compliance, and establish
-                    sustainable succession planning for
-                    internal and external services. By fostering inclusivity, we also contribute to reducing poverty and
-                    unemployment.</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="rts-trusted-client mt--70 rts-section-gapBottom">
-        <div class="">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-area-client text-center">
-                        <p class="client-title">Our Clients</p>
+                    <div class="go-service-clients-grid">
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Edge Growth logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/edge.svg' %}" /></div><strong>Edge Growth</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="SM Tax logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/smtax.png' %}" /></div><strong>SM Tax</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Kuhle Apha logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/kuhle-apha.png' %}" /></div><strong>Kuhle
+                                Apha</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Business Partner logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/business-partner.png' %}" /></div>
+                            <strong>Business Partner</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="GreenBay Africa logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/greenbay-africa.png' %}" /></div>
+                            <strong>GreenBay Africa</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Sima's Cottage logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/sima-s-cottage.png' %}" /></div>
+                            <strong>Sima's Cottage</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Media EQ logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/mediae.png' %}" /></div><strong>Media EQ</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="CYBTT logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/cybtt.png' %}" /></div><strong>CYBTT</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Bidvest logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/bidvest.png' %}" /></div><strong>Bidvest</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Tshiberry B&amp;B logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/tshiberry-b-b.png' %}" /></div>
+                            <strong>Tshiberry B&amp;B</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="JM Hydraulics logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/jm-hydraulics.png' %}" /></div><strong>JM
+                                Hydraulics</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Black Business Growth Initiative logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/bbgi.png' %}" /></div>
+                            <strong>Black Business Growth Initiative</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="College of Cape Town logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/college-of-cape-town.png' %}" />
+                            </div><strong>College of Cape Town</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Jade-Sky Project Management logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/jade-sky-project-management.png' %}" /></div>
+                            <strong>Jade-Sky Project Management</strong>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-            <div class="row">
-                <div class="client-wrapper-one">
-                    <a href="#"><img src="{% static 'assets/images/clients/bbgi.png' %}" alt="BBGI logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/smtax.png' %}" alt="Fasset logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/kuhle-apha.jpg' %}" alt="Kuhle apha logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/jade-sky.jpg' %}" alt="jade sky logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/mediae.png' %}" class="bg-dark" alt="media eq logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/edge.svg' %}" alt="Edge Growth logo"></a>
+            <aside class="detail-aside">
+                <div class="aside-card">
+                    <h3>Our service areas</h3><a href="{% url 'goldours_home:governance-and-direction' %}">Governance &amp;
+                        Direction <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:talent-management-and-development' %}">Talent
+                        Management &amp; Development <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Accounting, Tax &amp; Assurance <i
+                            class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE
+                        Consulting &amp; Training <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
+                <div class="aside-card aside-dark">
+                    <h3>Need assistance?</h3>
+                    <p>Speak to GoldOurs about your business goals and challenges.</p><a class="btn btn-gold"
+                        href="{% url 'goldours_home:contact' %}">Get in touch <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
         </div>
-    </div>
-</div>
-{% endblock service %}
+    </section>
+</main>
+
+{% endblock content %}

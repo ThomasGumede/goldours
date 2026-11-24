@@ -2,168 +2,266 @@
 {% load static %}
 
 {% block seo %}
-<title>Systems, Reviews, & Assurance</title>
-<meta name="description" content="GoldOurs provides businesses with a robust foundation for financial clarity, operational efficiency, and
-            compliance." />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, B-BBEE strategy, financial reporting, Systems, Reviews, & Assurance, asset and liability optimization, tax filing, taxation" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="Systems, Reviews, & Assurance" />
-<meta property="og:description" content="GoldOurs provides businesses with a robust foundation for financial clarity, operational efficiency, and
-            compliance." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/service/service-3.jpg' %}">
+<title>Accounting, Tax &amp; Assurance Services | GoldOurs</title>
+<meta
+    content="GoldOurs prepares annual financial statements and independent reviews, management accounts, internal controls, VAT, income tax and payroll tax returns."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Accounting, Tax &amp; Assurance Services | GoldOurs" property="og:title" />
+<meta
+    content="GoldOurs prepares annual financial statements and independent reviews, management accounts, internal controls, VAT, income tax and payroll tax returns."
+    property="og:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Accounting, Tax &amp; Assurance Services | GoldOurs" name="twitter:title" />
+<meta
+    content="GoldOurs prepares annual financial statements and independent reviews, management accounts, internal controls, VAT, income tax and payroll tax returns."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"https://www.goldours.co.za/accounting-tax-assurance.html#webpage","url":"https://www.goldours.co.za/accounting-tax-assurance.html","name":"Accounting, Tax & Assurance Services | GoldOurs","description":"GoldOurs prepares annual financial statements and independent reviews, management accounts, internal controls, VAT, income tax and payroll tax returns.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"Service","@id":"https://www.goldours.co.za/accounting-tax-assurance.html#service","name":"Accounting, Tax & Assurance","serviceType":"Accounting, Tax & Assurance","description":"Annual financial statement preparation and independent reviews, management accounts, internal controls, tax registration and filing.","provider":{"@id":"https://www.goldours.co.za/#organization"},"areaServed":{"@type":"Country","name":"South Africa"},"url":"https://www.goldours.co.za/accounting-tax-assurance.html"}]}</script>
 {% endblock seo %}
 
-{% block service_title %}
-Systems, Reviews, & Assurance
-{% endblock service_title %}
 
-{% block service_title_2 %}
-Systems, Reviews, & Assurance
-{% endblock service_title_2 %}
+{% block content %}
 
-{% block link %}{% url 'goldours_home:systems-reviews-and-assurance' %}{% endblock link %}
-
-{% block service %}
-
-<div class="col-xl-8 col-md-12 col-sm-12 col-12">
-    <!-- service details left area start -->
-    <div class="service-detials-step-1">
-        <div class="thumbnail">
-            <img src="{% static 'assets/images/service/service-3.jpg' %}" alt="Photo by Tima Miroshnichenko: https://www.pexels.com/photo/person-in-black-long-sleeve-polo-shirt-working-on-a-wooden-table-6694481/">
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Accounting, Tax &amp; Assurance</span></div><span
+                class="eyebrow">SERVICE DETAILS</span>
+            <h1>Accounting, Tax &amp; Assurance</h1>
+            <p>Sound financial information. Better business decisions.</p>
         </div>
-        <h4 class="title">Systems, Reviews, and Assurance</h4>
-        <p class="disc">
-            GoldOurs provides businesses with a robust foundation for financial clarity, operational efficiency, and
-            compliance. Our
-            Annual Financial Statements services ensure accurate preparation and independent reviews to maintain
-            transparency and
-            credibility. With Monthly/Quarterly Management Accounts, we offer in-depth analyses of financial patterns
-            and cash flow,
-            combined with coaching sessions to enhance business growth.
-
-        </p>
-        <p class="disc">
-            Through Internal Controls and Policies, we help organizations refine their systems to boost productivity,
-            minimize
-            wastage, and comply with regulations. This includes efficient management of procurement, cash flow, and
-            working capital,
-            alongside asset and liability optimization. Our Tax Registration and Filing services cover VAT, income tax,
-            payroll, and
-            deceased estate tax, ensuring businesses meet their obligations seamlessly.
-        </p>
-        <!-- <div class="row g-5 mt--30 mb--40">
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Strategy</h6>
-                                    <p class="disc">We help boards craft impactful strategies by aligning vision,
-                                        identifying key drivers, and setting measurable objectives
-                                        for success.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Risk management</h6>
-                                    <p class="disc">We identify and evaluate risks, enhancing readiness to mitigate
-                                        threats and seize opportunities effectively.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Performance management</h6>
-                                    <p class="disc">We create actionable plans to achieve goals, define roles, and
-                                        measure progress for sustained growth.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                    </div> -->
-        <p class="disc">
-            We are proud to have assisted clients such as Transnet, Standard Bank, and the Pension Fund Adjudicator. Our
-            proven
-            commitment to financial and operational excellence makes GoldOurs the partner of choice for businesses
-            aiming to build
-            sustainable success.
-        </p>
-    </div>
-
-    <!-- service details left area end -->
-    <div class="service-detials-step-3 mt--70 mt_md--50">
-        <div class="row g-5 align-items-center">
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="thumbnail sm-thumb-service">
-                    <img src="{% static 'assets/images/service/sm-01.jpg' %}" alt="Service">
+    </section>
+    <section class="section">
+        <div class="container detail-layout">
+            <div class="detail-main"><img alt="Accounting, Tax &amp; Assurance consulting" class="detail-photo"
+                    id="service-image" src="{% static 'assets/images/service/service-3.jpg' %}" /><span class="eyebrow"
+                    id="service-tag">Financial Statements • Internal Controls • Tax</span>
+                <h2 id="service-title">Accounting, Tax &amp; Assurance</h2>
+                <p class="big-p" id="service-summary">Annual financial statements, independent reviews, management
+                    accounts, internal controls and statutory tax support.</p>
+                <div class="rich-copy" id="service-intro">
+                    <p>GoldOurs supports financial accountability, management insight and regulatory compliance for
+                        institutions and businesses.</p>
+                    <p>The company profile describes annual financial statements and independent reviews, management
+                        accounts, systems and policy improvements, and tax registration and filing.</p>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
-                <h4 class="title">Customer Benefits</h4>
-                <p class="disc">By leveraging these services, clients gain improved financial oversight, operational
-                    efficiency, reduced risk, and
-                    sustainable growth. GoldOurs's expertise ensures businesses operate within compliance frameworks
-                    while optimizing
-                    resources.</p>
-                <!-- <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Proactive leadership</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Prioritising strategically
-                                    important projects</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Consensus on Clear
-                                    Direction</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Improving relationships
-                                    with stakeholders</span>
-                            </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="rts-trusted-client mt--70 rts-section-gapBottom">
-        <div class="">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-area-client text-center">
-                        <p class="client-title">Our Clients</p>
+                <h3>How we can help</h3>
+                <div class="point-grid" id="service-points">
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Annual financial statements</h3>
+                            <p>Preparation and independent review of financial statements.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Management accounts</h3>
+                            <p>Monthly or quarterly management accounts, cash-flow analysis, income and profit
+                                pattern analysis, and business coaching conversations.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Internal controls and policies</h3>
+                            <p>Internal controls for efficient operations, reliable reporting and legal compliance;
+                                software quality assessment; waste reduction; procurement, expenditure, cash-flow
+                                and working-capital management; assets and liabilities.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Tax registration and filing</h3>
+                            <p>Value-added tax, provisional and income tax, payroll and employees' tax, and deceased
+                                estates.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="client-wrapper-one">
-                    <a href="#"><img src="{% static 'assets/images/clients/tourism.png' %}" alt="tourism SA logo"></a>
-    
-                    <a href="#"><img src="{% static 'assets/images/clients/iSIVINAVA-logo.png' %}"
-                            alt="iSIVINAVA logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/mandela.png' %}" alt="Mandela Bay Development Agency logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/nlc.png' %}" alt="NLC logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/HDA-logo-31.png' %}" class="bg-white"
-                            alt="HDA logo"></a>
-                    <a href="#"><img src="https://dinaledi.org/wp-content/uploads/2024/03/Dinaledi-Website-Logo-Transparent.png" alt="Dinaledi logo"></a>
-    
+                <div class="benefit-panel">
+                    <h3>Client benefits</h3>
+                    <div class="benefit-list" id="service-benefits">
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Access to funding</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Trackable business growth</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Tax compliance</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Improving business processes and systems
+                        </div>
+                    </div>
                 </div>
+                <section aria-labelledby="team-assurance" class="go-service-team">
+                    <div class="go-service-section-label"><span class="eyebrow">OUR TEAM</span><span
+                            class="go-team-id"><i aria-hidden="true" class="fas fa-award"></i> Expertise behind
+                            every outcome</span></div>
+                    <h2 id="team-assurance">Accounting, tax and assurance specialists</h2>
+                    <p class="go-team-intro">Our Accounting, Tax &amp; Assurance team offers professional financial
+                        and assurance skills developed through work in private and public institutions.</p>
+                    <div aria-label="Team qualifications and experience" class="go-team-stat-grid">
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-users"></i></span><strong>8</strong><span>Experienced
+                                professionals</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-briefcase"></i></span><strong>20 years</strong><span>Average
+                                executive experience</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-user-tie"></i></span><strong>1 year</strong><span>Average
+                                non-executive experience</span></div>
+                    </div>
+                    <div class="go-team-qualifications">
+                        <div class="go-team-qual-icon"><i aria-hidden="true" class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Professional qualifications</h3>
+                            <p>BCom Accounting, Internal Audit Technician, CA(SA), CIA, Honours Bachelor of
+                                Accounting Science (CTA), Registered Auditor (RA), Registered Tax Practitioners</p>
+                        </div>
+                    </div>
+                    <h3 class="go-mini-heading">Experience across sectors</h3>
+                    <div class="go-sector-grid">
+                        <div><i aria-hidden="true" class="fas fa-building"></i><strong>15
+                                years</strong><span>Private sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-landmark"></i><strong>12 years</strong><span>Public
+                                sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-university"></i><strong>3
+                                years</strong><span>Academic sector</span></div>
+                    </div>
+                    <h3 class="go-mini-heading">Professional affiliations &amp; accreditations</h3>
+                    <ul class="go-team-affiliations">
+                        <li>SAICA</li>
+                        <li>IIA SA</li>
+                        <li>ACFE</li>
+                        <li>IRBA</li>
+                        <li>ISACA</li>
+                    </ul>
+                </section>
+                <section aria-labelledby="clients-assurance" class="go-service-clients">
+                    <span class="eyebrow">OUR CLIENTS</span>
+                    <div class="go-client-heading">
+                        <h2 id="clients-assurance">Trusted by organisations across South Africa.</h2>
+                        <p>Clients and organisations referenced in our Accounting, Tax &amp; Assurance portfolio.
+                        </p>
+                    </div>
+                    <div class="go-service-clients-grid">
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Mandela Bay Development Agency logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/mandela-bay-development-agency.png' %}" /></div>
+                            <strong>Mandela Bay Development Agency</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Dinaledi Educational Leadership logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/dinaledi-educational-leadership.png' %}" /></div>
+                            <strong>Dinaledi Educational Leadership</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Housing Development Agency logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/housing-development-agency.png' %}" />
+                            </div>
+                            <strong>Housing Development Agency</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Hlalisa Property Investments logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/hlalisa-property-investments.png' %}" /></div>
+                            <strong>Hlalisa Property Investments</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="National Lotteries Commission logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/nlc.png' %}" /></div>
+                            <strong>National Lotteries Commission</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Khwaza Engineering Consultants logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/khwaza-engineering-consultants.png' %}" /></div>
+                            <strong>Khwaza Engineering Consultants</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Tourism South Africa logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/tourism.png' %}" /></div><strong>Tourism
+                                South Africa</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Isivivana Centre logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/isivivana-centre.png' %}" /></div>
+                            <strong>Isivivana Centre</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="SANBI logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/sanbi.png' %}" /></div><strong>SANBI</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="SANRAL logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/sanral.png' %}" /></div><strong>SANRAL</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="CEF logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/cef.webp" /></div><strong>CEF</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Auditor-General of South Africa logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/AGSA-Logo.png' %}" />
+                            </div><strong>Auditor-General of South Africa</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Mazana logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/mazana.png' %}" /></div><strong>Mazana</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="NECSA logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/necsa.png' %}" /></div><strong>NECSA</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Chris Hani District Municipality logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/chris-hani-district-municipality.png' %}" />
+                            </div><strong>Chris Hani District Municipality</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Amatola Water logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/amatola-water.png' %}" /></div><strong>Amatola
+                                Water</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Chosi Narratives logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/chosi-narratives.png' %}" /></div>
+                            <strong>Chosi Narratives</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="DSRAC logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/dsrac.png' %}" /></div><strong>DSRAC</strong>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <aside class="detail-aside">
+                <div class="aside-card">
+                    <h3>Our service areas</h3><a href="{% url 'goldours_home:governance-and-direction' %}">Governance &amp;
+                        Direction <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:talent-management-and-development' %}">Talent
+                        Management &amp; Development <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Accounting, Tax &amp; Assurance <i
+                            class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE
+                        Consulting &amp; Training <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="aside-card aside-dark">
+                    <h3>Need assistance?</h3>
+                    <p>Speak to GoldOurs about your business goals and challenges.</p><a class="btn btn-gold"
+                        href="{% url 'goldours_home:contact' %}">Get in touch <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
-{% endblock service %}
+{% endblock content %}

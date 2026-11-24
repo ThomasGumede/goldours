@@ -22,7 +22,7 @@ def home(request):
     reviews = Review.objects.all()
     accreditations = Accreditation.objects.all()
     teamsummary = TeamSummary.objects.filter(slug="our-team-summary").first()
-    blogs = Blog.objects.all()[:5]
+    blogs = Blog.objects.all()[:3]
     return render(request, "home/home.html", {"posts": blogs, "reviews": reviews, "teamsummary": teamsummary, "accreditations": accreditations})
 
 def about_goldours(request):
@@ -32,37 +32,103 @@ def about_goldours(request):
     blogs = Blog.objects.all()[:5]
     return render(request, "home/about-us.html", {"clients": clients, "posts": blogs, "reviews": reviews, "teamsummary": teamsummary})
 
+
 def contact(request):
     if request.method == 'POST':
         form = EmailForm(request.POST)
+
         if form.is_valid():
             recaptcha_token = form.cleaned_data.get('recaptcha_token')
-            # print(recaptcha_token)
+
             try:
                 validate_recaptcha(
                     token=recaptcha_token,
                     project_id=settings.RECAPTCHA_ENTERPRISE_PROJECT_ID,
                     site_key=settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
                 )
-                form.save()
-                send_email_to_admin(form.cleaned_data["subject"], form.cleaned_data["message"], form.cleaned_data["from_email"], form.cleaned_data["name"])
-                messages.success(request, "We have successfully receive your email, will be in touch shortly")
-                return redirect("goldours_home:contact")
-            
+
             except ValueError as e:
-                logger.error(f"Failed to verify this due to f{e}")
-                messages.success(request, "We have successfully receive your email, will be in touch shortly")
+                logger.warning("reCAPTCHA verification failed: %s", e)
+
+                messages.error(
+                    request,
+                    "We could not verify your submission. Please try again."
+                )
+
+                return render(
+                    request,
+                    "home/contact-us.html",
+                    {
+                        "form": form,
+                        "site_key": settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
+                    },
+                    status=400
+                )
+
+            try:
+                form.save()
+
+                send_email_to_admin(
+                    form.cleaned_data["subject"],
+                    form.cleaned_data["message"],
+                    form.cleaned_data["from_email"],
+                    form.cleaned_data["name"]
+                )
+
+                messages.success(
+                    request,
+                    "We have successfully received your message. "
+                    "We will be in touch shortly."
+                )
+
                 return redirect("goldours_home:contact")
-            
-            
+
+            except Exception:
+                logger.exception("Failed to process contact form submission.")
+
+                messages.error(
+                    request,
+                    "We could not process your message at this time. "
+                    "Please try again later."
+                )
+
+                return render(
+                    request,
+                    "home/contact-us.html",
+                    {
+                        "form": form,
+                        "site_key": settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
+                    },
+                    status=500
+                )
+
         else:
-            messages.error(request, "Something went wrong, please fix errors below")
-            for err in form.errors:
-                messages.error(request, f"{err}")
-                return redirect("goldours_home:contact")
-            
+            messages.error(
+                request,
+                "Something went wrong. Please correct the errors below."
+            )
+
+            return render(
+                request,
+                "home/contact-us.html",
+                {
+                    "form": form,
+                    "site_key": settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
+                },
+                status=400
+            )
+
     form = EmailForm()
-    return render(request, "home/contact-us.html", {"form": form})
+
+    return render(
+        request,
+        "home/contact-us.html",
+        {
+            "form": form,
+            "site_key": settings.RECAPTCHA_ENTERPRISE_SITE_KEY,
+        }
+    )
+
 
 def contact_ajax(request):
     if request.method == 'POST':

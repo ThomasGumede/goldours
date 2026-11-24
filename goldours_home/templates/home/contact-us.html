@@ -3,6 +3,37 @@
 {% load email_filters %}
 
 {% block seo %}
+
+    <style>
+        
+    
+.error-summary {
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid #c0392b;
+    background: #fff3f3;
+    color: #842029;
+    border-radius: 4px;
+}
+
+.error-summary h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.error-summary ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.field-error {
+    display: block;
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+    </style>
     <script
         src="https://www.google.com/recaptcha/enterprise.js?render={{ site_key }}"></script>
         <script>
@@ -20,189 +51,217 @@
 
             window.onload = loadRecaptcha;
         </script>
-        <title>Contact Us - GoldOurs</title>
-        <meta name="description"
-            content="Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals through governance, leadership, and talent development." />
-        <meta name="keywords"
-            content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting, contact goldours, contacts" />
-        <link rel="canonical" href="{{ request.build_absolute_uri }}" />
-        <meta property="og:title" content="Contact Us - GoldOurs" />
-        <meta property="og:description"
-            content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
-        <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image"
-            content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-        <meta name="author" content="GoldOurs Team">
-        <meta name="robots" content="index, nofollow">
-        <meta name="language" content="en">
-        <meta name="revisit-after" content="7 days">
-        <meta name="distribution" content="global">
+        <title>Contact GoldOurs | Five South African Office Locations</title>
+        <meta
+            content="Contact GoldOurs at info@goldours.co.za or 021 525 9188. Find offices in Cape Town, Pretoria, Pietermaritzburg, Gqeberha and Qonce."
+            name="description" />
+        <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+        <meta content="website" property="og:type" />
+        <meta content="GoldOurs" property="og:site_name" />
+        <meta content="en_ZA" property="og:locale" />
+        <meta content="Contact GoldOurs | Five South African Office Locations" property="og:title" />
+        <meta
+            content="Contact GoldOurs at info@goldours.co.za or 021 525 9188. Find offices in Cape Town, Pretoria, Pietermaritzburg, Gqeberha and Qonce."
+            property="og:description" />
+       
+        <meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+        <meta content="1200" property="og:image:width" />
+        <meta content="630" property="og:image:height" />
+        <meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="Contact GoldOurs | Five South African Office Locations" name="twitter:title" />
+        <meta
+            content="Contact GoldOurs at info@goldours.co.za or 021 525 9188. Find offices in Cape Town, Pretoria, Pietermaritzburg, Gqeberha and Qonce."
+            name="twitter:description" />
+        <meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+        <meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
         
-        
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
-        <meta name="twitter:description"
-            content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
-        <meta name="twitter:image"
-            content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-        <meta name="twitter:site" content="{{ request.build_absolute_uri }}">
-        <meta name="twitter:creator" content="@GoldOursOfficial">
+        <script
+            type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"ContactPage","@id":"{% url 'goldours_home:contact' %}#webpage","url":"https://www.goldours.co.za/{% url 'goldours_home:contact' %}","name":"Contact GoldOurs | Five South African Office Locations","description":"Contact GoldOurs at info@goldours.co.za or 021 525 9188. Find offices in Cape Town, Pretoria, Pietermaritzburg, Gqeberha and Qonce.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
 {% endblock seo %}
 
 {% block content %}
 
-<!-- start breadcrumb area -->
-<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">Contact Us</h1>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
-                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
-                    <span> / </span>
-                    <a href="{% url 'goldours_home:contact' %}" class="active">Contact Us</a>
-                </div>
-            </div>
+
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Contact Us</span></div><span class="eyebrow">CONTACT
+                US</span>
+            <h1>Let's start a<br /><em>conversation.</em></h1>
+            <p>Tell us about your challenges, aspirations or partnership idea.</p>
         </div>
-    </div>
-</div>
-<!-- end breadcrumb area -->
-
-
-<!-- contact single area start -->
-<div class="rts-contact-area rts-section-gap">
-    <div class="container">
-        <div class="row g-5">
-            <!-- single contact area -->
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="single-contact-one-inner">
-                    <div class="thumbnail tw-overflow-hidden tw-h-[150px]">
-                        <img src="{% static 'assets/images/contact/call.svg' %}" alt="Call BBGI">
-                    </div>
-                    <div class="content">
-                        <div class="icone">
-                            <img src="{% static 'assets/images/contact/shape/01.svg' %}" alt="Call Icon">
-                        </div>
-                        <div class="info">
-                            <span>Call Us 24/7</span>
-                            <a href="tel:{{ '0215259188'|obfuscate_phone|safe }}">
-                                <h5>{{ '0215259188'|obfuscate_phone|safe }}</h5>
-                            </a>
-                        </div>
+    </section>
+    <section class="section">
+        <div class="container contact-grid">
+            <div><span class="eyebrow">GET IN TOUCH</span>
+                <h2>Good partnerships begin with understanding.</h2>
+                <p>We'd be delighted to talk about governance, leadership, skills, assurance, B-BBEE strategy or
+                    social impact collaboration.</p>
+                <div class="contact-method"><i aria-hidden="true" class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Call us</h3><a href="tel:{{ '+27215259188'|obfuscate_phone|safe }}">{{ '+27215259188'|obfuscate_phone|safe }}</a>
                     </div>
                 </div>
-            </div>
-            <!-- single contact area end -->
-            <!-- single contact area -->
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="single-contact-one-inner">
-                    <div class="thumbnail tw-overflow-hidden tw-h-[150px]">
-                        <img src="{% static 'assets/images/contact/mail.svg' %}" alt="Email Goldours">
-                    </div>
-                    <div class="content">
-                        <div class="icone">
-                            <img src="{% static 'assets/images/contact/shape/02.svg' %}" alt="Email Icon">
-                        </div>
-                        <div class="info">
-                            <span>Want A Quote?</span>
-                            <a href="emailto:{{ 'info@goldours.co.za'|obfuscate|safe }}">
-                                <h5>{{ 'info@goldours.co.za'|obfuscate|safe }}</h5>
-                            </a>
-                        </div>
+                <div class="contact-method"><i aria-hidden="true" class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email us</h3><a href="mailto:{{ 'info@goldours.co.za'|obfuscate|safe }}">{{ 'info@goldours.co.za'|obfuscate|safe }}</a>
                     </div>
                 </div>
-            </div>
-            <!-- single contact area end -->
-            <!-- single contact area -->
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="single-contact-one-inner">
-                    <div class="thumbnail tw-overflow-hidden tw-h-[150px]">
-                        <img src="{% static 'assets/images/contact/location.svg' %}" alt="Find Goldours">
-                    </div>
-                    <div class="content">
-                        <div class="icone">
-                            <img src="{% static 'assets/images/contact/shape/03.svg' %}" alt="Location Icon">
-                        </div>
-                        <div class="info">
-                            <span>Service Station</span>
-                            <a href="https://maps.app.goo.gl/Hha9YFwzbMEMQy9q7" target="_blank" rel="noopener noreferrer">
-                                <h5>Century City, Cape Town, 7441</h5>
-                            </a>
-                        </div>
+                <div class="contact-method"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Visit our service office</h3>
+                        <p>Unit 108, Millennium Business Park<br />19 Edison Way, Century City, Cape Town, 7441</p>
                     </div>
                 </div>
+                
             </div>
-            <!-- single contact area end -->
+            <div class="profile-office-block"><span class="eyebrow">OUR OFFICES</span>
+                <h2>Across South Africa.</h2>
+                <div class="profile-office-grid">
+                    <article class="profile-office"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Cape Town</h3>
+                            <p>Unit 108, Millenium Business Park, 19 Edison Way, Century City, Cape Town, 7441</p>
+                        </div>
+                    </article>
+                    <article class="profile-office"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Pretoria</h3>
+                            <p>6 Piccolo Estate, 270 Von Willich, Die Hoewes, Centurion, Pretoria, 0157</p>
+                        </div>
+                    </article>
+                    <article class="profile-office"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Pietermaritzburg</h3>
+                            <p>9 Armitage Road, Bird Sanctuary, Townhill, Pietermaritzburg, 3201</p>
+                        </div>
+                    </article>
+                    <article class="profile-office"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Gqeberha</h3>
+                            <p>43 Bird Street, Central, Gqeberha, 6001</p>
+                        </div>
+                    </article>
+                    <article class="profile-office"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Qonce</h3>
+                            <p>13 Blaine Street, West Bank, Qonce, 5601</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- conact single area end -->
-
-<!-- bizup map area start -->
-<!-- <div class="rts-contact-map-area">
-    <div class="contaciner-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="contact-map-area-fluid">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.8552267731684!2d18.5044565!3d-33.8933822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5c174917e0c5%3A0x48cc357fd4ac8952!2sGoldOurs%20Strategy%2C%20Governance%2C%20and%20Business%20Leadership%20Development!5e0!3m2!1sen!2sza!4v1737817470185!5m2!1sen!2sza"
-                         style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <img class="location" src="https://goldours.co.za/wp-content/uploads/2023/03/goldours-favicon.png' %}"
-                        alt="Business_map">
-                </div>
+        {% if form.errors %}
+        <section class="error-summary" role="alert" aria-live="assertive">
+            <h2>Please check the following:</h2>
+            <ul>
+                {% for field in form %}
+                {% for error in field.errors %}
+                <li>{{ field.label }}: {{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+        
+                {% for error in form.non_field_errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+        
+        <form class="contact-form" id="contact-form1" method="post" action="{% url 'goldours_home:contact' %}">
+        
+            {% csrf_token %}
+        
+            <div class="form-top">
+                <span class="eyebrow">LET'S TALK</span>
+                <h2>How can we help?</h2>
+                <p>
+                    Tell us about your organisation and the support you need.
+                    We look forward to hearing from you.
+                </p>
             </div>
-        </div>
-    </div>
-</div> -->
-<!-- bizup map area end -->
-
-
-<!-- conact us form fluid start -->
-<div class="rts-contact-form-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="rts-contact-fluid rts-section-gap">
-                    <div class="rts-title-area contact-fluid text-center mb--50">
-                        <p class="pre-title">
-                            Get In Touch
-                        </p>
-                        <h2 class="title">Needs Help? Let's Get in Touch</h2>
-                    </div>
-                    <div class="form-wrapper">
-                        <div id="form-messages"></div>
-                        <form id="contact-form-" method="post">
-                            {% csrf_token %}
-                            
-                            <div class="name-email">
-                                <input type="text" placeholder="Your Name" name="name" required>
-                                <input type="email" placeholder="Email Address" name="from_email" required>
-                            </div>
-                            <div class="name-email">
-                                <input type="tel" placeholder="Your Number" name="phone" required>
-                                <input type="text" placeholder="Business Topic" name="subject" required>
-                            </div>
-                            
-                            <textarea placeholder="Type Your Message" name="message"></textarea>
-                            {{form.recaptcha_token}}
-                            
-                            <button type="submit" class="g-recaptcha rts-btn btn-primary" data-sitekey="{{ site_key }}" data-callback='onSubmit'
-                                data-action='submit'>
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
+        
+            <div class="form-two">
+                <label>
+                    Your name <span>*</span>
+                    <input autocomplete="name" minlength="2" name="name" placeholder="Full name"
+                        value="{{ form.name.value|default_if_none:'' }}" required />
+                    {% for error in form.name.errors %}
+                    <small class="field-error">{{ error }}</small>
+                    {% endfor %}
+                </label>
+        
+                <label>
+                    Email address <span>*</span>
+                    <input autocomplete="email" name="from_email" placeholder="you@company.co.za" type="email"
+                        value="{{ form.from_email.value|default_if_none:'' }}" required />
+                    {% for error in form.from_email.errors %}
+                    <small class="field-error">{{ error }}</small>
+                    {% endfor %}
+                </label>
             </div>
-        </div>
-    </div>
-</div>
-<!-- conact us form fluid end -->
+        
+            <div class="form-two">
+                <label>
+                    Phone number
+                    <input autocomplete="tel" name="phone" placeholder="+27..." type="tel"
+                        value="{{ form.phone.value|default_if_none:'' }}" />
+                    {% for error in form.phone.errors %}
+                    <small class="field-error">{{ error }}</small>
+                    {% endfor %}
+                </label>
+        
+                <label>
+                    Area of interest
+                    <select name="subject">
+                        <option value="General Enquiry" selected>
+                            General enquiry
+                        </option>
+                        <option value="Governance and Direction" >
+                            Governance &amp; Direction
+                        </option>
+                        <option value="Talent Development">
+                            Talent Development
+                        </option>
+                        <option value="Accounting, Tax &amp; Assurance">
+                            Accounting, Tax &amp; Assurance
+                        </option>
+                        <option value="B-BBEE Consulting">
+                            B-BBEE Consulting
+                        </option>
+                        <option value="Partnership or sponsorship">
+                            Partnership or sponsorship
+                        </option>
+                    </select>
+                    {% for error in form.subject.errors %}
+                    <small class="field-error">{{ error }}</small>
+                    {% endfor %}
+                </label>
+            </div>
+        
+            <label>
+                Tell us more <span>*</span>
+                <textarea minlength="10" name="message" placeholder="Briefly tell us about your organisation and your needs."
+                    required>{{ form.message.value|default_if_none:'' }}</textarea>
+        
+                {% for error in form.message.errors %}
+                <small class="field-error">{{ error }}</small>
+                {% endfor %}
+            </label>
+        
+            <button data-sitekey="{{ site_key }}" data-callback="onSubmit" class="g-recaptcha btn btn-gold" type="submit">
+                Submit
+                <i aria-hidden="true" class="fas fa-paper-plane"></i>
+            </button>
+        
+            <p class="form-message" role="status"></p>
+        </form>
+
+    </section>
+</main>
 
 {% endblock content %}
 

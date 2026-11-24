@@ -35,45 +35,67 @@
 {% endblock seo %}
 
 {% block content %}
-<!-- start breadcrumb area -->
-<div class="banner-area-nine bg_image">
-    <div class="inner">
-        <div class="banner-image-right-top">
-            <img src="{% static 'assets/images/banner/banner-12.png' %}" alt="banner_image">
-        </div>
-        <div class="banner-image-left-bottom">
-            <img src="{% static 'assets/images/banner/banner-13.png' %}" alt="banner_image">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="banner-inner-content">
-                        <div class="main-wrapper">
-                            <h1 class="title">Mastering Physical <br> Asset Accounting.</h1>
-                            <p class="disc">
-                                Join us for an intensive, two-hour online course designed to empower you with the strategic skills needed to excel in asset and facilities management.
-                            </p>
-                            
-                            
 
-                            <div class="dropdown rts-btn-cont tw-w-fit">
-                                <button class="dropdown-toggle rts-btn btn-nine  tw-w-fit" type="button" id="bookSeatDropdown" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Book Your Seat Now
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="bookSeatDropdown">
-                                    <li><a class="dropdown-item" target="_blank" rel="noopener noreferrer" href="https://www.quicket.co.za/events/333479-master-the-art-of-asset-management-10-sept/">12 September, 7 pm</a></li>
-                                    <li><a class="dropdown-item" target="_blank" rel="noopener noreferrer" href="https://www.quicket.co.za/events/333484-master-the-art-of-asset-management-13-sept/">13 September, 10 am</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Online Course</span></div><span class="eyebrow">ONLINE
+                COURSE</span>
+            <h1>Master the art of<br /><em>asset management.</em></h1>
+            <p>Practical, online learning that connects assets and organisational performance.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container split">
+            <div><span class="eyebrow">ASSET MANAGEMENT ONLINE COURSE</span>
+                <h2>Understand the full asset lifecycle.</h2>
+                <p class="big-p">From acquisition and maintenance to depreciation, budgeting and replacement.</p>
+                <p>Learn to link asset management to strategic and operational goals; communicate requirements for
+                    budgeting, insurance, security and operational delivery; understand accounting concepts; and
+                    make a stronger contribution as an asset or facilities manager.</p>
+                <div class="mini-checks"><span><i aria-hidden="true" class="fas fa-check-circle"></i> Live,
+                        interactive online session</span><span><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        Certificate of attendance</span><span><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        Practical tools and concepts</span>
+                </div><a class="btn btn-dark" href="{% url 'goldours_home:contact' %}">Enquire about course dates <i aria-hidden="true"
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="course-panel"><i aria-hidden="true" class="fas fa-graduation-cap"></i>
+                <h3>Learning outcomes</h3>
+                <ul>
+                    <li>Asset management value chain</li>
+                    <li>Systems and processes</li>
+                    <li>Financial, tax and insurance implications</li>
+                    <li>Audit readiness and loss prevention</li>
+                    <li>Depreciation, impairment and fair value</li>
+                    <li>Classes and categories of assets</li>
+                </ul>
             </div>
         </div>
-    </div>
-</div>
-<!-- end breadcrumb area -->
+    </section>
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">YOUR LEARNING JOURNEY</span>
+                <h2>Three simple steps to stronger capability.</h2>
+            </div>
+            <div class="about-values">
+                <article><span class="round-icon"><i aria-hidden="true" class="fas fa-edit"></i></span>
+                    <h3>Register</h3>
+                    <p>Enquire about the next available online course and registration process.</p>
+                </article>
+                <article><span class="round-icon"><i aria-hidden="true" class="fas fa-laptop"></i></span>
+                    <h3>Learn online</h3>
+                    <p>Join a live, interactive learning experience with industry-focused content.</p>
+                </article>
+                <article><span class="round-icon"><i aria-hidden="true" class="fas fa-certificate"></i></span>
+                    <h3>Receive a certificate</h3>
+                    <p>Receive a certificate of attendance after meeting course requirements.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
 
 
 <!-- project details image area -->

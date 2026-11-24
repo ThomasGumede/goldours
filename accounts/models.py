@@ -75,7 +75,6 @@ class AboutCompany(AbstractCreate):
         verbose_name = 'About Company'
         verbose_name_plural = 'About Companys'
 
-
 class CompanyCommunication(AbstractCreate):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
@@ -108,7 +107,6 @@ class CompanyCommunication(AbstractCreate):
             self.slug = slug
 
         super().save(*args, **kwargs)
-
 
 class CompanyCommunicationImage(models.Model):
     event = models.ForeignKey(

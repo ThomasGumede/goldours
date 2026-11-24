@@ -1,212 +1,142 @@
 {% load static %}
 {% load static tailwind_tags %}
+{% load email_filters %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    {% tailwind_preload_css %}
-    {% tailwind_css %}
-    {% load email_filters %}
-    {{form.media}}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="max-image-preview:large">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/icon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/icon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/icon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'assets/images/icon/site.webmanifest' %}">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <head>
+        {% tailwind_preload_css %}
+        {% tailwind_css %}
+        
+        {{form.media}}
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="#142431" name="theme-color" />
+        <link href="{% static 'assets/images/icon/favicon.ico' %}" rel="icon" />
+        <link href="{% static 'assets/css/icon-fallback.css' %}" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+        <script defer="" src="{% static 'assets/js/data.js' %}"></script>
+        <script defer="" src="{% static 'assets/js/site.js' %}"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/icon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/icon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/icon/favicon-16x16.png' %}">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="googlebot" content="index, follow, max-image-preview:large">
+        <meta name="author" content="Drive4U">
+        <meta name="theme-color" content="#172e4d">
+        <meta name="color-scheme" content="light">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_MEASUREMENT_ID }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '{{ GOOGLE_ANALYTICS_MEASUREMENT_ID }}');
-    </script>
-
-    {% block seo %}
-    <title>GoldOurs - Empowering Growth & Excellence</title>
-    <meta name="description"
-        content="We help African businesses and institutions align leadership, unlock compliance as a competitive advantage, and deliver measurable outcomes across growth, governance, and impact. Empowering individuals and organizations for impactful growth." />
-    <meta name="keywords"
-        content="GoldOurs, governance consulting, Asset Management Online Course, leadership development, B-BBEE consulting, talent management, strategy formulation, risk management" />
-    <meta name="author" content="GoldOurs" />
-    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
-    <meta property="og:title" content="GoldOurs - Empowering Growth & Excellence" />
-    <meta property="og:description"
-        content="Transform your business with GoldOurs' expert governance, strategy, and leadership solutions." />
-    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-    <meta property="og:type" content="website" />
+        {% block seo %}
+        <title>GoldOurs | Governance, Accounting &amp; B-BBEE Consulting</title>
+        <meta
+            content="GoldOurs is a 100% Black-owned, Level 1 B-BBEE South African consultancy offering governance, talent development, accounting, tax and B-BBEE services."
+            name="description" />
+        <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+        <meta content="website" property="og:type" />
+        <meta content="GoldOurs" property="og:site_name" />
+        <meta content="en_ZA" property="og:locale" />
+        <meta content="GoldOurs | Governance, Accounting &amp; B-BBEE Consulting" property="og:title" />
+        <meta
+            content="GoldOurs is a 100% Black-owned, Level 1 B-BBEE South African consultancy offering governance, talent development, accounting, tax and B-BBEE services."
+            property="og:description" />
+        
+        <meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+        <meta content="1200" property="og:image:width" />
+        <meta content="630" property="og:image:height" />
+        <meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="GoldOurs | Governance, Accounting &amp; B-BBEE Consulting" name="twitter:title" />
+        <meta
+            content="GoldOurs is a 100% Black-owned, Level 1 B-BBEE South African consultancy offering governance, talent development, accounting, tax and B-BBEE services."
+            name="twitter:description" />
+        <meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+        <meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+        
+        <script
+            type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"{{ request.build_absolute_uri }}","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"https://www.goldours.co.za/#webpage","url":"https://www.goldours.co.za/","name":"GoldOurs | Governance, Accounting & B-BBEE Consulting","description":"GoldOurs is a 100% Black-owned, Level 1 B-BBEE South African consultancy offering governance, talent development, accounting, tax and B-BBEE services.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
     
-    <meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "GoldOurs - Empowering Growth & Excellence",
-        "description": "We help African businesses and institutions align leadership, unlock compliance as a competitive advantage, and deliver measurable outcomes across growth, governance, and impact.",
-        "url": "https://goldours.co.za",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "GoldOurs (Pty) Ltd",
-            "logo": "https://goldours.co.za/static/assets/images/logo/logo.jpg",
-            "sameAs": [
-                "https://www.linkedin.com/company/goldours?trk=blended-typeahead",
-                "https://www.instagram.com/goldours_official?igsh=YTB0NnZsN2Jsb245",
-                "https://www.twitter.com/GoldOurs?t=68iGp4CLnO-jz476TVdHWg&s=09"
-            ],
-            "address": [
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Unit 108, Millennium Business Park, 19 Edison Way, Century City",
-                    "addressLocality": "Cape Town",
-                    "addressRegion": "Western Cape",
-                    "postalCode": "7441",
-                    "addressCountry": "South Africa"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "6 Piccolo Estate, 270 Von Willich, Die Hoewes, Centurion",
-                    "addressLocality": "Pretoria",
-                    "addressRegion": "Gauteng",
-                    "postalCode": "0157",
-                    "addressCountry": "South Africa"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "9 Armitage Road, Bird Sanctuary, Townhill",
-                    "addressLocality": "Pietermaritzburg",
-                    "addressRegion": "KwaZulu-Natal",
-                    "postalCode": "3201",
-                    "addressCountry": "South Africa"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "43 Bird Street, Central",
-                    "addressLocality": "Gqeberha",
-                    "addressRegion": "Eastern Cape",
-                    "postalCode": "6001",
-                    "addressCountry": "South Africa"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "13 Blaine Street, West Bank",
-                    "addressLocality": "Qonce",
-                    "addressRegion": "Eastern Cape",
-                    "postalCode": "5601",
-                    "addressCountry": "South Africa"
-                }
-            ],
-            
-            "makesOffer": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Governance & Direction",
-                        "description": "Strategic planning, risk management, and board training.",
-                        "url": "https://goldours.co.za/services/governance-and-direction"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Systems, Reviews & Assurance",
-                        "description": "Ensuring business continuity, compliance, and reliable financial reporting.",
-                        "url": "https://goldours.co.za/services/systems-reviews-and-assurance"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "B-BBEE Consulting & Training",
-                        "description": "Supporting strategy development, implementation, and B-BBEE audit processes.",
-                        "url": "https://goldours.co.za/services/bbbee-consulting-and-training"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Talent Management & Development",
-                        "description": "Building leadership skills, managing performance, and fostering organizational growth.",
-                        "url": "https://goldours.co.za/services/talent-management-and-development"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+        {% endblock seo %}
+        
+        <link href="{{ request.build_absolute_uri }}" rel="canonical" />
+        
+        <script>
+            function initApollo() {
+                var n = Math.random().toString(36).substring(7), o = document.createElement("script");
+                o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
+                    o.onload = function () {window.trackingFunctions.onLoad({appId: "68c02b8f788f5c0015b6e290"})},
+                    document.head.appendChild(o)
+            } initApollo();
+        </script>
+        <meta content="{{ request.build_absolute_uri }}" property="og:url" />
+    </head>
 
-    {% endblock seo %}
-    
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://goldours.co.za/wp-content/uploads/2023/03/goldours-favicon.png">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/fontawesome-5.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/unicons.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    <script>
-        function initApollo() {
-            var n = Math.random().toString(36).substring(7), o = document.createElement("script");
-            o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
-                o.onload = function () {window.trackingFunctions.onLoad({appId: "68c02b8f788f5c0015b6e290"})},
-                document.head.appendChild(o)
-        } initApollo();
-    </script>
-</head>
-<body>
-    {% include 'includes/header.html' %}
-    {% include 'includes/messages.html' %}
-    {% block content %}
-    {% endblock content %}
-    
-    {% include 'includes/footer.html' %}
-    <!-- start loader -->
-    <div class="loader-wrapper">
-        <div class="loader">
+    <body class="page-home">
+        <a class="skip" href="#main">Skip to content</a>
+        <div class="topbar">
+            <div class="container"><span><i aria-hidden="true" class="fas fa-map-marker-alt"></i> Century City, Cape
+                    Town</span>
+                <div><a href="tel:{{ '+27215259188'|obfuscate_phone|safe }}"><i aria-hidden="true" class="fas fa-phone-alt"></i> {{ '+27215259188'|obfuscate_phone|safe }}</a><a
+                        href="mailto:{{ 'info@goldours.co.za'|obfuscate|safe }}"><i aria-hidden="true" class="fas fa-envelope"></i>
+                        {{ 'info@goldours.co.za'|obfuscate|safe }}</a></div>
+            </div>
         </div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-    <!-- End loader -->
-    <!-- progress Back to top -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- progress Back to top End -->
-    <!-- scripts start form hear -->
-    <script src="{% static 'assets/js/vendor/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/jqueryui.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/waypoint.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/sal.min.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
-    
-    <script src="{% static 'assets/js/vendor/waw.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script>
-    <!-- main Js -->
-    <script src="{% static 'assets/js/main.js' %}"></script>
-    <!-- scripts end form hear -->
+        <header class="header">
+            <div class="container navbar">
+                <a aria-label="GoldOurs home" class="brand" href="{% url 'goldours_home:goldours-home' %}"><img
+                        alt="GoldOurs — Partnering to unearth optimal value"
+                        src="{% static 'assets/images/logo/logo-2.png' %}" /></a><button aria-controls="nav"
+                    aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle"><i aria-hidden="true"
+                        class="fas fa-bars"></i></button>
+                <nav aria-label="Main navigation" class="nav" id="nav"><a
+                        href="{% url 'goldours_home:goldours-home' %}">Home</a><a
+                        href="{% url 'goldours_home:about-goldours' %}">About</a>
+                    <div class="nav-drop"><button aria-expanded="false" class="nav-drop-trigger" type="button">Services <i
+                                aria-hidden="true" class="fas fa-chevron-down"></i></button>
+                        <div class="nav-drop-content"><a href="{% url 'goldours_home:all-services' %}">All Services</a><a
+                                href="{% url 'goldours_home:governance-and-direction' %}">Governance &amp; Direction</a><a
+                                href="{% url 'goldours_home:talent-management-and-development' %}">Talent Management</a><a
+                                href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Accounting, Tax &amp;
+                                Assurance</a><a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE
+                                Consulting</a></div>
+                    </div>
+                    <div class="nav-drop"><button aria-expanded="false" class="nav-drop-trigger" type="button">Our Impact <i
+                                aria-hidden="true" class="fas fa-chevron-down"></i></button>
+                        <div class="nav-drop-content">
+                            <a href="{% url 'goldours_home:get-team' %}">Our Team</a>
+                            <a href="{% url 'goldours_home:get-accreditations' %}">Accreditations</a>
+                            <a href="{% url 'goldours_home:get-clients' %}">Our
+                                Clients</a>
+                                <a href="{% url 'goldours_home:get-contributions' %}">Contributions</a>
+                                <a href="{% url 'goldours_home:get-testimonials' %}">Testimonials</a>
+                        </div>
+                    </div><a href="{% url 'goldours_home:blogs' %}">Insights</a>
+                    <div class="nav-drop"><button aria-expanded="false" class="nav-drop-trigger" type="button">More <i
+                                aria-hidden="true" class="fas fa-chevron-down"></i></button>
+                        <div class="nav-drop-content"><a href="">Media Gallery</a><a href="{% url 'accounts:communications' %}">Events
+                                &amp; Updates</a>
+                        </div>
+                    </div><a class="nav-contact" href="{% url 'goldours_home:contact' %}">Let's Talk <i aria-hidden="true"
+                            class="fas fa-external-link-alt"></i></a>
+                </nav>
+            </div>
+        </header>
+        
+        {% block content %}
+        {% include 'includes/messages.html' %}
+        {% endblock content %}
+        
+        {% include 'includes/footer.html' %}
+        
 
-    
-    {% block js %}
         
-    {% endblock js %}
-        
-    <script id="_agile_min_js" async type="text/javascript" src="https://goldoursconsulting.agilecrm.com/stats/min/agile-min.js"> </script>
-    <script type="text/javascript" >
-         var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account('b5nkkppm9ukltf4iftd6nti0e', 'goldoursconsulting', false);
-         _agile.track_page_view();};
-    </script>
-</body>
+        {% block js %}
+            
+        {% endblock js %}
+            
+        <script id="_agile_min_js" async type="text/javascript" src="https://goldoursconsulting.agilecrm.com/stats/min/agile-min.js"> </script>
+        <script type="text/javascript" >
+            var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){_agile.set_account('b5nkkppm9ukltf4iftd6nti0e', 'goldoursconsulting', false);
+            _agile.track_page_view();};
+        </script>
+    </body>
 </html>

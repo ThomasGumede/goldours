@@ -1,0 +1,14 @@
+/* Lightweight symbol fallback; official Font Awesome Free icons load by CDN when online. */
+.fas::before,.far::before,.fab::before{content:"◆";display:inline-block;font-style:normal;line-height:1}
+.fa-check-circle::before,.fa-check::before{content:"✓"}
+.fa-arrow-right::before,.fa-long-arrow-alt-right::before{content:"→"}
+.fa-arrow-left::before{content:"←"}.fa-arrow-up::before{content:"↑"}
+.fa-chevron-down::before{content:"⌄"}.fa-chevron-right::before,.fa-angle-right::before{content:"›"}
+.fa-compass::before{content:"◈"}.fa-quote-left::before{content:"❝"}
+.fa-users::before,.fa-user-tie::before{content:"♟"}.fa-award::before,.fa-certificate::before{content:"✦"}
+.fa-graduation-cap::before{content:"▣"}.fa-phone-alt::before{content:"☎"}
+.fa-envelope::before{content:"✉"}.fa-search::before{content:"⌕"}
+.fa-map-marker-alt::before{content:"⌖"}.fa-calendar-alt::before,.fa-clock::before{content:"◷"}
+.fa-handshake::before,.fa-heart::before{content:"♥"}.fa-external-link-alt::before{content:"↗"}
+.fa-bars::before{content:"☰"}.fa-times::before{content:"×"}
+.fa-link::before{content:"↗"}.fa-laptop::before{content:"▣"}

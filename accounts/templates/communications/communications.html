@@ -2,105 +2,75 @@
 {% load static %}
 
 {% block seo %}
-<title>Company Communications & Events - GoldOurs</title>
-<meta name="description"
-    content="GoldOurs a South African-based private company operating in Cape Town and Johannesburg. We offer expertise in executive leadership coaching, accounting services, leadership training," />
-<meta name="keywords"
-    content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting, goldours cape town, goldours johannersburg, goldours photos, goldours services" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="About Us - GoldOurs" />
-<meta property="og:description"
-    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image"
-    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-<meta name="author" content="GoldOurs Team">
-<meta name="robots" content="index, follow">
-<meta name="language" content="en">
-<meta name="revisit-after" content="7 days">
-<meta name="distribution" content="global">
-
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
-<meta name="twitter:description"
-    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
-<meta name="twitter:image"
-    content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
-<meta name="twitter:creator" content="@GoldOursOfficial">
-
-
-<script type="application/ld+json">
-        {
-                "@context": "https://schema.org",
-                    "@type": "Webpage",
-                        "name": "About Us - GoldOurs",
-                            "description": "Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals.",
-                                "url": "https://www.goldours.com/about-us",
-                                    "mainEntity": {
-                    "@type": "Organization",
-                        "name": "GoldOurs",
-                            "mission": "To empower individuals and organizations to achieve sustainable growth and transformation.",
-                                "vision": "To be world-renowned for unearthing the optimal value of institutions and leaders.",
-                                    "values": [
-                                        "People are treasure",
-                                        "Pursue joy and protect peace",
-                                        "Honor commitments",
-                                        "Grow always"
-                                    ]
-                }
-            }
-
-    </script>
+<title>News &amp; Events | GoldOurs</title>
+<meta
+    content="Find GoldOurs company announcements, event updates and professional engagements. Contact the team for information about current activities and training."
+    name="description" />
+<meta content="noindex,follow" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="News &amp; Events | GoldOurs" property="og:title" />
+<meta
+    content="Find GoldOurs company announcements, event updates and professional engagements. Contact the team for information about current activities and training."
+    property="og:description" />
+<meta content="{% url 'accounts:communications' %}" property="og:url" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="News &amp; Events | GoldOurs" name="twitter:title" />
+<meta
+    content="Find GoldOurs company announcements, event updates and professional engagements. Contact the team for information about current activities and training."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"{% url 'accounts:communications' %}#webpage","url":"{% url 'accounts:communications' %}","name":"News & Events | GoldOurs","description":"Find GoldOurs company announcements, event updates and professional engagements. Contact the team for information about current activities and training.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
 {% endblock seo %}
 
 {% block content %}
-<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">Company Communications & Events</h1>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
-                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
-                    <span> / </span>
-                    <a href="{% url 'accounts:communications' %}" class="active">Company Communications & Events</a>
-                </div>
-            </div>
+
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Communications &amp; Events</span></div><span
+                class="eyebrow">COMMUNICATIONS &amp; EVENTS</span>
+            <h1>Conversations.<br /><em>Connections.</em></h1>
+            <p>News, company communication and industry events.</p>
         </div>
-    </div>
-</div>
-<section class="portfolio-area style-3 pt--110 pb--90 pt--md--60 pb--md-30 pt_xs--60 pb_xs--30">
-    <div class="container">
-        <div class="grid row align-items-center">
-            
-            {% for com in communications %}
-                <div class="col-lg-4 col-md-6 col-sm-12 grid-item cat3">
-                    <div class="portfolio-wrapper2 tw-overflow-hidden mb-30">
-                        <div class="img-fluid tw-overflow-hidden">
-                            <img class="tw-w-[330px] tw-h-[271px] lg:tw-w-[414px] lg:tw-h-[333px]" src="{% if com.image %}{{com.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{com.title}}">
-                            <div class="portfolio-content">
-                                <a class="fw-bold text-white" href="{{com.get_absolute_url}}">Veiw Details </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <div class="text">
-                                <p class="p-category">
-                                    <a href="{% url 'accounts:communications' %}">Company Communications</a>
-                                </p>
-                                <div class="p-title">
-                                    <a href="{{com.get_absolute_url}}">{{com.title}}</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">STAY CONNECTED</span>
+                <h2>Where we share what matters.</h2>
+                <p>The current public communications page has no published items visible. These are editorial design
+                    placeholders for management approval.</p>
+            </div>
+            <div class="about-values">
+                <article class="fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-bullhorn"></i></span><span class="mini-label">SECTION PREVIEW</span>
+                    <h3>Company updates</h3>
+                    <p>A future home for verified GoldOurs announcements and organisational milestones.</p>
+                </article>
+                <article class="fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-calendar-alt"></i></span><span class="mini-label">SECTION PREVIEW</span>
+                    <h3>Events and workshops</h3>
+                    <p>Highlight upcoming training, thought-leadership sessions and partner events once confirmed.
+                    </p>
+                </article>
+                <article class="fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-users"></i></span><span class="mini-label">SECTION PREVIEW</span>
+                    <h3>Community engagement</h3>
+                    <p>Share approved stories from graduate, youth and charity initiatives.</p>
+                </article>
+            </div>
+            <div class="center-action"><a class="btn btn-dark" href="{% url 'goldours_home:contact' %}">Contact communications <i
+                        aria-hidden="true" class="fas fa-arrow-right"></i></a></div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
+
 {% endblock content %}

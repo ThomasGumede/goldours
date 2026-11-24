@@ -2,158 +2,92 @@
 {% load static %}
 
 {% block seo %}
-<title>Insights & Blog - GoldOurs</title>
-<meta name="description"
-    content="Stay updated with GoldOurs' latest insights and expert advice on governance, leadership, strategy, and talent development." />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, media, photos, goldours articles, company insights" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="Insights & Blog - GoldOurs" />
-<meta property="og:description"
-    content="Explore GoldOurs' latest articles and insights to empower your business and career." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
+<title>Insights on Governance, Leadership &amp; Growth | GoldOurs</title>
+<meta
+    content="Read GoldOurs insights on strategy execution, board oversight, risk, leadership, talent development, financial systems, transformation and sustainable growth."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Insights on Governance, Leadership &amp; Growth | GoldOurs" property="og:title" />
+<meta
+    content="Read GoldOurs insights on strategy execution, board oversight, risk, leadership, talent development, financial systems, transformation and sustainable growth."
+    property="og:description" />
+
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Insights on Governance, Leadership &amp; Growth | GoldOurs" name="twitter:title" />
+<meta
+    content="Read GoldOurs insights on strategy execution, board oversight, risk, leadership, talent development, financial systems, transformation and sustainable growth."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"CollectionPage","@id":"{% url 'goldours_home:blogs' %}#webpage","url":"{% url 'goldours_home:blogs' %}","name":"Insights on Governance, Leadership & Growth | GoldOurs","description":"Read GoldOurs insights on strategy execution, board oversight, risk, leadership, talent development, financial systems, transformation and sustainable growth.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
 {% endblock seo %}
 
 {% block content %}
-<!-- start breadcrumb area -->
-<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">Latest Posts</h1>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="bread-tag">
-                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
-                    <span> / </span>
-                    <a href="#" class="active">Latest Posts</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end breadcrumb area -->
 
-<!-- rts blog list area -->
-<div class="rts-blog-list-area rts-section-gap">
-    <div class="container">
-        <div class="row g-5">
-            <!-- rts blog post area -->
-             <div class="col-xl-8 col-md-12 col-sm-12 col-12 pr--40 pr_md--0 pr_sm-controler--0">
-                <div class="row g-5">
-                    
-                        <!-- start blog grid inner -->
-                        {% for post in posts %}
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div class="blog-grid-inner">
-                                <div class="blog-header">
-                                    <a class="thumbnail" href="{% url 'goldours_home:details-blog' post.slug %}">
-                                        <img src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" alt="{{post.title}}">
-                                    </a>
-                                    <div class="blog-info">
-                                        <div class="user">
-                                            <i class="fal fa-user-circle"></i>
-                                            <span>by Admin</span>
-                                        </div>
-                                        <div class="user">
-                                            <i class="fal fa-tags"></i>
-                                            <span>{{post.category.label|truncatechars:10}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="date">
-                                        <h6 class="title">{{post.created|date:"d"}}</h6>
-                                        <span>{{post.created|date:"b"}}</span>
-                                    </div>
-                                </div>
-                                <div class="blog-body">
-                                    <a href="{% url 'goldours_home:details-blog' post.slug %}">
-                                        <h5 class="title">
-                                            {{post.title|truncatewords:5}}
-                                        </h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {% endfor %}
-                        <!-- end blog grid inner -->
-                    
-                </div>
-            </div>
-            
-            <!-- rts-blog post end area -->
-            <!--rts blog wized area -->
-            <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60">
-                <!-- single wized start -->
-                <div class="rts-single-wized search">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Search Here
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <form class="rts-search-wrapper" action="{% url 'goldours_home:blogs' %}">
-                            <input class="Search" type="text" name="query" placeholder="Enter Keyword">
-                            <button><i class="fal fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized Categories">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Categories
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        {% for category in blog_categories %}
-                        <!-- single categoris -->
-                        <ul class="single-categories">
-                            <li><a href="{% url 'goldours_home:blogs-by-category' category.slug %}">{{category.label}} <i
-                                        class="far fa-long-arrow-right"></i></a></li>
-                        </ul>
-                        {% endfor %}
-                        
-                    </div>
-                </div>
-                <div class="rts-single-wized">
-                    <div class="wized-header">
-                        <h5 class="title">
-                            Popular Tags
-                        </h5>
-                    </div>
-                    <div class="wized-body">
-                        <div class="tags-wrapper">
-                
-                            {% for tagpop in popular_tags %}
-                            <a href="{% url 'goldours_home:blogs_by_tag' tagpop.slug %}">{{tagpop.name}}</a>
-                            {% endfor %}
-                
-                
-                
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- single wized End -->
-                <!-- single wized start -->
-                <div class="rts-single-wized contact">
-                    <div class="wized-header">
-                        <a href="#"><img src="{% static 'assets/images/logo/logo-2.png' %}" alt="Business_logo"></a>
-                    </div>
-                    <div class="wized-body">
-                        <h5 class="title">Need Help? We Are Here
-                            To Help You</h5>
-                        <a class="rts-btn btn-primary" href="{% url 'goldours_home:contact' %}">Contact Us</a>
-                    </div>
-                </div>
-                <!-- single wized End -->
-            </div>
-            <!-- rts- blog wized end area -->
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Our Insights</span></div><span class="eyebrow">OUR
+                INSIGHTS</span>
+            <h1>Ideas that challenge.<br /><em>Insights that move.</em></h1>
+            <p>Thoughtful perspectives on leadership, governance, change and growth.</p>
         </div>
-    </div>
-</div>
-<!-- rts blog list area End -->
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="blog-tools">
+                <label class="searchbox">
+                    <i aria-hidden="true" class="fas fa-search">
+
+                </i><input
+                        aria-label="Search article titles and topics" id="blog-search" placeholder="Search insights..."
+                        type="search" name="search" />
+                    </label>
+
+                <div aria-label="Filter by category" class="filter-chips" role="group">
+                    <a
+                        class="filter-chip active" data-filter="all" href="{% url 'goldours_home:blogs' %}">All topics</a>
+                        {% for category in popular_categories %}
+                        <a
+                        class="filter-chip" data-filter="Governance &amp; Leadership"
+                        href="{% url 'goldours_home:blogs-by-category' category.slug %}">{{category.label}}</a>
+                        {% endfor %}
+                        
+            </div>
+            <div class="blog-grid" id="blog-list">
+                {% for post in posts %}
+                <article class="blog-card fade-up">
+                    <a class="blog-image" href="{% url 'goldours_home:details-blog' post.slug %}"><img
+                            alt="{{post.title}}" class=""
+                            decoding="async" loading="lazy" src="{% if post.image %}{{post.image.url}}{% else %}{% static 'assets/images/no-image.png' %}{% endif %}" /></a>
+                    <div class="blog-body">
+                        <div class="meta"><span>{{post.category.label|truncatechars:30}}</span><span>{{post.created|date:"d M y"}}</span></div>
+                        <h3><a href="{% url 'goldours_home:details-blog' post.slug %}">{{post.title|truncatewords:10}}</a></h3>
+                        <p>{{post.description|truncatewords:15}}</p><a
+                            class="text-link" href="{% url 'goldours_home:details-blog' post.slug %}">Read insight <i aria-hidden="true"
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                {% empty %}
+
+                {% endfor %}
+                
+            </div>
+            <p class="empty-results" hidden="">No matching insights. Try a different keyword or topic.</p>
+            <div class="blog-count" role="status"></div>
+        </div>
+    </section>
+</main>
+
+
 {% endblock content %}

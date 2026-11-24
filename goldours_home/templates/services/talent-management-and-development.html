@@ -1,171 +1,255 @@
 {% extends '_service.html' %}
 {% load static %}
 {% block seo %}
-<title>Talent Management and Development</title>
-<meta name="description" content="GoldOurs offers comprehensive solutions to empower individuals and teams through focused training and
-            development." />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, Marketing and Sales, Talent Management and Development, Strategic Thinking, Leadership Coaching, Team Coaching, Performance Management" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="Talent Management and Development" />
-<meta property="og:description" content="GoldOurs offers comprehensive solutions to empower individuals and teams through focused training and
-            development." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/service/service-2.jpg' %}">
+<title>Talent Management &amp; Training | GoldOurs</title>
+<meta
+    content="GoldOurs provides leadership coaching, governance workshops, professional and technical skills development, change management and entrepreneurship training."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Talent Management &amp; Training | GoldOurs" property="og:title" />
+<meta
+    content="GoldOurs provides leadership coaching, governance workshops, professional and technical skills development, change management and entrepreneurship training."
+    property="og:description" />
+<meta content="https://www.goldours.co.za/talent-management-development.html" property="og:url" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Talent Management &amp; Training | GoldOurs" name="twitter:title" />
+<meta
+    content="GoldOurs provides leadership coaching, governance workshops, professional and technical skills development, change management and entrepreneurship training."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<link href="https://www.goldours.co.za/talent-management-development.html" rel="canonical" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"https://www.goldours.co.za/talent-management-development.html#webpage","url":"https://www.goldours.co.za/talent-management-development.html","name":"Talent Management & Training | GoldOurs","description":"GoldOurs provides leadership coaching, governance workshops, professional and technical skills development, change management and entrepreneurship training.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"Service","@id":"https://www.goldours.co.za/talent-management-development.html#service","name":"Talent Management & Development","serviceType":"Talent Management & Development","description":"Governance and ethics workshops, leadership coaching, professional and technical skills development, change management and entrepreneurship training.","provider":{"@id":"https://www.goldours.co.za/#organization"},"areaServed":{"@type":"Country","name":"South Africa"},"url":"https://www.goldours.co.za/talent-management-development.html"}]}</script>
 {% endblock seo %}
-{% block service_title %}
-Talent Management and Development
-{% endblock service_title %}
 
-{% block service_title_2 %}
-Talent Management and Development
-{% endblock service_title_2 %}
+{% block content %}
 
-{% block link %}
-{% url 'goldours_home:talent-management-and-development' %}{% endblock link %}
-
-{% block service %}
-<div class="col-xl-8 col-md-12 col-sm-12 col-12">
-    <!-- service details left area start -->
-    <div class="service-detials-step-1">
-        <div class="thumbnail">
-            <img src="{% static 'assets/images/service/service-2.jpg' %}" alt="Photo by Christina Morillo: https://www.pexels.com/photo/group-of-people-talking-to-each-other-in-front-of-brown-wooden-table-1181360/">
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="index.html">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Talent Management &amp; Development</span></div><span
+                class="eyebrow">SERVICE DETAILS</span>
+            <h1>Talent Management &amp; Development</h1>
+            <p>Equip people with the skills to thrive.</p>
         </div>
-        <h4 class="title">Talent Management and Development</h4>
-        <p class="disc">
-            GoldOurs offers comprehensive solutions to empower individuals and teams through focused training and
-            development. Our
-            Governance and Ethics Workshop emphasizes the importance of ethical decision-making and accountability in
-            leadership.
-            With Leadership Development, we provide tailored coaching and change management strategies that help leaders
-            and teams
-            adapt, grow, and excel in dynamic environments.
-
-
-        </p>
-        <p class="disc">
-            Our Professional Skills Training sharpens essential abilities like strategic thinking, relationship
-            building, and
-            effective communication. Through Technical Skills Development, we equip professionals with critical
-            expertise in
-            financial management, budgeting, and compliance with key legislative frameworks like the Public Finance
-            Management Act.
-            Additionally, our Entrepreneurship Training nurtures business acumen with modules on marketing, accounting,
-            negotiations, and sustainable operations to support entrepreneurs on their growth journeys.
-        </p>
-        <!-- <div class="row g-5 mt--30 mb--40">
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Strategy</h6>
-                                    <p class="disc">We help boards craft impactful strategies by aligning vision,
-                                        identifying key drivers, and setting measurable objectives
-                                        for success.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Risk management</h6>
-                                    <p class="disc">We identify and evaluate risks, enhancing readiness to mitigate
-                                        threats and seize opportunities effectively.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            
-                            <div class="service-details-card">
-
-                                <div class="details">
-                                    <h6 class="title">Performance management</h6>
-                                    <p class="disc">We create actionable plans to achieve goals, define roles, and
-                                        measure progress for sustained growth.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                    </div> -->
-        <p class="disc">
-            GoldOurs has proudly supported numerous clients in achieving their strategic goals, including
-            Central Energy Fund, Black
-            Management Forum, SIRDAR, Re-Imagine SA, Realistic Child & Youth Care Centre, Dale College,
-            Massive Quantum
-            International, and Budget Partnership SA. With a proven track record of empowering
-            organizations, we're here to guide
-            you toward success. Let's uncover your potential together!
-        </p>
-    </div>
-
-    <!-- service details left area end -->
-    <div class="service-detials-step-3 mt--70 mt_md--50">
-        <div class="row g-5 align-items-center">
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="thumbnail sm-thumb-service">
-                    <img src="{% static 'assets/images/service/service-2.jpg' %}" alt="Service">
+    </section>
+    <section class="section">
+        <div class="container detail-layout">
+            <div class="detail-main"><img alt="Talent Management &amp; Development consulting" class="detail-photo"
+                    id="service-image" src="{% static 'assets/images/service/service-2.webp' %}" /><span class="eyebrow"
+                    id="service-tag">Leadership • Skills • Coaching</span>
+                <h2 id="service-title">Talent Management &amp; Development</h2>
+                <p class="big-p" id="service-summary">Governance and ethics workshops, leadership development,
+                    professional and technical skills training, and entrepreneurship support.</p>
+                <div class="rich-copy" id="service-intro">
+                    <p>GoldOurs develops leadership, technical and professional capability through practical
+                        workshops, coaching and training for organisations and entrepreneurs.</p>
+                    <p>These programmes include governance and ethics, leadership and team coaching, professional
+                        skills, statutory finance knowledge and business development capabilities.</p>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
-                <h4 class="title">Customer Benefits</h4>
-                <p class="disc">This program delivers tangible results, including enhanced access to funding, improved
-                    business operations, trackable
-                    growth, and tax compliance. By addressing both individual and organizational needs, we enable
-                    clients to unlock their
-                    full potential and achieve sustainable success</p>
-                <!-- <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Proactive leadership</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Prioritising strategically
-                                    important projects</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Consensus on Clear
-                                    Direction</span>
-                            </div>
-                            <div class="single-banifits">
-                                <i class="far fa-check-circle"></i>
-                                <span>Improving relationships
-                                    with stakeholders</span>
-                            </div> -->
-            </div>
-            <div class="rts-trusted-client mt--70 rts-section-gapBottom">
-                <div class="">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="title-area-client text-center">
-                                <p class="client-title">Our Clients</p>
-                            </div>
+                <h3>How we can help</h3>
+                <div class="point-grid" id="service-points">
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Governance and ethics</h3>
+                            <p>Governance and ethics workshop programmes.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="client-wrapper-one">
-                            <a href="#"><img src="{% static 'assets/images/clients/trans.png' %}" alt="Transnet logo"></a>
-            
-                            <a href="#"><img src="{% static 'assets/images/clients/AGSA-Logo.png' %}"
-                                    alt="AGSA logo"></a>
-                            <a href="#"><img src="{% static 'assets/images/clients/sacap.svg' %}" alt="South African College of Applied Psychology logo"></a>
-                            <a href="#"><img src="{% static 'assets/images/clients/pfa.png' %}" alt="Pension Fund Adjudicator logo"></a>
-                            <a href="#"><img src="{% static 'assets/images/clients/img5.png' %}" class="bg-dark"
-                                    alt="Personal Trust logo"></a>
-                            <a href="#"><img src="{% static 'assets/images/clients/mid.png' %}" alt="MID logo"></a>
-            
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Leadership development</h3>
+                            <p>Leadership coaching, team coaching and change management.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Professional skills training</h3>
+                            <p>Strategic thinking, relationship management, performance management, communication
+                                and risk and opportunity management.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Technical skills development</h3>
+                            <p>Financial and budget management, internal controls, supply chain management,
+                                Companies Act, PFMA and MFMA.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Entrepreneurship training</h3>
+                            <p>Marketing and sales, accounting and tax compliance, negotiations and contracting,
+                                profits, reserves, dividends, sustainability and quality service.</p>
                         </div>
                     </div>
                 </div>
+                <div class="benefit-panel">
+                    <h3>Client benefits</h3>
+                    <div class="benefit-list" id="service-benefits">
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Access to funding</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Trackable business growth</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Tax compliance</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Improving business operations</div>
+                    </div>
+                </div>
+                <section aria-labelledby="team-talent" class="go-service-team">
+                    <div class="go-service-section-label"><span class="eyebrow">OUR TEAM</span><span
+                            class="go-team-id"><i aria-hidden="true" class="fas fa-award"></i> Expertise behind
+                            every outcome</span></div>
+                    <h2 id="team-talent">Leadership, coaching and development specialists</h2>
+                    <p class="go-team-intro">Our Talent Management &amp; Development team combines business
+                        leadership, training, coaching and educational expertise to support organisations and their
+                        people.</p>
+                    <div aria-label="Team qualifications and experience" class="go-team-stat-grid">
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-users"></i></span><strong>20</strong><span>Experienced
+                                professionals</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-briefcase"></i></span><strong>20+ years</strong><span>Average
+                                executive experience</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-user-tie"></i></span><strong>10+ years</strong><span>Average
+                                non-executive experience</span></div>
+                    </div>
+                    <div class="go-team-qualifications">
+                        <div class="go-team-qual-icon"><i aria-hidden="true" class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Professional qualifications</h3>
+                            <p>MBA, MPhil and PhD candidates</p>
+                        </div>
+                    </div>
+                    <h3 class="go-mini-heading">Experience across sectors</h3>
+                    <div class="go-sector-grid">
+                        <div><i aria-hidden="true" class="fas fa-building"></i><strong>Over 25
+                                years</strong><span>Private sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-landmark"></i><strong>10 years</strong><span>Public
+                                sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-university"></i><strong>5
+                                years</strong><span>Academic sector</span></div>
+                    </div>
+                    <h3 class="go-mini-heading">Professional affiliations &amp; accreditations</h3>
+                    <ul class="go-team-affiliations">
+                        <li>SAIGA</li>
+                        <li>SEDFA</li>
+                        <li>ABCCCP</li>
+                        <li>ICF</li>
+                        <li>COMENSA</li>
+                    </ul>
+                </section>
+                <section aria-labelledby="clients-talent" class="go-service-clients">
+                    <span class="eyebrow">OUR CLIENTS</span>
+                    <div class="go-client-heading">
+                        <h2 id="clients-talent">Trusted by organisations across South Africa.</h2>
+                        <p>Clients and organisations referenced in our Talent Management &amp; Development
+                            portfolio.</p>
+                    </div>
+                    <div class="go-service-clients-grid">
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Auditor-General of South Africa logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/AGSA-Logo.png' %}" />
+                            </div><strong>Auditor-General of South Africa</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Transnet logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/trans.png' %}" /></div><strong>Transnet</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="South African College of Applied Psychology logo"
+                                    decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/south-african-college-of-applied-psychology.png' %}" />
+                            </div><strong>South African College of Applied Psychology</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Varsity College logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/varsity-college.png' %}" /></div>
+                            <strong>Varsity College</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Standard Bank logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/standard-bank.png' %}" /></div><strong>Standard
+                                Bank</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Pension Fund logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/pension-fund.png' %}" /></div><strong>Pension
+                                Fund</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Personal Trust logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/personal-trust.png' %}" /></div>
+                            <strong>Personal Trust</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Muizenberg Improvement District logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/muizenberg-improvement-district.png' %}" /></div>
+                            <strong>Muizenberg Improvement District</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Eskom logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/eskom.png' %}" /></div><strong>Eskom</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Amatola Water logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/amatola-water.png' %}" /></div><strong>Amatola
+                                Water</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Healthy Living Consulting logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/healthy-living-consulting.png' %}" />
+                            </div>
+                            <strong>Healthy Living Consulting</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="One Vision Academy logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/one-vision-academy.png' %}" />
+                            </div><strong>One Vision Academy</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="CEF SOC Ltd logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/cef.webp' %}" /></div><strong>CEF SOC Ltd</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="TalentLine logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/talentline.png' %}" /></div>
+                            <strong>TalentLine</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="NASCEE logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/nascee.png' %}" /></div><strong>NASCEE</strong>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <aside class="detail-aside">
+                <div class="aside-card">
+                    <h3>Our service areas</h3><a href="{% url 'goldours_home:governance-and-direction' %}">Governance &amp;
+                        Direction <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:talent-management-and-development' %}">Talent
+                        Management &amp; Development <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Accounting, Tax &amp; Assurance <i
+                            class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE
+                        Consulting &amp; Training <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="aside-card aside-dark">
+                    <h3>Need assistance?</h3>
+                    <p>Speak to GoldOurs about your business goals and challenges.</p><a class="btn btn-gold"
+                        href="{% url 'goldours_home:contact' %}">Get in touch <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
-{% endblock service %}
+{% endblock content %}

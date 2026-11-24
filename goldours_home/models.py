@@ -259,6 +259,9 @@ class Member(AbstractCreate):
 #     title = models.CharField(help_text=_("Enter title for your image"), max_length=150)
 #     image = models.ImageField(help_text=_("Upload media image."), upload_to=handle_post_file_upload, blank=True, null=True)
     
+#     class Meta:
+#         pass
+    
 @receiver(pre_delete, sender=Blog)
 def delete_Post_image_hook(sender, instance, using, **kwargs):
     instance.image.delete()

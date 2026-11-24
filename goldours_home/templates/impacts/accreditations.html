@@ -1,0 +1,103 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>Professional Affiliations &amp; Credentials | GoldOurs</title>
+<meta
+    content="Review the professional affiliations and credentials listed for GoldOurs’ governance, talent development, accounting, audit and B-BBEE teams."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Professional Affiliations &amp; Credentials | GoldOurs" property="og:title" />
+<meta
+    content="Review the professional affiliations and credentials listed for GoldOurs’ governance, talent development, accounting, audit and B-BBEE teams."
+    property="og:description" />
+<meta content="{% url 'goldours_home:get-accreditations' %}" property="og:url" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Professional Affiliations &amp; Credentials | GoldOurs" name="twitter:title" />
+<meta
+    content="Review the professional affiliations and credentials listed for GoldOurs’ governance, talent development, accounting, audit and B-BBEE teams."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<link href="{% url 'goldours_home:get-accreditations' %}" rel="canonical" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"{% url 'goldours_home:get-accreditations' %}#webpage","url":"{% url 'goldours_home:get-accreditations' %}","name":"Professional Affiliations & Credentials | GoldOurs","description":"Review the professional affiliations and credentials listed for GoldOurs’ governance, talent development, accounting, audit and B-BBEE teams.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
+
+{% endblock seo %}
+
+{% block content %}
+
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Accreditations</span></div><span
+                class="eyebrow">ACCREDITATIONS</span>
+            <h1>Commitment to standards.<br /><em>Confidence in delivery.</em></h1>
+            <p>Accreditations, professional affiliations and responsible business credentials.</p>
+        </div>
+    </section>
+    <section class="section section-cream" id="accreditations">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">CREDENTIALS &amp; PROFESSIONAL BODIES</span>
+                <h2>Professional connections. <em>Responsible representation.</em></h2>
+                <p>Our specialists are connected with professional organisations and skills-development institutions
+                    that support quality, ethics and industry knowledge.</p>
+            </div>
+            <div class="profile-credentials-grid">
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="SAIGA logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/saiga.png' %}" /></div>
+                    <h3>SAIGA</h3>
+                    <p>Government auditing professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">SAICA</span></div>
+                    <h3>SAICA</h3>
+                    <p>Chartered accountancy professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="QCTO logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/qcto_logo.svg' %}" /></div>
+                    <h3>QCTO</h3>
+                    <p>Occupational qualifications and skills development</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="FASSET logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/fasset.jpg' %}" /></div>
+                    <h3>FASSET</h3>
+                    <p>Finance and accounting SETA</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">COMENSA</span></div>
+                    <h3>COMENSA</h3>
+                    <p>Coaching and mentoring professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">IRBA</span></div>
+                    <h3>IRBA</h3>
+                    <p>Registered auditors professional body</p>
+                </article>
+            </div>
+            <div class="ownership-strip fade-up">
+                <div><span class="round-icon"><i aria-hidden="true" class="fas fa-award"></i></span><strong>Level
+                        1</strong><span>B-BBEE contributor</span></div>
+                <div><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-handshake"></i></span><strong>100%</strong><span>Black-owned
+                        business</span></div>
+                <div><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-certificate"></i></span><strong>Verify</strong><span>Current certificates
+                        and scope</span></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}

@@ -2,162 +2,230 @@
 {% load static %}
 
 {% block seo %}
-<title>Governance & Direction</title>
-<meta name="description"
-    content="We help you navigate the complexities of governance by offering strategic planning, risk
-            management, board training, and..." />
-<meta name="keywords" content="blog, insights, leadership advice, GoldOurs, governance trends, B-BBEE strategy, Governance & Direction" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="Governance & Direction" />
-<meta property="og:description"
-    content="We help you navigate the complexities of governance by offering strategic planning, risk
-            management, board training, and.." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/service/service-4.jpg' %}">
+<title>Governance &amp; Strategy Consulting | GoldOurs</title>
+<meta
+    content="GoldOurs supports boards and leaders with strategy facilitation, risk management, performance planning, IT governance and board training in South Africa."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Governance &amp; Strategy Consulting | GoldOurs" property="og:title" />
+<meta
+    content="GoldOurs supports boards and leaders with strategy facilitation, risk management, performance planning, IT governance and board training in South Africa."
+    property="og:description" />
+<meta content="https://www.goldours.co.za/governance-direction.html" property="og:url" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Governance &amp; Strategy Consulting | GoldOurs" name="twitter:title" />
+<meta
+    content="GoldOurs supports boards and leaders with strategy facilitation, risk management, performance planning, IT governance and board training in South Africa."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<link href="https://www.goldours.co.za/governance-direction.html" rel="canonical" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"WebPage","@id":"https://www.goldours.co.za/governance-direction.html#webpage","url":"https://www.goldours.co.za/governance-direction.html","name":"Governance & Strategy Consulting | GoldOurs","description":"GoldOurs supports boards and leaders with strategy facilitation, risk management, performance planning, IT governance and board training in South Africa.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"Service","@id":"https://www.goldours.co.za/governance-direction.html#service","name":"Governance & Direction","serviceType":"Governance & Direction","description":"Strategy facilitation, organisational risk management, performance management, IT governance and board training.","provider":{"@id":"https://www.goldours.co.za/#organization"},"areaServed":{"@type":"Country","name":"South Africa"},"url":"https://www.goldours.co.za/governance-direction.html"}]}</script>
 {% endblock seo %}
 
-{% block service_title %}
-Governance & Direction
-{% endblock service_title %}
 
-{% block service_title_2 %}
-Governance & Direction
-{% endblock service_title_2 %}
+{% block content %}
 
-{% block link %}
-{% url 'goldours_home:governance-and-direction' %}{% endblock link %}
-
-{% block service %}
-
-<div class="col-xl-8 col-md-12 col-sm-12 col-12">
-    <!-- service details left area start -->
-    <div class="service-detials-step-1">
-        <div class="thumbnail">
-            <img src="{% static 'assets/images/service/service-4.jpg' %}" alt="Photo by Anna Tarazevich: https://www.pexels.com/photo/leadership-lettering-text-on-black-background-5598284/">
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Governance &amp; Direction</span></div><span
+                class="eyebrow">SERVICE DETAILS</span>
+            <h1>Governance &amp; Direction</h1>
+            <p>Proactive leadership. Clear organisational direction.</p>
         </div>
-        <h4 class="title">Governance & Direction</h4>
-        <p class="disc">
-            We help you navigate the complexities of governance by offering strategic planning, risk
-            management, board training, and
-            performance alignment, ensuring your organization's direction is set for success.
-
-        </p>
-        <p class="disc">
-            We foster proactive leadership, build consensus on clear direction, prioritize strategically
-            important projects, and
-            improve relationships with stakeholders.
-        </p>
-        <div class="row g-5 mt--30 mb--40">
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Strategy</h6>
-                        <p class="disc">We help boards craft impactful strategies by aligning vision,
-                            identifying key drivers, and setting measurable objectives
-                            for success.</p>
+    </section>
+    <section class="section">
+        <div class="container detail-layout">
+            <div class="detail-main"><img alt="Governance &amp; Direction consulting" class="detail-photo"
+                    id="service-image" src="{% static 'assets/images/service/service-3.webp' %}" /><span class="eyebrow"
+                    id="service-tag">Strategy • Risk Management • Performance</span>
+                <h2 id="service-title">Governance &amp; Direction</h2>
+                <p class="big-p" id="service-summary">Strategy facilitation, organisational risk management and
+                    performance management to help leadership teams establish direction and accountability.</p>
+                <div class="rich-copy" id="service-intro">
+                    <p>GoldOurs works with governing boards and councils to formulate strategy, review performance
+                        areas, identify strategic drivers and set clear objectives.</p>
+                    <p>Our governance support combines strategy, assessment of material risks and practical plans
+                        for managing performance.</p>
+                </div>
+                <h3>How we can help</h3>
+                <div class="point-grid" id="service-points">
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Strategy</h3>
+                            <p>Governing board or council strategy facilitation; review strategic documents and
+                                performance areas; identify strategic drivers; set key performance objectives.</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Risk management</h3>
+                            <p>Identify strategic and operational risks; evaluate impact and likelihood; establish
+                                risk appetite; assess organisational risk maturity; software testing (full
+                                regression).</p>
+                        </div>
+                    </div>
+                    <div class="point"><i aria-hidden="true" class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Performance management</h3>
+                            <p>Develop strategy and risk action plans, assign responsibilities and timelines,
+                                establish performance measures and agree monitoring intervals.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- single service details card End -->
-            </div>
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Risk management</h6>
-                        <p class="disc">We identify and evaluate risks, enhancing readiness to mitigate
-                            threats and seize opportunities effectively.</p>
+                <div class="benefit-panel">
+                    <h3>Client benefits</h3>
+                    <div class="benefit-list" id="service-benefits">
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Proactive leadership</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Consensus on clear direction</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Prioritising strategically important
+                            projects</div>
+                        <div><i aria-hidden="true" class="fas fa-check"></i>Improving relationships with
+                            stakeholders</div>
                     </div>
                 </div>
-                <!-- single service details card End -->
-            </div>
-            <div class="col-lg-6">
-                <!-- single service details card -->
-                <div class="service-details-card">
-
-                    <div class="details">
-                        <h6 class="title">Performance management</h6>
-                        <p class="disc">We create actionable plans to achieve goals, define roles, and
-                            measure progress for sustained growth.</p>
+                <section aria-labelledby="team-governance" class="go-service-team">
+                    <div class="go-service-section-label"><span class="eyebrow">OUR TEAM</span><span
+                            class="go-team-id"><i aria-hidden="true" class="fas fa-award"></i> Expertise behind
+                            every outcome</span></div>
+                    <h2 id="team-governance">Multidisciplinary leadership and governance experts</h2>
+                    <p class="go-team-intro">Our Governance &amp; Direction team brings together highly qualified,
+                        trained and experienced professionals with extensive private-sector, public-sector and
+                        academic experience.</p>
+                    <div aria-label="Team qualifications and experience" class="go-team-stat-grid">
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-users"></i></span><strong>10</strong><span>Experienced
+                                professionals</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-briefcase"></i></span><strong>15+ years</strong><span>Average
+                                executive experience</span></div>
+                        <div class="go-team-feature"><span class="go-team-feature-icon"><i aria-hidden="true"
+                                    class="fas fa-user-tie"></i></span><strong>10+ years</strong><span>Average
+                                non-executive experience</span></div>
                     </div>
-                </div>
-                <!-- single service details card End -->
-            </div>
-
-        </div>
-        <p class="disc">
-            GoldOurs has proudly supported numerous clients in achieving their strategic goals, including
-            Central Energy Fund, Black
-            Management Forum, SIRDAR, Re-Imagine SA, Realistic Child & Youth Care Centre, Dale College,
-            Massive Quantum
-            International, and Budget Partnership SA. With a proven track record of empowering
-            organizations, we're here to guide
-            you toward success. Let's uncover your potential together!
-        </p>
-    </div>
-
-    <!-- service details left area end -->
-    <div class="service-detials-step-3 mt--70 mt_md--50">
-        <div class="row g-5 align-items-center">
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="thumbnail sm-thumb-service">
-                    <img src="{% static 'assets/images/service/sm-01.jpg' %}" alt="Service">
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
-                <h4 class="title">Customer Benefits</h4>
-                <p class="disc">Enjoy proactive leadership, clear direction, prioritized projects, and
-                    stronger stakeholder relationships for lasting
-                    success.</p>
-                <div class="single-banifits">
-                    <i class="far fa-check-circle"></i>
-                    <span>Proactive leadership</span>
-                </div>
-                <div class="single-banifits">
-                    <i class="far fa-check-circle"></i>
-                    <span>Prioritising strategically
-                        important projects</span>
-                </div>
-                <div class="single-banifits">
-                    <i class="far fa-check-circle"></i>
-                    <span>Consensus on Clear
-                        Direction</span>
-                </div>
-                <div class="single-banifits">
-                    <i class="far fa-check-circle"></i>
-                    <span>Improving relationships
-                        with stakeholders</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="rts-trusted-client mt--70 rts-section-gapBottom">
-        <div class="">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-area-client text-center">
-                        <p class="client-title">Our Clients</p>
+                    <div class="go-team-qualifications">
+                        <div class="go-team-qual-icon"><i aria-hidden="true" class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Professional qualifications</h3>
+                            <p>MBA, MPhil and PhD candidates</p>
+                        </div>
                     </div>
-                </div>
+                    <h3 class="go-mini-heading">Experience across sectors</h3>
+                    <div class="go-sector-grid">
+                        <div><i aria-hidden="true" class="fas fa-building"></i><strong>Over 20
+                                years</strong><span>Private sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-landmark"></i><strong>10 years</strong><span>Public
+                                sector</span></div>
+                        <div><i aria-hidden="true" class="fas fa-university"></i><strong>10
+                                years</strong><span>Academic sector</span></div>
+                    </div>
+                    <h3 class="go-mini-heading">Professional affiliations &amp; accreditations</h3>
+                    <ul class="go-team-affiliations">
+                        <li>IRMSA</li>
+                        <li>IITPSA</li>
+                        <li>IODSA</li>
+                        <li>QCTO</li>
+                    </ul>
+                </section>
+                <section aria-labelledby="clients-governance" class="go-service-clients">
+                    <span class="eyebrow">OUR CLIENTS</span>
+                    <div class="go-client-heading">
+                        <h2 id="clients-governance">Trusted by organisations across South Africa.</h2>
+                        <p>Clients and organisations referenced in our Governance &amp; Direction portfolio.</p>
+                    </div>
+                    <div class="go-service-clients-grid">
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Central Energy Fund logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/clients/cef.webp' %}" /></div><strong>Central
+                                Energy Fund</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Dale College logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/dale.png' %}" /></div><strong>Dale College</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Massive Quantum logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/massive-quantum.png' %}" /></div>
+                            <strong>Massive Quantum</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="International Budget Partnership SA logo"
+                                    decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/international-budget-partnership-sa.png' %}" />
+                            </div><strong>International Budget Partnership SA</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Black Management Forum logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/black-management-forum.png' %}" />
+                            </div><strong>Black Management Forum</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="SIRDAR logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/sirdar.png' %}" /></div><strong>SIRDAR</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Re-Imagine SA logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/clients/reimag.png' %}" /></div><strong>Re-Imagine SA</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Realistic Child &amp; Youth Care Centre logo"
+                                    decoding="async" loading="lazy" src="{% static 'assets/images/clients/real.jpg' %}" /></div>
+                            <strong>Realistic Child &amp; Youth Care Centre</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Khwaza Engineering Consultants logo" decoding="async"
+                                    loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/khwaza-engineering-consultants.png' %}" /></div>
+                            <strong>Khwaza Engineering Consultants</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="NTP Logistics logo" decoding="async" loading="lazy"
+                                    src="{% static 'assets/images/profile-clients/ntp-logistics.png' %}" /></div><strong>NTP
+                                Logistics</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="ACE-AEC-Amersham SOC Ltd logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/ace-aec-amersham-soc-ltd.png' %}" />
+                            </div>
+                            <strong>ACE-AEC-Amersham SOC Ltd</strong>
+                        </div>
+                        <div class="go-client-card">
+                            <div class="go-client-art"><img alt="Seamount Primary School logo" decoding="async"
+                                    loading="lazy" src="{% static 'assets/images/profile-clients/seamount-primary-school.png' %}" />
+                            </div>
+                            <strong>Seamount Primary School</strong>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="row">
-                <div class="client-wrapper-one">
-                    <a href="#"><img src="{% static 'assets/images/clients/reimag.png' %}" alt="Reimagine SA logo"></a>
-                    
-                    <a href="#"><img src="{% static 'assets/images/clients/logo.svg' %}" alt="Black Management Forum logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/Logo5.svg' %}" alt="Massive Quantum logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/cef.webp' %}" alt="Central Energy Fund logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/real.jpg' %}" class="bg-dark"
-                            alt="Realistic Child & Youth Care Centre logo"></a>
-                    <a href="#"><img src="{% static 'assets/images/clients/dale.png' %}" alt="Dale College logo"></a>
-                    
+            <aside class="detail-aside">
+                <div class="aside-card">
+                    <h3>Our service areas</h3><a href="{% url 'goldours_home:governance-and-direction' %}">Governance &amp; Direction <i
+                            class="fas fa-arrow-right"></i></a><a href="{% url 'goldours_home:talent-management-and-development' %}">Talent
+                        Management &amp; Development <i class="fas fa-arrow-right"></i></a><a
+                        href="{% url 'goldours_home:systems-reviews-and-assurance' %}">Accounting, Tax &amp; Assurance <i
+                            class="fas fa-arrow-right"></i></a><a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">B-BBEE
+                        Consulting &amp; Training <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
+                <div class="aside-card aside-dark">
+                    <h3>Need assistance?</h3>
+                    <p>Speak to GoldOurs about your business goals and challenges.</p><a class="btn btn-gold"
+                        href="{% url 'goldours_home:contact' %}">Get in touch <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
-{% endblock service %}
+{% endblock content %}

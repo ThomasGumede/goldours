@@ -2,614 +2,244 @@
 {% load static %}
 
 {% block seo %}
-<title>About Us - GoldOurs</title>
-<meta name="description"
-    content="GoldOurs a South African-based private company operating in Cape Town and Johannesburg. We offer expertise in executive leadership coaching, accounting services, leadership training," />
-<meta name="keywords"
-    content="GoldOurs, about us, governance, B-BBEE contributor, leadership coaching, business consulting, goldours cape town, goldours johannersburg, goldours photos, goldours services" />
-<link rel="canonical" href="{{ request.build_absolute_uri }}" />
-<meta property="og:title" content="About Us - GoldOurs" />
-<meta property="og:description"
-    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence." />
-<meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-<meta name="author" content="GoldOurs Team">
-<meta name="robots" content="index, follow">
-<meta name="language" content="en">
-<meta name="revisit-after" content="7 days">
-<meta name="distribution" content="global">
-
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GoldOurs | Unlocking Potential for Growth and Excellence">
-<meta name="twitter:description"
-    content="Explore GoldOurs' mission, vision, and values in driving impactful growth and excellence.">
-<meta name="twitter:image" content="{{request.scheme}}://{{request.get_host}}{% static 'assets/images/logo/logo-2.png' %}">
-<meta name="twitter:site" content="{{ request.build_absolute_uri }}">
-<meta name="twitter:creator" content="@GoldOursOfficial">
-
-
-<script type="application/ld+json">
-        {
-                "@context": "https://schema.org",
-                    "@type": "Webpage",
-                        "name": "About Us - GoldOurs",
-                            "description": "Learn about GoldOurs, a 100% Black-owned Level 1 B-BBEE contributor dedicated to empowering businesses and individuals.",
-                                "url": "https://www.goldours.com/about-us",
-                                    "mainEntity": {
-                    "@type": "Organization",
-                        "name": "GoldOurs",
-                            "mission": "To empower individuals and organizations to achieve sustainable growth and transformation.",
-                                "vision": "To be world-renowned for unearthing the optimal value of institutions and leaders.",
-                                    "values": [
-                                        "People are treasure",
-                                        "Pursue joy and protect peace",
-                                        "Honor commitments",
-                                        "Grow always"
-                                    ]
-                }
-            }
-
-    </script>
+<title>About GoldOurs | South African Consulting Company</title>
+<meta
+    content="Learn about GoldOurs, a 100% Black-owned, Level 1 B-BBEE contributor serving public and private, social-impact and academic organisations across South Africa."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="About GoldOurs | South African Consulting Company" property="og:title" />
+<meta
+    content="Learn about GoldOurs, a 100% Black-owned, Level 1 B-BBEE contributor serving public and private, social-impact and academic organisations across South Africa."
+    property="og:description" />
+    
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="About GoldOurs | South African Consulting Company" name="twitter:title" />
+<meta
+    content="Learn about GoldOurs, a 100% Black-owned, Level 1 B-BBEE contributor serving public and private, social-impact and academic organisations across South Africa."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"AboutPage","@id":"https://www.goldours.co.za/about.html#webpage","url":"https://www.goldours.co.za/about.html","name":"About GoldOurs | South African Consulting Company","description":"Learn about GoldOurs, a 100% Black-owned, Level 1 B-BBEE contributor serving public and private, social-impact and academic organisations across South Africa.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
 {% endblock seo %}
 
 {% block content %}
 
-<!-- start breadcrumb area -->
-<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                <h1 class="title">About Us</h1>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div aria-label="Breadcrumb" class="bread-tag">
-                    <a href="{% url 'goldours_home:goldours-home' %}">Home</a>
-                    <span> / </span>
-                    <a href="{% url 'goldours_home:about-goldours' %}" class="active">About Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end breadcrumb area -->
-
-<!-- rts about us section start -->
-<div class="rts-about-area rts-section-gap">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="business-goal-one">
-                    <img src="{% static 'assets/images/business-goal/001.jpg' %}" alt="Business_Goal"
-                        class="lg:tw-w-[500px] tw-h-[566px] tw-rounded-lg tw-object-contain">
-                    <img class="small tw-w-[200px] tw-object-contain tw-border-8 tw-border-white tw-border-solid tw-shadow-lg tw-rounded-lg"
-                        src="{% static 'assets/images/business-goal/002.jpg' %}" alt="Business_Goal">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-progress-inner">
-                    <div class="title-area">
-                        <span>GET TO KNOW US</span>
-                        <h2 class="title">Unearthing Potential, Shaping Futures</h2>
-                    </div>
-                    <!-- inner start -->
-                    <div class="inner">
-                        <p class="disc">At GoldOurs, we uncover the gold within individuals and organizations to benefit
-                            society. As a 100% Black-owned, Level 1
-                            B-BBEE contributor, we deliver expertise in governance, strategy, and leadership through a
-                            team of qualified
-                            professionals. Guided by integrity, we foster sustainable growth, empower communities, and
-                            give back through charitable
-                            partnerships and graduate support.</p>
-                        <p class="disc">
-                            Choose GoldOurs for unmatched expertise, integrity, and a commitment to your success. With
-                            our 100% Black-owned, Level 1
-                            B-BBEE status, a team of seasoned professionals, and a holistic approach to governance and
-                            strategy, we deliver
-                            impactful solutions tailored to your needs. Together, we drive sustainable growth and unlock
-                            your full potential.
-                        </p>
-
-
-                    </div>
-                    <!-- end -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- rts about us section end -->
-
-<!-- rts services area start -->
-<div class="rts-service-area rts-section-gapBottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="rts-title-area service text-center">
-                    <p class="pre-title">
-                        Our Services
-                    </p>
-                    <h2 class="title">High Quality Services</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid service-main plr--120-service  plr_md--0 pl_sm--0 pr_sm--0">
-        <div class="background-service tw-grid tw-justify-center tw-items-center tw-grid-cols-1 md:tw-grid-cols-2">
-            <!-- start single Service -->
-            <div class="">
-                <div class="service-one-inner one">
-                    <div class="thumbnail">
-                        <img src="{% static 'assets/images/service/icon/01.svg' %}" alt="Goldours_service">
-                    </div>
-                    <div class="service-details">
-                        <a href="{% url 'goldours_home:governance-and-direction' %}">
-                            <h5 class="title">Governance & direction</h5>
-                        </a>
-                        <p class="disc">
-                            Strategic planning, risk management, and board training to drive organizational success.
-                        </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:governance-and-direction' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end single Services -->
-            <!-- start single Service -->
-            <div class="">
-                <div class="service-one-inner two">
-                    <div class="thumbnail">
-                        <img src="{% static 'assets/images/service/icon/04.svg' %}" alt="Goldours_service">
-                    </div>
-                    <div class="service-details">
-                        <a href="{% url 'goldours_home:talent-management-and-development' %}">
-                            <h5 class="title">Talent Management & Development</h5>
-                        </a>
-                        <p class="disc">
-                            Building leadership skills, managing performance, and fostering organizational growth.
-                        </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:talent-management-and-development' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end single Services -->
-            <!-- start single Service -->
-            <div class="">
-                <div class="service-one-inner three">
-                    <div class="thumbnail">
-                        <img src="{% static 'assets/images/service/icon/03.svg' %}" alt="Goldours_service">
-                    </div>
-                    <div class="service-details">
-                        <a href="{% url 'goldours_home:systems-reviews-and-assurance' %}">
-                            <h5 class="title">Systems, Reviews & Assurance</h5>
-                        </a>
-                        <p class="disc">
-                            Ensuring business continuity, compliance, and reliable financial reporting.
-
-                        </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:systems-reviews-and-assurance' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end single Services -->
-            <!-- start single Service -->
-            <div class="">
-                <div class="service-one-inner four">
-                    <div class="thumbnail">
-                        <img src="{% static 'assets/images/service/icon/06.svg' %}" alt="Goldours_service">
-                    </div>
-                    <div class="service-details">
-                        <a href="{% url 'goldours_home:bbbee-consulting-and-training' %}">
-                            <h5 class="title">B-BBEE Consulting & Training</h5>
-                        </a>
-                        <p class="disc">
-                            Supporting strategy development, implementation, and B-BBEE audit processes.
-                        </p>
-                        <a class="rts-read-more btn-primary"
-                            href="{% url 'goldours_home:bbbee-consulting-and-training' %}"><i
-                                class="far fa-arrow-right"></i>Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end single Services -->
-
-            <!-- end single Services -->
-        </div>
-        <div class="row">
-            <div class="cta-one-bg col-12">
-                <div class="cta-one-inner">
-                    <div class="cta-left">
-                        <h3 class="title">Master the Art of Asset Management.</h3>
-                    </div>
-                    <div class="cta-right">
-                        <a class="rts-btn btn-white" href="{% url 'goldours_home:course-details' %}">Asset Management Online Course</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- rts services area End -->
-
-<div class="rts-trusted-client rts-section-gapBottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-area-client text-center">
-                    <p class="client-title">Our Clients</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="client-wrapper-one">
-                {% for client in clients %}
-                    <a href="#"><img src="{% if client.logo %}{{client.logo.url}}{% else %}{% static 'assets/images/clients/bbgi.png' %}{% endif %}" alt="{{client.client}}"></a>
-                {% endfor %}
-                <!-- <a href="#"><img src="{% static 'assets/images/clients/bbgi.png' %}" alt="BBGI logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/smtax.png' %}" alt="Fasset logo"></a>
-                
-                <a href="#"><img src="{% static 'assets/images/clients/jade-sky.jpg' %}" alt="jade sky logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/mediae.png' %}" class="bg-dark" alt="media eq logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/edge.svg' %}" alt="Edge Growth logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/reimag.png' %}" alt="Reimagine SA logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/kuhle-apha.jpg' %}" alt="Kuhle apha logo"></a>
-                
-                
-                <a href="#"><img src="{% static 'assets/images/clients/logo.svg' %}" alt="Black Management Forum logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/nlc.png' %}" alt="NLC logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/cef.webp' %}" alt="Central Energy Fund logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/real.jpg' %}" class="bg-dark"
-                        alt="Realistic Child & Youth Care Centre logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/dale.png' %}" alt="Dale College logo"></a>
-
-                <a href="#"><img src="{% static 'assets/images/clients/tourism.png' %}" alt="tourism SA logo"></a>
-                
-                <a href="#"><img src="{% static 'assets/images/clients/iSIVINAVA-logo.png' %}" alt="iSIVINAVA logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/mandela.png' %}" alt="Mandela Bay Development Agency logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/Logo5.svg' %}" alt="Massive Quantum logo"></a>
-                
-                <a href="#"><img src="{% static 'assets/images/clients/HDA-logo-31.png' %}" class="bg-white" alt="HDA logo"></a>
-                <a href="#"><img src="https://dinaledi.org/wp-content/uploads/2024/03/Dinaledi-Website-Logo-Transparent.png"
-                        alt="Dinaledi logo"></a>
-
-                <a href="#"><img src="{% static 'assets/images/clients/trans.png' %}" alt="Transnet logo"></a>
-                
-                <a href="#"><img src="{% static 'assets/images/clients/AGSA-Logo.png' %}" alt="AGSA logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/sacap.svg' %}"
-                        alt="South African College of Applied Psychology logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/pfa.png' %}" alt="Pension Fund Adjudicator logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/img5.png' %}" class="bg-dark" alt="Personal Trust logo"></a>
-                <a href="#"><img src="{% static 'assets/images/clients/mid.png' %}" alt="MID logo"></a> -->
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="rts-accordion-area service rts-section-gap">
-    <div class="accordion-service-bg bg_image ptb--120 ptb_md--80 ptb_sm--60">
+<main id="main">
+    <section class="inner-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="accordion-service-inner">
-                        <div class="title-area-start">
-                            <span class="sub color-primary">WHY CHOOSE US?</span>
-                            <h2 class="title">Why GoldOurs? Your Partner in Excellence</h2>
-                        </div>
-                        <div class="accordion-area">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            Our Purpose
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Partnering with individuals and organizations to achieve long-term visions
-                                            through strategic decision-making and
-                                            goal-oriented services.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Our Vision
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            To be globally renowned for assisting leaders and institutions in achieving
-                                            their optimal potential.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Our core values
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Our core values center on treasuring people—employees, clients, and
-                                            partners—while fostering joy, peace, and integrity
-                                            in every interaction. We honor commitments with prompt delivery, uphold
-                                            trust, and embrace continuous growth through
-                                            lifelong learning and improvement.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
-                                            Expert Minds, Exceptional Results
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Our team of seasoned professionals brings years of expertise and a passion
-                                            for excellence, ensuring tailored solutions
-                                            that drive success and transformation.
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>About Goldours</span></div><span class="eyebrow">ABOUT
+                GOLDOURS</span>
+            <h1>Unearthing potential.<br /><em>Shaping futures.</em></h1>
+            <p>Our purpose, values and expertise empower organisations and communities.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container split">
+            <div class="fade-up"><span class="eyebrow">OUR STORY</span>
+                <h2>Partnering to unearth optimal value.</h2>
+                <p class="big-p">GoldOurs is a 100% Black-owned, Level 1 B-BBEE contributor serving public and
+                    private organisations, social impact and academic sectors, entrepreneurs and their funders,
+                    leadership teams in transition, and owners focused on sustainable business growth.</p>
+                <p>As a 100% Black-owned, Level 1 B-BBEE contributor, we deliver governance, strategy, leadership
+                    development, assurance and transformation services supported by experienced professionals.</p>
+                <p>We serve private, public, social impact and academic sectors, entrepreneurs and funders,
+                    leadership teams in transition, and business owners seeking sustainable growth.</p><a
+                    class="btn btn-dark" href="{% url 'goldours_home:all-services' %}">Our services <i aria-hidden="true"
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="image-frame fade-up"><img alt="Professionals working through a strategy discussion" class=""
+                    decoding="async" loading="lazy" src="{% static 'assets/images/about/main/about-01.jpg' %}" /></div>
+        </div>
+    </section>
+    <section class="section section-cream" id="purpose-values">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">PURPOSE, VISION &amp; VALUES</span>
+                <h2>The values that <em>guide our work.</em></h2>
+                <p>GoldOurs partners with organisations by understanding their goals and vision and helps track
+                    growth using assurance-reviewed data.</p>
+            </div>
+            <div class="profile-values-grid">
+                <article class="profile-value fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-users"></i></span>
+                    <h3>People are treasure</h3>
+                    <p>Recognise the value of people.</p>
+                </article>
+                <article class="profile-value fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-dove"></i></span>
+                    <h3>Pursue joy and protect your peace</h3>
+                    <p>Create space for constructive growth.</p>
+                </article>
+                <article class="profile-value fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-clipboard-check"></i></span>
+                    <h3>Honour Commitments</h3>
+                    <p>Do what we promise.</p>
+                </article>
+                <article class="profile-value fade-up"><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-seedling"></i></span>
+                    <h3>Grow Allways</h3>
+                    <p>Keep learning and improving.</p>
+                </article>
+            </div>
+            <div class="profile-purpose-grid">
+                <div><i aria-hidden="true" class="fas fa-chart-line"></i> We help institutions to grow sustainably
+                </div>
+                <div><i aria-hidden="true" class="fas fa-file-invoice-dollar"></i> We give good accounting and tax
+                    advice</div>
+                <div><i aria-hidden="true" class="fas fa-coins"></i> We help businesses to access funding</div>
+                <div><i aria-hidden="true" class="fas fa-users-cog"></i> We help clients capacitate their staff
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="rts-feature-area rts-section-gap mb--40">
-    <div class="container-fluid padding-controler plr--120">
-        <div class="row bg-white-feature  pt--120 pb--120">
-            <div class="col-xl-6 col-lg-12">
-                <div class="feature-left-area">
-                    <img src="{% static 'assets/images/feature/01.png' %}" alt="Team Goldours">
-                </div>
+    </section>
+    <section class="section" id="our-team">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">OUR TEAM</span>
+                <h2>Specialist expertise across <em>every service pillar.</em></h2>
+                <p>Our multidisciplinary professionals bring experience in governance, leadership, finance,
+                    assurance, coaching and entrepreneurship.</p>
             </div>
-            <div class="col-xl-6 col-lg-12">
-                <div class="rts-title-area feature text-start pl--30 pl_sm--0">
-                    <p class="pre-title">
-                        Our Team
-                    </p>
-                    <h2 class="title feature-title">{{team.title}}</h2>
-                    <p>
-
-                        {{team.summary}}</p>
-
-                </div>
-
-                <!-- <div class="feature-one-wrapper pl--30 mt--40 pl_sm--0">
-                    <div class="single-feature-one">
-                        <i class="fal fa-check"></i>
-                        <p>Fast Growing Sells</p>
+            <div class="profile-team-grid">
+                <article class="profile-team-card fade-up">
+                    <div class="profile-team-top"><span class="profile-team-count">10</span><span
+                            class="profile-team-label">Experienced professionals</span></div>
+                    <h3>Governance &amp; Direction</h3>
+                    <p>Our Governance &amp; Direction team brings together highly qualified, trained and experienced
+                        professionals with extensive private-sector, public-sector and academic experience.</p>
+                    <div class="profile-team-experience"><i aria-hidden="true" class="fas fa-briefcase"></i> 15+
+                        years executive; 10+ years non-executive</div>
+                    <div class="profile-affiliations">
+                        <span>IRMSA</span><span>IITPSA</span><span>IODSA</span><span>QCTO</span>
                     </div>
-                    <div class="single-feature-one">
-                        <i class="fal fa-check"></i>
-                        <p>24/7 Quality Services</p>
+                </article>
+                <article class="profile-team-card fade-up">
+                    <div class="profile-team-top"><span class="profile-team-count">20</span><span
+                            class="profile-team-label">Experienced professionals</span></div>
+                    <h3>Talent Management &amp; Development</h3>
+                    <p>Our Talent Management &amp; Development team combines business leadership, training, coaching
+                        and educational expertise to support organisations and their people.</p>
+                    <div class="profile-team-experience"><i aria-hidden="true" class="fas fa-briefcase"></i> 20+
+                        years executive; 10+ years non-executive</div>
+                    <div class="profile-affiliations">
+                        <span>SAIGA</span><span>SEDFA</span><span>ABCCCP</span><span>ICF</span><span>COMENSA</span>
                     </div>
-                    <div class="single-feature-one">
-                        <i class="fal fa-check"></i>
-                        <p>Expert Members</p>
-                    </div>
-                    <div class="single-feature-one">
-                        <i class="fal fa-check"></i>
-                        <p>Best Quality Services</p>
-                    </div>
-                </div> -->
+                </article>
+                <article class="profile-team-card fade-up">
+                    <div class="profile-team-top"><span class="profile-team-count">8</span><span
+                            class="profile-team-label">Experienced professionals</span></div>
+                    <h3>Accounting, Tax &amp; Assurance</h3>
+                    <p>Our Accounting, Tax &amp; Assurance team offers professional financial and assurance skills
+                        developed through work in private and public institutions.</p>
+                    <div class="profile-team-experience"><i aria-hidden="true" class="fas fa-briefcase"></i> 20
+                        years executive; 1 year non-executive</div>
+                    <div class="profile-affiliations"><span>SAICA</span><span>IIA
+                            SA</span><span>ACFE</span><span>IRBA</span><span>ISACA</span></div>
+                </article>
+                <article class="profile-team-card fade-up">
+                    <div class="profile-team-top"><span class="profile-team-count">7</span><span
+                            class="profile-team-label">Experienced professionals</span></div>
+                    <h3>B-BBEE Consulting &amp; Training</h3>
+                    <p>Our B-BBEE Consulting &amp; Training team combines entrepreneurship, organisational change,
+                        coaching and finance skills to support sustainable transformation.</p>
+                    <div class="profile-team-experience"><i aria-hidden="true" class="fas fa-briefcase"></i> 20
+                        years executive; 8 years non-executive</div>
+                    <div class="profile-affiliations"><span>Black Management Forum</span><span>SEDFA</span></div>
+                </article>
+            </div><a class="btn btn-dark" href="team.html">Explore our people <i aria-hidden="true"
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <section class="section section-navy">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">WHY GOLDOURS</span>
+                <h2>Why our approach <em>delivers results.</em></h2>
+            </div>
+            <div class="service-grid">
+                <article class="service-card"><span class="service-ico"><i aria-hidden="true"
+                            class="fas fa-route"></i></span>
+                    <h3>From strategy to execution</h3>
+                    <p>We help implement—not merely present—recommendations that drive performance.</p>
+                </article>
+                <article class="service-card"><span class="service-ico"><i aria-hidden="true"
+                            class="fas fa-handshake"></i></span>
+                    <h3>Committed to your success</h3>
+                    <p>Relationships that extend beyond the project to meaningful long-term value.</p>
+                </article>
+                <article class="service-card"><span class="service-ico"><i aria-hidden="true"
+                            class="fas fa-compass"></i></span>
+                    <h3>Holistic, tailored insight</h3>
+                    <p>Governance, people and performance solutions built around real organisational needs.</p>
+                </article>
+                <article class="service-card"><span class="service-ico"><i aria-hidden="true"
+                            class="fas fa-seedling"></i></span>
+                    <h3>Societal contribution</h3>
+                    <p>Empowering communities and businesses to grow through opportunity and inclusion.</p>
+                </article>
             </div>
         </div>
-    </div>
-</div>
-
-<!-- rts faq section area -->
-<!-- <div class="rts-faq-section rts-section-gap rts-faq-bg bg_image">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="faq-two-inner">
-                    <div class="title-area-faq">
-                        <span class="sub">WHY CHOOSE US</span>
-                        <h2 class="title">We Are Experienced
-                            <span class="sm-title">Business <span>Solution</span></span>
-                        </h2>
-                    </div>
-                    
-                    <div class="faq-accordion-area">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <span>01. </span> What should i included my personal details?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Neque partrient nascetur facilisis suscipit ridiculus agna lobortis
-                                        imperdiet vivamus est aliquam euismod nector quam convallis ornare justo
-                                        service lifereu visionary sources unleash online businesss solutions
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <span>02. </span> Where i can find my business growth result?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Neque partrient nascetur facilisis suscipit ridiculus agna lobortis
-                                        imperdiet vivamus est aliquam euismod nector quam convallis ornare justo
-                                        service lifereu visionary sources unleash online businesss solutions
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        <span>03. </span> Did you get any business consultant?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Neque partrient nascetur facilisis suscipit ridiculus agna lobortis
-                                        imperdiet vivamus est aliquam euismod nector quam convallis ornare justo
-                                        service lifereu visionary sources unleash online businesss solutions
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+    </section>
+    <section class="section section-cream" id="accreditations">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">CREDENTIALS &amp; PROFESSIONAL BODIES</span>
+                <h2>Professional connections. <em>Responsible representation.</em></h2>
+                <p>Our specialists are connected with professional organisations and skills-development institutions
+                    that support quality, ethics and industry knowledge.</p>
             </div>
-            <div class="col-lg-6">
-                <div class="thumbnail-faq-four">
-                    <img src="{% static 'assets/images/faq/02.png' %}" alt="">
-                </div>
+            <div class="profile-credentials-grid">
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="SAIGA logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/saiga.png' %}" /></div>
+                    <h3>SAIGA</h3>
+                    <p>Government auditing professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">SAICA</span></div>
+                    <h3>SAICA</h3>
+                    <p>Chartered accountancy professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="QCTO logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/qcto_logo.svg' %}" /></div>
+                    <h3>QCTO</h3>
+                    <p>Occupational qualifications and skills development</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><img alt="FASSET logo" decoding="async" loading="lazy"
+                            src="{% static 'assets/images/brands/fasset.jpg' %}" /></div>
+                    <h3>FASSET</h3>
+                    <p>Finance and accounting SETA</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">COMENSA</span></div>
+                    <h3>COMENSA</h3>
+                    <p>Coaching and mentoring professional body</p>
+                </article>
+                <article class="profile-credential-card fade-up">
+                    <div class="profile-credential-art"><span class="profile-logo-letter">IRBA</span></div>
+                    <h3>IRBA</h3>
+                    <p>Registered auditors professional body</p>
+                </article>
+            </div>
+            <div class="ownership-strip fade-up">
+                <div><span class="round-icon"><i aria-hidden="true" class="fas fa-award"></i></span><strong>Level
+                        1</strong><span>B-BBEE contributor</span></div>
+                <div><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-handshake"></i></span><strong>100%</strong><span>Black-owned
+                        business</span></div>
+                <div><span class="round-icon"><i aria-hidden="true"
+                            class="fas fa-certificate"></i></span><strong>Verify</strong><span>Current certificates
+                        and scope</span></div>
             </div>
         </div>
-    </div>
-</div> -->
-<!-- rts faq section area End -->
-
-<!-- customers feed back area start -->
-<div class="rts-customer-feedback-area rts-section-gap bg-customer-feedback">
-    <div class="container">
-        <div class="row">
-            <div class="rts-title-area feedback team text-center">
-                <p class="pre-title">
-                    Feedbacks
-                </p>
-                <h2 class="title">Customer Feedbacks</h2>
-            </div>
-        </div>
-        <div class="row g-5 mt--20">
-            {% for review in reviews %}
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimopnial-wrapper-two">
-                    <div class="test-header">
-                        <div class="thumbnail">
-                            <img src="{% if review.logo %}{{review.logo.url}}{% else %}{% static 'assets/images/R.png' %}{% endif %}" alt="Mazana Security Services">
-                        </div>
-                        <div class="name-desig">
-                            <h5 class="title">{{review.reviewer}}</h5>
-                            <span class="designation">{{review.role}}</span>
-                        </div>
-                    </div>
-                    <div class="test-body">
-                        <p class="disc">
-                            “{{review.review}}”
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimopnial-wrapper-two">
-                    <div class="test-header">
-                        <div class="thumbnail">
-                            <img src="https://yongonakho.co.za/wp-content/uploads/2020/02/yascolor05.png" alt="Yongonakho Advisory Services (Pty) Ltd">
-                        </div>
-                        <div class="name-desig">
-                            <h5 class="title">Yongonakho Advisory Services (Pty) Ltd</h5>
-                            <span class="designation">Director</span>
-                        </div>
-                    </div>
-                    <div class="test-body">
-                        <p class="disc">
-                            “GoldOurs clarified our strategic direction and key business drivers. Their management
-                            account reviews help us spot and
-                            correct issues in real-time. Partnering with GoldOurs has been incredibly valuable—I highly
-                            recommend them.”
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimopnial-wrapper-two">
-                    <div class="test-header">
-                        <div class="thumbnail">
-                            <img src="https://scontent.fdur8-1.fna.fbcdn.net/v/t39.30808-1/304036200_443818011097390_4032199104880527804_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeGUW5AXz20MG7br0r0AJ5P5Morr-CoyDZoyiuv4KjINmph2gpc9gttM6I1mm3VRC7Vai1OXg8k7f6T8n9uJcGfl&_nc_ohc=G2BnBoXqzZMQ7kNvgGNHgkr&_nc_zt=24&_nc_ht=scontent.fdur8-1.fna&_nc_gid=AQ9WR1cy65yt0ZzWN_C35pI&oh=00_AYCMOoibJW8xMjtP3TQHF9To2SzvJuSpSpIvn84bHyDA2g&oe=67871E16" alt="Kuhle Apha (Pty) Ltd">
-                        </div>
-                        <div class="name-desig">
-                            <h5 class="title">Kuhle Apha (Pty) Ltd</h5>
-                            <span class="designation">Director</span>
-                        </div>
-                    </div>
-                    <div class="test-body">
-                        <p class="disc">
-                            “For the first time, we truly understand our company's finances. GoldOurs provides excellent
-                            accounting services and
-                            connects us with experts in specialized areas, helping us achieve sustainable growth. It's
-                            been an extraordinary
-                            journey.”
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimopnial-wrapper-two">
-                    <div class="test-header">
-                        <div class="thumbnail">
-                            <img src="https://khwaza.com/wp-content/uploads/2022/07/KHWAZA-logo-2-179x64.png" alt="Khwaza Engineering Consultants">
-                        </div>
-                        <div class="name-desig">
-                            <h5 class="title">Khwaza Engineering Consultants</h5>
-                            <span class="designation">Director</span>
-                        </div>
-                    </div>
-                    <div class="test-body">
-                        <p class="disc">
-                            “If you want to grow and sustain your business, GoldOurs is the way to go. Their
-                            multi-dimensional approach covers
-                            strategy, team cohesion, and operational efficiency. Monthly management reviews have
-                            deepened our understanding of our
-                            business in ways we never imagined.”
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-</div>
-<!-- customers feed back area end -->
+    </section>
+</main>
 
 {% endblock content %}

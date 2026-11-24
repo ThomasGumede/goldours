@@ -1,0 +1,125 @@
+{% extends '_service.html' %}
+{% load static %}
+
+{% block seo %}
+
+<title>Client Testimonials | GoldOurs Consulting</title>
+<meta
+    content="Read client feedback from CEF, Massive Quantum, Auditor-General of South Africa, SACAP, the National Department of Tourism, SANBI and other GoldOurs clients."
+    name="description" />
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+<meta content="website" property="og:type" />
+<meta content="GoldOurs" property="og:site_name" />
+<meta content="en_ZA" property="og:locale" />
+<meta content="Client Testimonials | GoldOurs Consulting" property="og:title" />
+<meta
+    content="Read client feedback from CEF, Massive Quantum, Auditor-General of South Africa, SACAP, the National Department of Tourism, SANBI and other GoldOurs clients."
+    property="og:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" property="og:image" />
+<meta content="1200" property="og:image:width" />
+<meta content="630" property="og:image:height" />
+<meta content="GoldOurs — Partnering to unearth optimal value" property="og:image:alt" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Client Testimonials | GoldOurs Consulting" name="twitter:title" />
+<meta
+    content="Read client feedback from CEF, Massive Quantum, Auditor-General of South Africa, SACAP, the National Department of Tourism, SANBI and other GoldOurs clients."
+    name="twitter:description" />
+<meta content="https://www.goldours.co.za/assets/images/og-goldours.webp" name="twitter:image" />
+<meta content="GoldOurs — Partnering to unearth optimal value" name="twitter:image:alt" />
+
+<script
+    type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.goldours.co.za/#organization","name":"GoldOurs","url":"https://www.goldours.co.za/","description":"A South African consulting company supporting organisations through governance and direction, talent management and development, accounting, tax and assurance, and B-BBEE consulting and training.","slogan":"Partnering to unearth optimal value.","logo":{"@type":"ImageObject","url":"https://www.goldours.co.za/assets/images/logo/logo-2.png"},"image":"https://www.goldours.co.za/assets/images/og-goldours.webp","email":"info@goldours.co.za","telephone":"+27 21 525 9188","identifier":{"@type":"PropertyValue","propertyID":"Company registration number","value":"2018/302352/07"},"address":[{"@type":"PostalAddress","streetAddress":"Unit 108, Millennium Business Park, 19 Edison Way","addressLocality":"Century City, Cape Town","addressRegion":"Western Cape","postalCode":"7441","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"6 Piccolo Estate, 270 Von Willich, Die Hoewes","addressLocality":"Centurion, Pretoria","addressRegion":"Gauteng","postalCode":"0157","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"9 Armitage Road, Bird Sanctuary, Townhill","addressLocality":"Pietermaritzburg","addressRegion":"KwaZulu-Natal","postalCode":"3201","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"43 Bird Street, Central","addressLocality":"Gqeberha","addressRegion":"Eastern Cape","postalCode":"6001","addressCountry":"ZA"},{"@type":"PostalAddress","streetAddress":"13 Blaine Street, West Bank","addressLocality":"Qonce","addressRegion":"Eastern Cape","postalCode":"5601","addressCountry":"ZA"}],"areaServed":{"@type":"Country","name":"South Africa"},"contactPoint":{"@type":"ContactPoint","contactType":"General enquiries","email":"info@goldours.co.za","telephone":"+27 21 525 9188"}},{"@type":"WebSite","@id":"https://www.goldours.co.za/#website","url":"https://www.goldours.co.za/","name":"GoldOurs","publisher":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"},{"@type":"CollectionPage","@id":"https://www.goldours.co.za/testimonials.html#webpage","url":"https://www.goldours.co.za/testimonials.html","name":"Client Testimonials | GoldOurs Consulting","description":"Read client feedback from CEF, Massive Quantum, Auditor-General of South Africa, SACAP, the National Department of Tourism, SANBI and other GoldOurs clients.","isPartOf":{"@id":"https://www.goldours.co.za/#website"},"about":{"@id":"https://www.goldours.co.za/#organization"},"inLanguage":"en-ZA"}]}</script>
+
+{% endblock seo %}
+
+
+{% block content %}
+
+<main id="main">
+    <section class="inner-hero">
+        <div class="container">
+            <div class="breadcrumbs"><a href="{% url 'goldours_home:goldours-home' %}">Home</a><i aria-hidden="true"
+                    class="fas fa-chevron-right"></i><span>Testimonials</span></div><span
+                class="eyebrow">TESTIMONIALS</span>
+            <h1>The voices behind<br /><em>our impact.</em></h1>
+            <p>Client feedback that reminds us why our work matters.</p>
+        </div>
+    </section>
+    <section class="section testimonial-profile-list">
+        <div class="container">
+            <div class="section-header fade-up"><span class="eyebrow">AS PUBLISHED IN THE COMPANY PROFILE</span>
+                <h2>Testimonials from <em>all four service pillars.</em></h2>
+                <p>Statements below are attributed to the organisations and roles named in the company profile, page
+                    12 (printed page 10).</p>
+            </div>
+            <div class="profile-quote-grid">
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Governance &amp;
+                        Direction</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“GoldOurs is competent and their impact is invaluable”</blockquote>
+                    <div><strong>CEF SOC Ltd</strong><small>Chief Audit Executive</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Governance &amp;
+                        Direction</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“We highly recommend GoldOurs for strategy facilitation because they ensured that
+                        our needs were understood and delivered high quality work”</blockquote>
+                    <div><strong>Massive Quantum (Pty) Ltd</strong><small>CEO</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Talent Management
+                        &amp; Development</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“We recommend GoldOurs because the training facilitator was experienced,
+                        knowledgeable and customised the training to our context and training needs”</blockquote>
+                    <div><strong>Auditor-General of South Africa</strong><small>Senior Manager (Learning &amp;
+                            Development)</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Talent Management
+                        &amp; Development</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“The facilitator received great reviews from the participants, especially in
+                        relation to making the topics interesting and practical”</blockquote>
+                    <div><strong>SACAP</strong><small>Co-ordinator (Learning and Teaching)</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Accounting, Tax
+                        &amp; Assurance</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“We are happy to say that GoldOurs contributed positively to our clean audit
+                        outcome”</blockquote>
+                    <div><strong>National Department of Tourism</strong><small>Director</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">Accounting, Tax
+                        &amp; Assurance</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“GoldOurs is competent and professional; they contributed to our clean audit
+                        outcome”</blockquote>
+                    <div><strong>SANBI</strong><small>Chief Audit Executive</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">B-BBEE Consulting
+                        &amp; Training</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“If you want to grow as an individual; if you want to grow as a team; and if you
+                        want your business to grow, I recommend GoldOurs!”</blockquote>
+                    <div><strong>Jade-Sky Project Management (Pty) Ltd</strong><small>Director</small></div>
+                </article>
+                <article class="profile-quote-card fade-up"><span class="profile-quote-category">B-BBEE Consulting
+                        &amp; Training</span><i aria-hidden="true" class="fas fa-quote-left"></i>
+                    <blockquote>“Growth! Taking up the entrepreneur coaching program will grow your self-awareness,
+                        thinking ability, and leadership capability. It helped me focus on the highest priorities
+                        for lasting benefits of my business and my clients. Try it!”</blockquote>
+                    <div><strong>Changing Your Business Through Theatre (CYBTT) (Pty) Ltd</strong><small>CEO &amp;
+                            Founder</small></div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="section section-cream">
+        <div class="container">
+            <div class="review-note"><span class="round-icon"><i aria-hidden="true"
+                        class="fas fa-shield-alt"></i></span>
+                <div>
+                    <h2>Authentic feedback matters.</h2>
+                    <p>One attributable client testimonial is currently included from the existing public website.
+                        Additional quotes should only be published after management supplies approved wording and
+                        attribution. We have intentionally not invented client endorsements for Eskom, Transnet or
+                        the other showcased organisations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
